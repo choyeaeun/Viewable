@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,17 +12,272 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Viewable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arskView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO5-fy-WZq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arskView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8J-O0-RkF">
+                                <rect key="frame" x="0.0" y="341" width="375" height="326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="롯데타워빌딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpw-0P-hFC">
+                                        <rect key="frame" x="20" y="21" width="114.5" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="ufV-SU-7Bb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 송파구 올림픽로 300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-Mf-EpJ">
+                                        <rect key="frame" x="20" y="54" width="156.5" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Gle-MA-cBN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안전주의" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYQ-XY-AdK">
+                                        <rect key="frame" x="310" y="68" width="45" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="NXa-eh-J1m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-57-4wG" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                        <rect key="frame" x="310" y="22" width="45" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Nab-yZ-ARO"/>
+                                            <constraint firstAttribute="width" constant="45" id="Uh8-aY-6Cl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPercentRadius" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보유 시설" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxv-UN-MBd">
+                                        <rect key="frame" x="20" y="89" width="63.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k0-Yq-D6b">
+                                        <rect key="frame" x="89.5" y="89" width="20" height="20"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="T4z-u9-AbG"/>
+                                            <constraint firstAttribute="height" constant="20" id="sZR-71-gWE"/>
+                                        </constraints>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZoH-SG-9vn">
+                                        <rect key="frame" x="20" y="117" width="335" height="106"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc8-Ya-8kH">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="106"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oj0-mj-3Ap" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                                        <rect key="frame" x="9.5" y="0.0" width="65" height="65"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="2bO-gr-wpC"/>
+                                                            <constraint firstAttribute="width" constant="65" id="d3v-nl-CfE"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-IO-fXI">
+                                                        <rect key="frame" x="17.5" y="74" width="49" height="31.5"/>
+                                                        <string key="text">주,출입구
+접근로</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="P8p-IO-fXI" firstAttribute="centerX" secondItem="Oj0-mj-3Ap" secondAttribute="centerX" id="2uK-rK-R9j"/>
+                                                    <constraint firstItem="P8p-IO-fXI" firstAttribute="top" secondItem="Oj0-mj-3Ap" secondAttribute="bottom" constant="9" id="Uox-LK-6ve"/>
+                                                    <constraint firstItem="Oj0-mj-3Ap" firstAttribute="top" secondItem="yc8-Ya-8kH" secondAttribute="top" id="eZx-Vy-T72"/>
+                                                    <constraint firstItem="Oj0-mj-3Ap" firstAttribute="centerX" secondItem="yc8-Ya-8kH" secondAttribute="centerX" id="jg8-6C-q7W"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-PZ-aIJ">
+                                                <rect key="frame" x="84" y="0.0" width="83.5" height="106"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BLW-ex-FxG" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                                        <rect key="frame" x="9" y="0.0" width="65" height="65"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="bi1-Dd-s2u"/>
+                                                            <constraint firstAttribute="width" constant="65" id="gcX-2I-RSh"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyP-1q-ri4">
+                                                        <rect key="frame" x="17" y="74" width="49" height="31.5"/>
+                                                        <string key="text">장애인용 
+승강기</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="BLW-ex-FxG" firstAttribute="centerX" secondItem="RC8-PZ-aIJ" secondAttribute="centerX" id="FfW-oC-ltN"/>
+                                                    <constraint firstItem="BLW-ex-FxG" firstAttribute="top" secondItem="RC8-PZ-aIJ" secondAttribute="top" id="KxO-4i-POx"/>
+                                                    <constraint firstItem="lyP-1q-ri4" firstAttribute="centerX" secondItem="BLW-ex-FxG" secondAttribute="centerX" id="bFW-mZ-Ii3"/>
+                                                    <constraint firstItem="lyP-1q-ri4" firstAttribute="top" secondItem="BLW-ex-FxG" secondAttribute="bottom" constant="9" id="zwE-74-UUe"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnS-5j-deZ">
+                                                <rect key="frame" x="167.5" y="0.0" width="84" height="106"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-35-bac" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                                        <rect key="frame" x="9.5" y="0.0" width="65" height="65"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="H2f-6Z-6gP"/>
+                                                            <constraint firstAttribute="height" constant="65" id="TXm-VN-3pP"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmb-Lo-CiH">
+                                                        <rect key="frame" x="19.5" y="74" width="45" height="31.5"/>
+                                                        <string key="text">장애인용
+화장실</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Pmb-Lo-CiH" firstAttribute="centerX" secondItem="L6t-35-bac" secondAttribute="centerX" id="4GT-F9-UbG"/>
+                                                    <constraint firstItem="Pmb-Lo-CiH" firstAttribute="top" secondItem="L6t-35-bac" secondAttribute="bottom" constant="9" id="cEc-44-sqP"/>
+                                                    <constraint firstItem="L6t-35-bac" firstAttribute="top" secondItem="HnS-5j-deZ" secondAttribute="top" id="eJg-QI-xT3"/>
+                                                    <constraint firstItem="L6t-35-bac" firstAttribute="centerX" secondItem="HnS-5j-deZ" secondAttribute="centerX" id="pqG-Hd-EyG"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xt6-wv-uOV">
+                                                <rect key="frame" x="251.5" y="0.0" width="83.5" height="106"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTa-kS-pAP" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                                        <rect key="frame" x="9" y="0.0" width="65" height="65"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="sro-Vi-Ota"/>
+                                                            <constraint firstAttribute="height" constant="65" id="yGT-np-6ZE"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJS-gW-vV7">
+                                                        <rect key="frame" x="19" y="74" width="45" height="31.5"/>
+                                                        <string key="text">장애인
+주차구역</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="NTa-kS-pAP" firstAttribute="centerX" secondItem="Xt6-wv-uOV" secondAttribute="centerX" id="0IA-Dk-cRG"/>
+                                                    <constraint firstItem="SJS-gW-vV7" firstAttribute="centerX" secondItem="NTa-kS-pAP" secondAttribute="centerX" id="3kj-iT-LUr"/>
+                                                    <constraint firstItem="NTa-kS-pAP" firstAttribute="top" secondItem="Xt6-wv-uOV" secondAttribute="top" id="ZDK-zr-vPs"/>
+                                                    <constraint firstItem="SJS-gW-vV7" firstAttribute="top" secondItem="NTa-kS-pAP" secondAttribute="bottom" constant="9" id="myA-uw-2QP"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQO-Rx-okr" customClass="UIRadiusButton" customModule="Viewable" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="275" width="278" height="48"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="KSq-Az-2UC"/>
+                                        </constraints>
+                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="매장 한 눈에 보기"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPP-FV-yqu" customClass="UIRadiusButton" customModule="Viewable" customModuleProvider="target">
+                                        <rect key="frame" x="310" y="275" width="48" height="48"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Nme-aa-dY7"/>
+                                            <constraint firstAttribute="width" constant="48" id="fod-ls-EDa"/>
+                                        </constraints>
+                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="신고"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="qPP-FV-yqu" firstAttribute="centerY" secondItem="pQO-Rx-okr" secondAttribute="centerY" id="1BE-sR-hqc"/>
+                                    <constraint firstItem="Zpw-0P-hFC" firstAttribute="top" secondItem="H8J-O0-RkF" secondAttribute="top" constant="21" id="2cC-ds-6An"/>
+                                    <constraint firstItem="cYQ-XY-AdK" firstAttribute="top" secondItem="Gub-57-4wG" secondAttribute="bottom" constant="1" id="4yE-SR-umA"/>
+                                    <constraint firstItem="JbS-Mf-EpJ" firstAttribute="top" secondItem="Zpw-0P-hFC" secondAttribute="bottom" id="5KS-Gm-Rc5"/>
+                                    <constraint firstItem="Bxv-UN-MBd" firstAttribute="leading" secondItem="JbS-Mf-EpJ" secondAttribute="leading" id="DRF-3D-wfa"/>
+                                    <constraint firstItem="cYQ-XY-AdK" firstAttribute="centerX" secondItem="Gub-57-4wG" secondAttribute="centerX" id="Hox-av-Kpu"/>
+                                    <constraint firstItem="pQO-Rx-okr" firstAttribute="leading" secondItem="H8J-O0-RkF" secondAttribute="leading" constant="20" id="N5n-GO-ipd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gub-57-4wG" secondAttribute="trailing" constant="20" id="OWt-pA-s7b"/>
+                                    <constraint firstItem="9k0-Yq-D6b" firstAttribute="centerY" secondItem="Bxv-UN-MBd" secondAttribute="centerY" id="PDX-op-d0z"/>
+                                    <constraint firstItem="ZoH-SG-9vn" firstAttribute="top" secondItem="Bxv-UN-MBd" secondAttribute="bottom" constant="8" id="POO-jL-Cx4"/>
+                                    <constraint firstItem="pQO-Rx-okr" firstAttribute="top" secondItem="ZoH-SG-9vn" secondAttribute="bottom" constant="52" id="RuQ-yS-naV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZoH-SG-9vn" secondAttribute="trailing" constant="20" id="SmF-ne-OCL"/>
+                                    <constraint firstItem="Bxv-UN-MBd" firstAttribute="top" secondItem="JbS-Mf-EpJ" secondAttribute="bottom" constant="13" id="WEF-Yl-9tP"/>
+                                    <constraint firstAttribute="height" constant="326" id="ayG-W0-jOK"/>
+                                    <constraint firstItem="JbS-Mf-EpJ" firstAttribute="leading" secondItem="Zpw-0P-hFC" secondAttribute="leading" id="bD3-Xi-Bnx"/>
+                                    <constraint firstItem="Gub-57-4wG" firstAttribute="top" secondItem="H8J-O0-RkF" secondAttribute="top" constant="22" id="bOv-pY-rtx"/>
+                                    <constraint firstItem="ZoH-SG-9vn" firstAttribute="leading" secondItem="H8J-O0-RkF" secondAttribute="leading" constant="20" id="g5L-TR-Zo0"/>
+                                    <constraint firstItem="9k0-Yq-D6b" firstAttribute="leading" secondItem="Bxv-UN-MBd" secondAttribute="trailing" constant="6" id="gfQ-8y-APY"/>
+                                    <constraint firstItem="qPP-FV-yqu" firstAttribute="leading" secondItem="pQO-Rx-okr" secondAttribute="trailing" constant="12" id="hCn-4h-6wJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qPP-FV-yqu" secondAttribute="trailing" constant="17" id="jMI-bd-ehM"/>
+                                    <constraint firstAttribute="bottom" secondItem="pQO-Rx-okr" secondAttribute="bottom" constant="3" id="jhN-Oz-Drl"/>
+                                    <constraint firstItem="Zpw-0P-hFC" firstAttribute="leading" secondItem="H8J-O0-RkF" secondAttribute="leading" constant="20" id="w8F-ra-2y0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="H8J-O0-RkF" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="0i3-Iw-n9o"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="H8J-O0-RkF" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="ShU-2b-OZS"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="H8J-O0-RkF" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="axL-N7-SWi"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" id="ix5-PJ-taE"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
@@ -34,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+            <point key="canvasLocation" x="136.80000000000001" y="105.69715142428787"/>
         </scene>
     </scenes>
 </document>
