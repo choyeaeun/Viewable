@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arskView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO5-fy-WZq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arskView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="EO5-fy-WZq" secondAttribute="bottom" constant="365" id="1It-zw-4vD"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="EO5-fy-WZq" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" id="ix5-PJ-taE"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>

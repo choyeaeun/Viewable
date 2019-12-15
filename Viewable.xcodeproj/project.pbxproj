@@ -49,6 +49,7 @@
 		3A0B8C82239E63DD003BBEDC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0B8C81239E63D7003BBEDC /* libc++.tbd */; };
 		3A0B8C84239E63EC003BBEDC /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0B8C83239E63E6003BBEDC /* libxml2.tbd */; };
 		3A0B8C86239E63FE003BBEDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0B8C85239E63F7003BBEDC /* libsqlite3.tbd */; };
+		3A0B8C9023A32520003BBEDC /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B8C8F23A32520003BBEDC /* Map.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		3A0B8C83239E63E6003BBEDC /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		3A0B8C85239E63F7003BBEDC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3A0B8C87239E647B003BBEDC /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		3A0B8C8F23A32520003BBEDC /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0B8C26239E5197003BBEDC /* Main.storyboard */,
+				3A0B8C8F23A32520003BBEDC /* Map.storyboard */,
 				3A0B8C2B239E5198003BBEDC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -243,9 +246,8 @@
 		3A0B8C8A239E7578003BBEDC /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				3A0B8C24239E5197003BBEDC /* ViewController.swift */,
-				3A0B8C20239E5197003BBEDC /* Scene.sks */,
-				3A0B8C22239E5197003BBEDC /* Scene.swift */,
+				3A0B8C9223A34351003BBEDC /* Map */,
+				3A0B8C9123A3434B003BBEDC /* AR */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -279,6 +281,23 @@
 			children = (
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		3A0B8C9123A3434B003BBEDC /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B8C24239E5197003BBEDC /* ViewController.swift */,
+				3A0B8C22239E5197003BBEDC /* Scene.swift */,
+				3A0B8C20239E5197003BBEDC /* Scene.sks */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		3A0B8C9223A34351003BBEDC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +361,7 @@
 				3A0B8C5E239E6337003BBEDC /* shadow_balloon.png in Resources */,
 				3A0B8C64239E6337003BBEDC /* copyright.png in Resources */,
 				3A0B8C72239E6337003BBEDC /* map_present.png in Resources */,
+				3A0B8C9023A32520003BBEDC /* Map.storyboard in Resources */,
 				3A0B8C6A239E6337003BBEDC /* map_pin_red.png in Resources */,
 				3A0B8C76239E6337003BBEDC /* map_pin_shadow.png in Resources */,
 				3A0B8C5F239E6337003BBEDC /* map_pinup.png in Resources */,
