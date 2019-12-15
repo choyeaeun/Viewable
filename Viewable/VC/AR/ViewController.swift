@@ -7,42 +7,38 @@
 //
 
 import UIKit
-import SpriteKit
 import ARKit
 import CoreLocation
+import ARCL
 
 class ViewController: UIViewController{
     
-    @IBOutlet var sceneView: ARSKView!
     // locationManager 변수
     let locManager: CLLocationManager = CLLocationManager()
+    
+    var sceneLocationView = SceneLocationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and node count
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
-        
-        // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "Scene") {
-            sceneView.presentScene(scene)
-        }
-        
-        
+        sceneLocationView.run()
+        view.addSubview(sceneLocationView)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func ViewPin(latitude:Double, longitude:Double, altitude:Double){
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
+        var location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.498875, longitude: 127.027598), altitude: altitude+10)
+        //let view = UIView() // or a custom UIView subclass
+        let image:UIImage = UIImage(named: "group5Copy")!
+        //let annotationNode = LocationAnnotationNode(location: location, view: view)
+        var annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, image: image)
+        annotationNode.annotationNode.name = "fastfive"
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        
+        location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.500362, longitude: 127.027006), altitude: altitude+10)
+        annotationNode = LocationAnnotationNode(location: location, image: image)
+        annotationNode.annotationNode.name = "megabox"
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,10 +74,13 @@ class ViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Pause the view's session
-        sceneView.session.pause()
-        
         self.locManager.stopUpdatingLocation()
+    }
+    
+    override func viewDidLayoutSubviews() {
+      super.viewDidLayoutSubviews()
+
+      sceneLocationView.frame = view.bounds
     }
 }
 
@@ -118,14 +117,11 @@ extension ViewController: CLLocationManagerDelegate{
         
         let location: CLLocation = locations[locations.count-1]
         
-        // 위도와 오차
-        let latitude: String = String(format: "%.6f", location.coordinate.latitude)
-        let latitude_accuracy: String = String(format: "%.6f", location.horizontalAccuracy)
-        
-        // 경도와 오차
-        let longitude: String = String(format: "%.6f", location.coordinate.longitude)
-        let longitude_accuracy: String = String(format: "%6.f", location.verticalAccuracy)
-        
-        print(latitude, latitude_accuracy, longitude, longitude_accuracy)
+        // 위도와 경도
+        let latitude: Double = Double(location.coordinate.latitude)
+        let longitude: Double = Double(location.coordinate.longitude)
+        let altitude: Double = Double(location.altitude)
+        ViewPin(latitude: latitude, longitude: longitude, altitude: altitude)
+        print(latitude, longitude, altitude)
     }
 }
