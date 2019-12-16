@@ -21,7 +21,10 @@ class SearchViewController: UIViewController {
     ]
     let results = ["스타벅스 공덕오거리점", "마포구", "음식점"]
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
