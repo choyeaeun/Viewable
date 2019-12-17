@@ -13,7 +13,10 @@ class SearchResultViewController: UIViewController {
     
     // MARK:- Property
     @IBOutlet var headerView: UIView!
+    @IBOutlet var mapBackView: UIView!
     @IBOutlet var categoryLabel: UILabel!
+    
+    var daumMapView: MTMapView?
     
     // MARK:- Method
     override func viewDidLoad() {
@@ -24,6 +27,16 @@ class SearchResultViewController: UIViewController {
         headerView.layer.shadowOpacity = 0.5
         headerView.layer.shadowRadius = 2
         headerView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        if (!MTMapView.isMapTilePersistentCacheEnabled()) {
+            MTMapView.setMapTilePersistentCacheEnabled(true)
+        }
+
+        daumMapView = MTMapView.create(delegate: self, bound: mapBackView.bounds)
+        if let mapView = daumMapView {
+            mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.onWithHeading
+            mapBackView.addSubview(mapView)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +48,9 @@ class SearchResultViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        if (daumMapView != nil) {
+            daumMapView = nil
+        }
     }
     
     @IBAction func didClickedBackButton(_ sender: Any) {
@@ -43,4 +59,8 @@ class SearchResultViewController: UIViewController {
     
     @IBAction func didClickedListButton(_ sender: Any) {
     }
+}
+
+extension SearchResultViewController: MTMapViewDelegate {
+    
 }

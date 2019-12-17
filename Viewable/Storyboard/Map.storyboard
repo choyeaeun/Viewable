@@ -35,6 +35,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz0-vG-ZVi" userLabel="MapBackView">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-A1-CwW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                 <subviews>
@@ -97,9 +101,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sz0-vG-ZVi" firstAttribute="top" secondItem="tZa-A1-CwW" secondAttribute="bottom" id="0yl-cV-J2Q"/>
                             <constraint firstItem="tZa-A1-CwW" firstAttribute="top" secondItem="o4b-Dj-jGH" secondAttribute="top" id="GGJ-iD-H0a"/>
                             <constraint firstItem="tZa-A1-CwW" firstAttribute="leading" secondItem="o4b-Dj-jGH" secondAttribute="leading" id="MXP-3S-WwF"/>
+                            <constraint firstItem="o4b-Dj-jGH" firstAttribute="bottom" secondItem="sz0-vG-ZVi" secondAttribute="bottom" id="XR9-pP-t7h"/>
                             <constraint firstItem="o4b-Dj-jGH" firstAttribute="trailing" secondItem="tZa-A1-CwW" secondAttribute="trailing" id="cCa-pl-LwP"/>
+                            <constraint firstItem="o4b-Dj-jGH" firstAttribute="trailing" secondItem="sz0-vG-ZVi" secondAttribute="trailing" id="ite-6c-6Ge"/>
+                            <constraint firstItem="sz0-vG-ZVi" firstAttribute="leading" secondItem="o4b-Dj-jGH" secondAttribute="leading" id="kOc-KK-ioI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o4b-Dj-jGH"/>
                     </view>
@@ -107,6 +115,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="Ybd-W9-JS5" id="S9e-cM-xVx"/>
                         <outlet property="headerView" destination="tZa-A1-CwW" id="fyQ-rI-of5"/>
+                        <outlet property="mapBackView" destination="sz0-vG-ZVi" id="X8L-P4-mEm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ykz-Km-6hV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
