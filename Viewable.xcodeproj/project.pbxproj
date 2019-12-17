@@ -61,6 +61,7 @@
 		EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1423A614B100A11EB3 /* FloatExtension.swift */; };
 		EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */; };
 		EE870F1923A6373D00A11EB3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1823A6373D00A11EB3 /* SearchViewController.swift */; };
+		EEB32E4F23A92398001988D7 /* UIStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB32E4E23A92398001988D7 /* UIStoreCell.xib */; };
 		EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBD742B23A7E275001C76FE /* SearchResultViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		EE870F1423A614B100A11EB3 /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICategoryViewCell.swift; sourceTree = "<group>"; };
 		EE870F1823A6373D00A11EB3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Viewable/Util/UI/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
+		EEB32E4E23A92398001988D7 /* UIStoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIStoreCell.xib; sourceTree = "<group>"; };
 		EEBD742B23A7E275001C76FE /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultViewController.swift; path = Viewable/Util/UI/SearchResultViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -269,6 +271,7 @@
 				3A0B8C26239E5197003BBEDC /* Main.storyboard */,
 				3A0B8C8F23A32520003BBEDC /* Map.storyboard */,
 				3A0B8C2B239E5198003BBEDC /* LaunchScreen.storyboard */,
+				EEB32E4E23A92398001988D7 /* UIStoreCell.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				3A0B8C2A239E5198003BBEDC /* Assets.xcassets in Resources */,
 				3A0B8C28239E5197003BBEDC /* Main.storyboard in Resources */,
 				3A0B8C71239E6337003BBEDC /* map_pin.png in Resources */,
+				EEB32E4F23A92398001988D7 /* UIStoreCell.xib in Resources */,
 				3A0B8C62239E6337003BBEDC /* map_pinup@3x.png in Resources */,
 				3A0B8C63239E6337003BBEDC /* map_pin_shadow@3x.png in Resources */,
 				3A0B8C61239E6337003BBEDC /* map_pin_custom@3x.png in Resources */,

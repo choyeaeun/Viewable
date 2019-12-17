@@ -12,7 +12,7 @@ import UIKit
 class StoreInformationViewController: UIViewController {
     
     // MARk:- Property
-    @IBOutlet var sortButton: UIButton!
+    @IBOutlet var collectionView: UICollectionView!
     
     let data = [
         StoreInformation(name: "스타벅스 공덕오거리점", address: "서울특별시 마포구 백범로 108-112", phone: "02-702-4199", facilities: [1, 2, 3], category: 0, thumbnail: "")
@@ -21,7 +21,9 @@ class StoreInformationViewController: UIViewController {
     // MARK:- Method
     override func viewDidLoad() {
         print("view did load")
-        sortButton.layer.zPosition = 100
+
+        let nib = UINib(nibName: UIStoreCell.identifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: UIStoreCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
