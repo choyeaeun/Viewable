@@ -15,22 +15,53 @@ class ViewController: UIViewController{
     
     // locationManager 변수
     let locManager: CLLocationManager = CLLocationManager()
-    
+    // pin 찍는 뷰
     var sceneLocationView = SceneLocationView()
+    let pinImg = UIView()
+    
+    @IBOutlet var buildingInfoView: UIView!
+    
+    @IBOutlet var buildingName: UILabel!
+    @IBOutlet var buildingAddress: UILabel!
+    @IBOutlet var facDoorIMG: UIRadiusImageView!
+    @IBOutlet var facDoorLB: UILabel!
+    @IBOutlet var facElevatorIMG: UIRadiusImageView!
+    @IBOutlet var facElevatorLB: UILabel!
+    @IBOutlet var facToiletIMG: UIRadiusImageView!
+    @IBOutlet var facToiletLB: UILabel!
+    @IBOutlet var facParkingIMG: UIRadiusImageView!
+    @IBOutlet var facParkingLB: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
+        
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        print("\ntap!!!!!!")
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        UIView.animate(withDuration: 1) {
+            self.buildingInfoView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        }
+//        buildingInfoView.
+        // Your action
+    }
+    // 특정 위치에 pin 꽂기
     func ViewPin(latitude:Double, longitude:Double, altitude:Double){
         
         var location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.498875, longitude: 127.027598), altitude: altitude+10)
-        //let view = UIView() // or a custom UIView subclass
+        
         let image:UIImage = UIImage(named: "group5Copy")!
-        //let annotationNode = LocationAnnotationNode(location: location, view: view)
+        let imageView = UIImageView(image: image)
+        self.pinImg.addSubview(imageView)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        pinImg.isUserInteractionEnabled = true
+        pinImg.addGestureRecognizer(tapGestureRecognizer)
+        
         var annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, image: image)
         annotationNode.annotationNode.name = "fastfive"
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
@@ -39,6 +70,14 @@ class ViewController: UIViewController{
         annotationNode = LocationAnnotationNode(location: location, image: image)
         annotationNode.annotationNode.name = "megabox"
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+    }
+    
+    // 보유시설 기능 설명 뷰로 넘어가는 액션
+    @IBAction func infromationAction(_ sender: UIButton) {
+        guard let infoVC = self.storyboard?.instantiateViewController(identifier: "facilityInfoVC") as? facilityInfoVC
+            else { return }
+        
+        self.present(infoVC, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,9 +117,9 @@ class ViewController: UIViewController{
     }
     
     override func viewDidLayoutSubviews() {
-      super.viewDidLayoutSubviews()
-
-      sceneLocationView.frame = view.bounds
+        super.viewDidLayoutSubviews()
+        //
+        sceneLocationView.frame = view.bounds
     }
 }
 
@@ -121,6 +160,7 @@ extension ViewController: CLLocationManagerDelegate{
         let latitude: Double = Double(location.coordinate.latitude)
         let longitude: Double = Double(location.coordinate.longitude)
         let altitude: Double = Double(location.altitude)
+        
         ViewPin(latitude: latitude, longitude: longitude, altitude: altitude)
         print(latitude, longitude, altitude)
     }
