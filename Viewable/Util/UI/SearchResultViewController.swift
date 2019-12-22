@@ -64,3 +64,17 @@ class SearchResultViewController: UIViewController {
 extension SearchResultViewController: MTMapViewDelegate {
     
 }
+
+extension SearchResultViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UISearchResultCell.identifier, for: indexPath) as? UISearchResultCell
+        else {
+            return UICollectionViewCell()
+        }
+        return cell
+    }
+}
