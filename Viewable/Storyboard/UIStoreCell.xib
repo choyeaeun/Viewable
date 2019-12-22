@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UIStoreCell" rowHeight="109" id="tUL-u4-MX5" customClass="UIStoreCell" customModule="Viewable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUL-u4-MX5" id="5cB-gC-laK">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스타벅스 공덕오거리점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-51-XJl" userLabel="Name Label">
+                        <rect key="frame" x="20" y="42" width="152" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="THT-Ib-uE7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시 마포구 백범로 108-112" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq1-9G-NPi" userLabel="Address Label">
+                        <rect key="frame" x="20" y="68" width="183" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="0sQ-at-nr6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-702-4199" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoN-xa-tkf" userLabel="PhoneLabel">
+                        <rect key="frame" x="20" y="87" width="82" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="xJ8-vI-TNI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-Qr-lXN" userLabel="Category Radius View" customClass="UIRadiusView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="20" y="15" width="38.5" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카페" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-dl-dry">
+                                <rect key="frame" x="8" y="0.0" width="22.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QPL-KV-bTg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wey-dl-dry" secondAttribute="trailing" constant="8" id="8fE-FS-Biv"/>
+                            <constraint firstAttribute="bottom" secondItem="Wey-dl-dry" secondAttribute="bottom" id="8m2-F8-3Pl"/>
+                            <constraint firstItem="Wey-dl-dry" firstAttribute="top" secondItem="hcc-Qr-lXN" secondAttribute="top" id="kJF-Ze-TTL"/>
+                            <constraint firstItem="Wey-dl-dry" firstAttribute="leading" secondItem="hcc-Qr-lXN" secondAttribute="leading" constant="8" id="smc-bQ-c9n"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보유 시설" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3n-dy-7f8" userLabel="Facility Label">
+                        <rect key="frame" x="20" y="111" width="45" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="FEA-GY-udS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="0.3803921569" green="0.42745098040000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-pi-wBd" userLabel="Facility1 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="20" y="134" width="36" height="36"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="NdW-VF-JMO"/>
+                            <constraint firstAttribute="width" secondItem="Y7C-pi-wBd" secondAttribute="height" multiplier="1:1" id="zDx-c9-YPa"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sou-Vk-QYa" userLabel="Facility2 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="61" y="134" width="36" height="36"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="brV-Rc-2jm"/>
+                            <constraint firstAttribute="width" secondItem="sou-Vk-QYa" secondAttribute="height" multiplier="1:1" id="t2d-aD-7g1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-b8-04u" userLabel="Facility3 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="102" y="134" width="36" height="36"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="5Lg-GR-tT9"/>
+                            <constraint firstAttribute="width" secondItem="jmm-b8-04u" secondAttribute="height" multiplier="1:1" id="sEy-Ba-CTB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-B3-Emk" userLabel="Facility4 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="143" y="134" width="36" height="36"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="He7-ku-UOt"/>
+                            <constraint firstAttribute="width" secondItem="XOj-B3-Emk" secondAttribute="height" multiplier="1:1" id="sLY-Of-6LR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-F8-9ip" userLabel="Facility5 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="184" y="134" width="36" height="36"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sUB-F8-9ip" secondAttribute="height" multiplier="1:1" id="2fy-7b-8Sa"/>
+                            <constraint firstAttribute="width" constant="36" id="J0b-mF-oOL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-wG-wfD" userLabel="BottomLine">
+                        <rect key="frame" x="20" y="183" width="374" height="1"/>
+                        <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="SHX-5T-Bmy"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-Px-Oc5" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                        <rect key="frame" x="309" y="23" width="85" height="85"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="YaA-oC-gfs"/>
+                            <constraint firstAttribute="width" secondItem="qEx-Px-Oc5" secondAttribute="height" multiplier="1:1" id="uWu-bd-TPp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bTz-wG-wfD" firstAttribute="top" secondItem="sou-Vk-QYa" secondAttribute="bottom" constant="13" id="4lh-Oe-mgE"/>
+                    <constraint firstItem="hcc-Qr-lXN" firstAttribute="top" secondItem="5cB-gC-laK" secondAttribute="top" constant="15" id="6Kh-sh-4ff"/>
+                    <constraint firstItem="Y7C-pi-wBd" firstAttribute="leading" secondItem="C3n-dy-7f8" secondAttribute="leading" id="Ob8-g1-QpG"/>
+                    <constraint firstItem="pq1-9G-NPi" firstAttribute="leading" secondItem="fFl-51-XJl" secondAttribute="leading" id="Pk7-np-Umo"/>
+                    <constraint firstItem="hcc-Qr-lXN" firstAttribute="leading" secondItem="5cB-gC-laK" secondAttribute="leading" constant="20" id="QdP-Vm-y2F"/>
+                    <constraint firstItem="C3n-dy-7f8" firstAttribute="leading" secondItem="RoN-xa-tkf" secondAttribute="leading" id="T7q-W8-YcP"/>
+                    <constraint firstItem="sou-Vk-QYa" firstAttribute="leading" secondItem="Y7C-pi-wBd" secondAttribute="trailing" constant="5" id="Tse-Xr-4QW"/>
+                    <constraint firstItem="jmm-b8-04u" firstAttribute="leading" secondItem="sou-Vk-QYa" secondAttribute="trailing" constant="5" id="U4Z-72-PkN"/>
+                    <constraint firstItem="C3n-dy-7f8" firstAttribute="top" secondItem="RoN-xa-tkf" secondAttribute="bottom" constant="5" id="UdO-Xz-Jev"/>
+                    <constraint firstItem="qEx-Px-Oc5" firstAttribute="top" secondItem="5cB-gC-laK" secondAttribute="top" constant="23" id="V1z-RY-CGw"/>
+                    <constraint firstItem="Y7C-pi-wBd" firstAttribute="top" secondItem="C3n-dy-7f8" secondAttribute="bottom" constant="5" id="XnG-Ij-pcC"/>
+                    <constraint firstItem="jmm-b8-04u" firstAttribute="centerY" secondItem="sou-Vk-QYa" secondAttribute="centerY" id="aaA-lX-QDG"/>
+                    <constraint firstAttribute="trailing" secondItem="qEx-Px-Oc5" secondAttribute="trailing" constant="20" id="dam-Ie-U80"/>
+                    <constraint firstItem="pq1-9G-NPi" firstAttribute="top" secondItem="fFl-51-XJl" secondAttribute="bottom" constant="1" id="df9-TN-gV2"/>
+                    <constraint firstItem="fFl-51-XJl" firstAttribute="leading" secondItem="hcc-Qr-lXN" secondAttribute="leading" id="ewv-fK-7h7"/>
+                    <constraint firstItem="bTz-wG-wfD" firstAttribute="leading" secondItem="5cB-gC-laK" secondAttribute="leading" constant="20" id="hu1-lW-wem"/>
+                    <constraint firstItem="RoN-xa-tkf" firstAttribute="top" secondItem="pq1-9G-NPi" secondAttribute="bottom" id="ib1-iC-ClM"/>
+                    <constraint firstItem="XOj-B3-Emk" firstAttribute="leading" secondItem="jmm-b8-04u" secondAttribute="trailing" constant="5" id="mcS-Uu-rNF"/>
+                    <constraint firstItem="sUB-F8-9ip" firstAttribute="centerY" secondItem="XOj-B3-Emk" secondAttribute="centerY" id="nno-16-PSx"/>
+                    <constraint firstItem="XOj-B3-Emk" firstAttribute="centerY" secondItem="jmm-b8-04u" secondAttribute="centerY" id="o0f-Iw-bK0"/>
+                    <constraint firstItem="sou-Vk-QYa" firstAttribute="centerY" secondItem="Y7C-pi-wBd" secondAttribute="centerY" id="qJy-90-A8U"/>
+                    <constraint firstItem="fFl-51-XJl" firstAttribute="top" secondItem="hcc-Qr-lXN" secondAttribute="bottom" constant="2" id="qeH-bG-xiX"/>
+                    <constraint firstItem="RoN-xa-tkf" firstAttribute="leading" secondItem="pq1-9G-NPi" secondAttribute="leading" id="v3E-yd-PgJ"/>
+                    <constraint firstItem="sUB-F8-9ip" firstAttribute="leading" secondItem="XOj-B3-Emk" secondAttribute="trailing" constant="5" id="wT0-Hn-sVa"/>
+                    <constraint firstAttribute="trailing" secondItem="bTz-wG-wfD" secondAttribute="trailing" constant="20" id="wjC-0h-4A5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="categoryLabel" destination="Wey-dl-dry" id="v2U-oL-KlR"/>
+                <outlet property="storeAddressLabel" destination="pq1-9G-NPi" id="jgp-26-nnE"/>
+                <outlet property="storeNameLabel" destination="fFl-51-XJl" id="FBk-SN-BHD"/>
+                <outlet property="storePhoneLabel" destination="RoN-xa-tkf" id="1In-DL-nAS"/>
+                <outlet property="thumbnailImageView" destination="qEx-Px-Oc5" id="WjQ-D7-FkO"/>
+                <outletCollection property="facilitiesImageView" destination="Y7C-pi-wBd" collectionClass="NSMutableArray" id="Jjt-Ly-bsf"/>
+                <outletCollection property="facilitiesImageView" destination="sou-Vk-QYa" collectionClass="NSMutableArray" id="dbZ-Kb-jxB"/>
+                <outletCollection property="facilitiesImageView" destination="jmm-b8-04u" collectionClass="NSMutableArray" id="WhY-7l-7FY"/>
+                <outletCollection property="facilitiesImageView" destination="XOj-B3-Emk" collectionClass="NSMutableArray" id="x1M-i6-Tyj"/>
+                <outletCollection property="facilitiesImageView" destination="sUB-F8-9ip" collectionClass="NSMutableArray" id="SKU-P5-f0P"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="232.70089285714283"/>
+        </tableViewCell>
+    </objects>
+</document>

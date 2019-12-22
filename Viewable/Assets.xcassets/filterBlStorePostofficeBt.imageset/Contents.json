@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "filterBlStorePostofficeBt.png",
-      "scale" : "1x",
-      "idiom" : "universal"
-    },
-    {
-      "scale" : "2x",
-      "filename" : "filterBlStorePostofficeBt@2x.png",
-      "idiom" : "universal"
-    },
-    {
       "idiom" : "universal",
+      "filename" : "filterBlStorePostofficeBt.png",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "filterBlStorePostofficeBt@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
       "filename" : "filterBlStorePostofficeBt@3x.png",
+      "idiom" : "universal",
       "scale" : "3x"
     }
   ],
