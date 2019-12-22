@@ -23,7 +23,7 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
@@ -37,7 +37,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         else {
             return UICollectionViewCell()
         }
-        cell.textLabel.text = categories[indexPath.item]["text"]
+//        cell.textLabel.text = categories[indexPath.item]["text"]
         return cell
     }
 }

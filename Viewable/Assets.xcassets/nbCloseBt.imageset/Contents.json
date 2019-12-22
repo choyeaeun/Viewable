@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "nbCloseBt.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "universal",
+      "filename" : "nbCloseBt@2x.png"
+    },
+    {
+      "filename" : "nbCloseBt@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
