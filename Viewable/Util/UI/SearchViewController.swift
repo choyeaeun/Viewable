@@ -11,13 +11,13 @@ import UIKit
 
 class SearchViewController: UIViewController {
     let categories = [
-        [ "text": "음식점", "icon": "" ],
-        [ "text": "카페", "icon": "" ],
-        [ "text": "편의점", "icon": "" ],
-        [ "text": "마트", "icon": "" ],
-        [ "text": "약국", "icon": "" ],
-        [ "text": "지하철역", "icon": "" ],
-        [ "text": "은행", "icon": "" ]
+        [ "icon": #imageLiteral(resourceName: "searchStoreFoodBt") ],
+        [ "icon": #imageLiteral(resourceName: "searchStoreCafeBt") ],
+        [ "icon": #imageLiteral(resourceName: "searchStoreMartBt") ],
+        [ "icon": #imageLiteral(resourceName: "searchStoreBankBt") ],
+        [ "icon": #imageLiteral(resourceName: "searchStorePharmacyBt") ],
+        [ "icon": #imageLiteral(resourceName: "searchStorePostofficeBt") ],
+        [ "icon": #imageLiteral(resourceName: "searchStoreConveniencestoreBt") ]
     ]
     let results = ["스타벅스 공덕오거리점", "마포구", "음식점"]
     
@@ -37,7 +37,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         else {
             return UICollectionViewCell()
         }
-//        cell.textLabel.text = categories[indexPath.item]["text"]
+        cell.iconImageView.image = categories[indexPath.item]["icon"]
         return cell
     }
 }

@@ -57,6 +57,7 @@
 		EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02623A7D2E30026EBAB /* Constants.swift */; };
 		EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */; };
 		EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F04F323A601D50055369C /* UIRadiusImageView.swift */; };
+		EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE546DB323AF4DF500E85574 /* UISearchResultCell.swift */; };
 		EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F0E23A610FC00A11EB3 /* UIRadiusButton.swift */; };
 		EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1423A614B100A11EB3 /* FloatExtension.swift */; };
 		EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */; };
@@ -130,6 +131,7 @@
 		EE0DA02623A7D2E30026EBAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadiusView.swift; sourceTree = "<group>"; };
 		EE0F04F323A601D50055369C /* UIRadiusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadiusImageView.swift; sourceTree = "<group>"; };
+		EE546DB323AF4DF500E85574 /* UISearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultCell.swift; sourceTree = "<group>"; };
 		EE870F0E23A610FC00A11EB3 /* UIRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadiusButton.swift; sourceTree = "<group>"; };
 		EE870F1423A614B100A11EB3 /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICategoryViewCell.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */,
 				EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */,
 				EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */,
+				EE546DB323AF4DF500E85574 /* UISearchResultCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */,
 				EE870F1923A6373D00A11EB3 /* SearchViewController.swift in Sources */,
 				EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */,
+				EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */,
 				EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */,
 				EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */,
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
