@@ -76,8 +76,9 @@ class ViewController: UIViewController{
     @IBAction func infromationAction(_ sender: UIButton) {
         guard let infoVC = self.storyboard?.instantiateViewController(identifier: "facilityInfoVC") as? facilityInfoVC
             else { return }
-        
+
         self.present(infoVC, animated: true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
