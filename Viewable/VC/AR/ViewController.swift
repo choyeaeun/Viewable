@@ -7,42 +7,77 @@
 //
 
 import UIKit
-import SpriteKit
 import ARKit
 import CoreLocation
+import ARCL
 
 class ViewController: UIViewController{
     
-    @IBOutlet var sceneView: ARSKView!
     // locationManager 변수
     let locManager: CLLocationManager = CLLocationManager()
+    // pin 찍는 뷰
+    var sceneLocationView = SceneLocationView()
+    let pinImg = UIView()
+    
+    @IBOutlet var buildingInfoView: UIView!
+    
+    @IBOutlet var buildingName: UILabel!
+    @IBOutlet var buildingAddress: UILabel!
+    @IBOutlet var facDoorIMG: UIRadiusImageView!
+    @IBOutlet var facDoorLB: UILabel!
+    @IBOutlet var facElevatorIMG: UIRadiusImageView!
+    @IBOutlet var facElevatorLB: UILabel!
+    @IBOutlet var facToiletIMG: UIRadiusImageView!
+    @IBOutlet var facToiletLB: UILabel!
+    @IBOutlet var facParkingIMG: UIRadiusImageView!
+    @IBOutlet var facParkingLB: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and node count
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
-        
-        // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "Scene") {
-            sceneView.presentScene(scene)
-        }
-        
+        sceneLocationView.run()
+        view.addSubview(sceneLocationView)
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        print("\ntap!!!!!!")
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        UIView.animate(withDuration: 1) {
+            self.buildingInfoView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        }
+//        buildingInfoView.
+        // Your action
+    }
+    // 특정 위치에 pin 꽂기
+    func ViewPin(latitude:Double, longitude:Double, altitude:Double){
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
+        var location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.498875, longitude: 127.027598), altitude: altitude+10)
+        
+        let image:UIImage = UIImage(named: "group5Copy")!
+        let imageView = UIImageView(image: image)
+        self.pinImg.addSubview(imageView)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        pinImg.isUserInteractionEnabled = true
+        pinImg.addGestureRecognizer(tapGestureRecognizer)
+        
+        var annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, image: image)
+        annotationNode.annotationNode.name = "fastfive"
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        
+        location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.500362, longitude: 127.027006), altitude: altitude+10)
+        annotationNode = LocationAnnotationNode(location: location, image: image)
+        annotationNode.annotationNode.name = "megabox"
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+    }
+    
+    // 보유시설 기능 설명 뷰로 넘어가는 액션
+    @IBAction func infromationAction(_ sender: UIButton) {
+        guard let infoVC = self.storyboard?.instantiateViewController(identifier: "facilityInfoVC") as? facilityInfoVC
+            else { return }
+        
+        self.present(infoVC, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,10 +113,13 @@ class ViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Pause the view's session
-        sceneView.session.pause()
-        
         self.locManager.stopUpdatingLocation()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //
+        sceneLocationView.frame = view.bounds
     }
 }
 
@@ -118,14 +156,12 @@ extension ViewController: CLLocationManagerDelegate{
         
         let location: CLLocation = locations[locations.count-1]
         
-        // 위도와 오차
-        let latitude: String = String(format: "%.6f", location.coordinate.latitude)
-        let latitude_accuracy: String = String(format: "%.6f", location.horizontalAccuracy)
+        // 위도와 경도
+        let latitude: Double = Double(location.coordinate.latitude)
+        let longitude: Double = Double(location.coordinate.longitude)
+        let altitude: Double = Double(location.altitude)
         
-        // 경도와 오차
-        let longitude: String = String(format: "%.6f", location.coordinate.longitude)
-        let longitude_accuracy: String = String(format: "%6.f", location.verticalAccuracy)
-        
-        print(latitude, latitude_accuracy, longitude, longitude_accuracy)
+        ViewPin(latitude: latitude, longitude: longitude, altitude: altitude)
+        print(latitude, longitude, altitude)
     }
 }

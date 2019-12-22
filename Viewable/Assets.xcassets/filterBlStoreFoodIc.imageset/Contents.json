@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "filterBlStoreFoodIc.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "universal",
+      "filename" : "filterBlStoreFoodIc@2x.png"
+    },
+    {
+      "filename" : "filterBlStoreFoodIc@3x.png",
+      "scale" : "3x",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "marketInfoCircle.png",
       "idiom" : "universal",
+      "filename" : "filterGrStoreMartIcCopy.png",
       "scale" : "1x"
     },
     {
-      "scale" : "2x",
-      "filename" : "marketInfoCircle@2x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "filterGrStoreMartIcCopy@2x.png",
+      "scale" : "2x"
     },
     {
-      "filename" : "marketInfoCircle@3x.png",
       "scale" : "3x",
+      "filename" : "filterGrStoreMartIcCopy@3x.png",
       "idiom" : "universal"
     }
   ],
