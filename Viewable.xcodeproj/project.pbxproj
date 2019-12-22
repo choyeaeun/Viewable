@@ -137,6 +137,10 @@
 		EEB32E4E23A92398001988D7 /* UIStoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIStoreCell.xib; sourceTree = "<group>"; };
 		EEB32E5223A92D77001988D7 /* MTMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewExtension.swift; sourceTree = "<group>"; };
 		EEBD742B23A7E275001C76FE /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultViewController.swift; path = Viewable/Util/UI/SearchResultViewController.swift; sourceTree = SOURCE_ROOT; };
+		3A0B8C9B23AD33E3003BBEDC /* facilityInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facilityInfoVC.swift; sourceTree = "<group>"; };
+		3A0B8C9D23AD3712003BBEDC /* ShopfilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfilterVC.swift; sourceTree = "<group>"; };
+		3A0B8C9F23AD3BBB003BBEDC /* ShopDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailVC.swift; sourceTree = "<group>"; };
+		A0ED7C22FFA8A3EB310EAECC /* Pods-Viewable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.debug.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,26 +303,15 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		3A0B8C8C239E75C2003BBEDC /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		3A0B8C8D239E75C6003BBEDC /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		3A0B8C9123A3434B003BBEDC /* AR */ = {
 			isa = PBXGroup;
 			children = (
 				3A0B8C24239E5197003BBEDC /* ViewController.swift */,
 				3A0B8C22239E5197003BBEDC /* Scene.swift */,
 				3A0B8C20239E5197003BBEDC /* Scene.sks */,
+				3A0B8C9B23AD33E3003BBEDC /* facilityInfoVC.swift */,
+				3A0B8C9D23AD3712003BBEDC /* ShopfilterVC.swift */,
+				3A0B8C9F23AD3BBB003BBEDC /* ShopDetailVC.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -326,11 +319,37 @@
 		3A0B8C9223A34351003BBEDC /* Map */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		3A0B8C9323A64660003BBEDC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B8C9423A64660003BBEDC /* UIRadiusButton.swift */,
+				3A0B8C9523A64660003BBEDC /* UIRadiusImageView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A0B8C9823A6466B003BBEDC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B8C9923A6466B003BBEDC /* FloatExtension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4B62842846314B725D13A33B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
 				EE870F1823A6373D00A11EB3 /* SearchViewController.swift */,
 				EEBD742B23A7E275001C76FE /* SearchResultViewController.swift */,
 				EE0DA02023A7D1570026EBAB /* StoreInformationViewController.swift */,
+				A0ED7C22FFA8A3EB310EAECC /* Pods-Viewable.debug.xcconfig */,
+				08B93A79CE1F80E38E3E8B6A /* Pods-Viewable.release.xcconfig */,
 			);
-			path = Map;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		7EB0E91F7E8CD7297BFAB139 /* Pods */ = {
@@ -524,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0B8CA023AD3BBB003BBEDC /* ShopDetailVC.swift in Sources */,
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
 				EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
@@ -534,6 +554,10 @@
 				EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */,
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
 				EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */,
+				3A0B8C9623A64660003BBEDC /* UIRadiusButton.swift in Sources */,
+				3A0B8C9C23AD33E3003BBEDC /* facilityInfoVC.swift in Sources */,
+				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
+				3A0B8C9E23AD3712003BBEDC /* ShopfilterVC.swift in Sources */,
 				3A0B8C1F239E5197003BBEDC /* AppDelegate.swift in Sources */,
 				EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */,
 				EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */,

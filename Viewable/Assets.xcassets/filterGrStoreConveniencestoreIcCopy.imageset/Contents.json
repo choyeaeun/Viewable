@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "filterGrStoreConveniencestoreIcCopy.png",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "filterGrStoreConveniencestoreIcCopy@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "scale" : "3x",
+      "filename" : "filterGrStoreConveniencestoreIcCopy@3x.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
