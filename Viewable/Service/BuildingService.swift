@@ -1,5 +1,5 @@
 //
-//  ARService.swift
+//  BuildingService.swift
 //  Viewable
 //
 //  Created by 조예은 on 2019/12/28.
@@ -7,14 +7,11 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
-
-struct ARService: GettableService {
-    typealias NetworkData = ARVO
-    static let shareInstance = ARService()
+struct BuildingService: GettableService {
+    typealias NetworkData = BuildInfo
+    static let shareInstance = BuildingService()
     
-    func arInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
+    func buildingBoardInit(url : String, params: [String : Any], completion : @escaping (NetworkResult<Any>) -> Void){
         
         get(url) { (result) in
             switch result {

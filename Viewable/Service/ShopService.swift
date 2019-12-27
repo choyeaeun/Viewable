@@ -1,5 +1,5 @@
 //
-//  ARService.swift
+//  ShopService.swift
 //  Viewable
 //
 //  Created by 조예은 on 2019/12/28.
@@ -7,14 +7,11 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
-
-struct ARService: GettableService {
-    typealias NetworkData = ARVO
-    static let shareInstance = ARService()
+struct ShopService: GettableService {
+    typealias NetworkData = ShopInfoVO
+    static let shareInstance = ShopService()
     
-    func arInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
+    func shopBoardInit(url : String, params: [String : Any], completion : @escaping (NetworkResult<Any>) -> Void){
         
         get(url) { (result) in
             switch result {
