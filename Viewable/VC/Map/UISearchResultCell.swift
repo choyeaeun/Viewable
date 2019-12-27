@@ -13,6 +13,27 @@ class UISearchResultCell: UICollectionViewCell {
     
     static let identifier = "UISearchResultCell"
     
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var operationLabel: UILabel!
+    @IBOutlet var phoneLabel: UILabel!
+    @IBOutlet var imageView: UIRadiusImageView!
+    
+    var data: StoreData? {
+        didSet {
+            if let safeData = data {
+                nameLabel.text = safeData.name
+                addressLabel.text = safeData.address
+                operationLabel.text = safeData.operating
+                phoneLabel.text = safeData.phone
+                if let url = URL(string: safeData.img) {
+                    imageView.downloadImage(from: url)
+                }
+            }
+        }
+    }
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
 

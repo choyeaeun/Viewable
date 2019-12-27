@@ -14,14 +14,19 @@ class SearchResultViewController: UIViewController {
     // MARK:- Property
     @IBOutlet var headerView: UIView!
     @IBOutlet var mapBackView: UIView!
+    @IBOutlet var storeCollectionView: UICollectionView!
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var categoryLabel: UILabel!
     
+    var stores: [StoreData] = []
     var daumMapView: MTMapView?
+    var category: Int = -1
+    var searchText: String = ""
+    var facilties: [Int] = []
     
     // MARK:- Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let color = CGFloat(155 / 255)
         headerView.layer.shadowColor = UIColor(red: color, green: color, blue: color, alpha: 0.27).cgColor
         headerView.layer.shadowOpacity = 0.5
@@ -36,6 +41,33 @@ class SearchResultViewController: UIViewController {
         if let mapView = daumMapView {
             mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.onWithHeading
             mapBackView.addSubview(mapView)
+        }
+        
+        var url = "\(APIService.BaseURL)/search"
+        if category != -1 {
+            searchBar.text = Constants.categories[category].name
+            url += "/\(category + 1)"
+        } else {
+            searchBar.text = searchText
+            if let text = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+                url += "?keyword=\(text)"
+            }
+            if facilties.count > 0 {
+                let facilitiesJoinString = facilties.map { ($0 + 1).description }.joined(separator: ",")
+                url += "&facilityIdx=\(facilitiesJoinString)"
+            }
+        }
+        print("url: \(url)")
+        SearchService.shareInstance.search(url: url) { result in
+            switch result {
+            case .networkSuccess(let data):
+                if let vo = data as? SearchCategoryVO {
+                    self.stores = vo.data
+                    self.storeCollectionView.reloadData()
+                }
+            default:
+                break
+            }
         }
     }
     
@@ -67,7 +99,7 @@ extension SearchResultViewController: MTMapViewDelegate {
 
 extension SearchResultViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return stores.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,6 +107,7 @@ extension SearchResultViewController: UICollectionViewDelegate, UICollectionView
         else {
             return UICollectionViewCell()
         }
+        cell.data = stores[indexPath.item]
         return cell
     }
 }
