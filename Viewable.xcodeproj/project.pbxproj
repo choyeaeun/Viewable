@@ -54,17 +54,23 @@
 		3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */; };
 		3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */; };
 		3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */; };
+		8024427823B61F0C004CE0E2 /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8024427723B61F0C004CE0E2 /* Report.storyboard */; };
+		8024427A23B61F5E004CE0E2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024427923B61F5E004CE0E2 /* ReportViewController.swift */; };
+		8024427C23B637DC004CE0E2 /* UIReportTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024427B23B637DC004CE0E2 /* UIReportTextView.swift */; };
+		EE0AC77923B3AA68003BE41B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AC77823B3AA68003BE41B /* Category.swift */; };
+		EE0AC77B23B3AB54003BE41B /* Facilitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AC77A23B3AB54003BE41B /* Facilitie.swift */; };
 		EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */; };
-		EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02023A7D1570026EBAB /* StoreInformationViewController.swift */; };
 		EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */; };
 		EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02623A7D2E30026EBAB /* Constants.swift */; };
 		EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */; };
 		EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F04F323A601D50055369C /* UIRadiusImageView.swift */; };
-		EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE546DB323AF4DF500E85574 /* UISearchResultCell.swift */; };
+		EE546DBB23B3962600E85574 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE546DB823B3962600E85574 /* SearchViewController.swift */; };
+		EE546DBC23B3962600E85574 /* StoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE546DB923B3962600E85574 /* StoreInformationViewController.swift */; };
+		EE546DBD23B3962600E85574 /* UISearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE546DBA23B3962600E85574 /* UISearchResultCell.swift */; };
+		EE546DBF23B3A5F900E85574 /* UIToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE546DBE23B3A5F900E85574 /* UIToggleButton.swift */; };
 		EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F0E23A610FC00A11EB3 /* UIRadiusButton.swift */; };
 		EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1423A614B100A11EB3 /* FloatExtension.swift */; };
 		EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */; };
-		EE870F1923A6373D00A11EB3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE870F1823A6373D00A11EB3 /* SearchViewController.swift */; };
 		EEB32E4F23A92398001988D7 /* UIStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB32E4E23A92398001988D7 /* UIStoreCell.xib */; };
 		EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB32E5223A92D77001988D7 /* MTMapViewExtension.swift */; };
 		EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBD742B23A7E275001C76FE /* SearchResultViewController.swift */; };
@@ -130,15 +136,23 @@
 		3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailVC.swift; sourceTree = "<group>"; };
 		3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailCVCell.swift; sourceTree = "<group>"; };
 		54862A051D9BEBE508E5CAD3 /* Pods-Viewable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.release.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.release.xcconfig"; sourceTree = "<group>"; };
+		8024427723B61F0C004CE0E2 /* Report.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
+		8024427923B61F5E004CE0E2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		8024427B23B637DC004CE0E2 /* UIReportTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIReportTextView.swift; sourceTree = "<group>"; };
 		94F433FFD41A0CF548BAB9C1 /* Pods_Viewable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viewable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F596771FBD98D095074BB1 /* Pods-Viewable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.debug.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.debug.xcconfig"; sourceTree = "<group>"; };
+		EE0AC77823B3AA68003BE41B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EE0AC77A23B3AB54003BE41B /* Facilitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facilitie.swift; sourceTree = "<group>"; };
 		EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoreCell.swift; sourceTree = "<group>"; };
 		EE0DA02023A7D1570026EBAB /* StoreInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreInformationViewController.swift; path = Viewable/Util/UI/StoreInformationViewController.swift; sourceTree = SOURCE_ROOT; };
 		EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInformation.swift; sourceTree = "<group>"; };
 		EE0DA02623A7D2E30026EBAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadiusView.swift; sourceTree = "<group>"; };
 		EE0F04F323A601D50055369C /* UIRadiusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadiusImageView.swift; sourceTree = "<group>"; };
-		EE546DB323AF4DF500E85574 /* UISearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultCell.swift; sourceTree = "<group>"; };
+		EE546DB823B3962600E85574 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EE546DB923B3962600E85574 /* StoreInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreInformationViewController.swift; sourceTree = "<group>"; };
+		EE546DBA23B3962600E85574 /* UISearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISearchResultCell.swift; path = ../../VC/Map/UISearchResultCell.swift; sourceTree = "<group>"; };
+		EE546DBE23B3A5F900E85574 /* UIToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToggleButton.swift; sourceTree = "<group>"; };
 		EE870F0E23A610FC00A11EB3 /* UIRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadiusButton.swift; sourceTree = "<group>"; };
 		EE870F1423A614B100A11EB3 /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICategoryViewCell.swift; sourceTree = "<group>"; };
@@ -284,6 +298,7 @@
 				3A0B8C8F23A32520003BBEDC /* Map.storyboard */,
 				3A0B8C2B239E5198003BBEDC /* LaunchScreen.storyboard */,
 				EEB32E4E23A92398001988D7 /* UIStoreCell.xib */,
+				8024427723B61F0C004CE0E2 /* Report.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -291,8 +306,9 @@
 		3A0B8C8A239E7578003BBEDC /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				3A0B8C9223A34351003BBEDC /* Map */,
+				EE546DB723B3962600E85574 /* Map */,
 				3A0B8C9123A3434B003BBEDC /* AR */,
+				8024427923B61F5E004CE0E2 /* ReportViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -321,13 +337,6 @@
 			path = AR;
 			sourceTree = "<group>";
 		};
-		3A0B8C9223A34351003BBEDC /* Map */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
 		3ACEB31623AF55A30025F649 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */,
+				EE0AC77823B3AA68003BE41B /* Category.swift */,
+				EE0AC77A23B3AB54003BE41B /* Facilitie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,14 +377,25 @@
 		EE0F04F223A601C10055369C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EE546DBA23B3962600E85574 /* UISearchResultCell.swift */,
 				EE0F04F323A601D50055369C /* UIRadiusImageView.swift */,
 				EE870F0E23A610FC00A11EB3 /* UIRadiusButton.swift */,
 				EE870F1623A6262800A11EB3 /* UICategoryViewCell.swift */,
 				EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */,
 				EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */,
-				EE546DB323AF4DF500E85574 /* UISearchResultCell.swift */,
+				EE546DBE23B3A5F900E85574 /* UIToggleButton.swift */,
+				8024427B23B637DC004CE0E2 /* UIReportTextView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		EE546DB723B3962600E85574 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				EE546DB823B3962600E85574 /* SearchViewController.swift */,
+				EE546DB923B3962600E85574 /* StoreInformationViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		EE870F1323A614B100A11EB3 /* Utility */ = {
@@ -449,6 +471,7 @@
 				3A0B8C64239E6337003BBEDC /* copyright.png in Resources */,
 				3A0B8C72239E6337003BBEDC /* map_present.png in Resources */,
 				3A0B8C9023A32520003BBEDC /* Map.storyboard in Resources */,
+				8024427823B61F0C004CE0E2 /* Report.storyboard in Resources */,
 				3A0B8C6A239E6337003BBEDC /* map_pin_red.png in Resources */,
 				3A0B8C76239E6337003BBEDC /* map_pin_shadow.png in Resources */,
 				3A0B8C5F239E6337003BBEDC /* map_pinup.png in Resources */,
@@ -531,25 +554,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
-				EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */,
+				8024427C23B637DC004CE0E2 /* UIReportTextView.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
 				EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */,
 				3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */,
-				EE870F1923A6373D00A11EB3 /* SearchViewController.swift in Sources */,
 				EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */,
-				EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */,
 				EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */,
 				EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */,
 				3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */,
+				8024427A23B61F5E004CE0E2 /* ReportViewController.swift in Sources */,
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
 				EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
+				EE0AC77B23B3AB54003BE41B /* Facilitie.swift in Sources */,
 				3A0B8C1F239E5197003BBEDC /* AppDelegate.swift in Sources */,
+				EE546DBB23B3962600E85574 /* SearchViewController.swift in Sources */,
 				EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */,
 				EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */,
 				EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */,
+				EE546DBF23B3A5F900E85574 /* UIToggleButton.swift in Sources */,
 				3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */,
 				EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */,
+				EE546DBD23B3962600E85574 /* UISearchResultCell.swift in Sources */,
+				EE546DBC23B3962600E85574 /* StoreInformationViewController.swift in Sources */,
+				EE0AC77923B3AA68003BE41B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
