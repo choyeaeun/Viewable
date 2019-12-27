@@ -51,9 +51,17 @@
 		3A0B8C84239E63EC003BBEDC /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0B8C83239E63E6003BBEDC /* libxml2.tbd */; };
 		3A0B8C86239E63FE003BBEDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0B8C85239E63F7003BBEDC /* libsqlite3.tbd */; };
 		3A0B8C9023A32520003BBEDC /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B8C8F23A32520003BBEDC /* Map.storyboard */; };
+		3A489A0023B638C600FC0703 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4899FF23B638C600FC0703 /* DynamicHeightCollectionView.swift */; };
+		3A489A0223B639A700FC0703 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A489A0123B639A700FC0703 /* CollectionViewFlowLayout.swift */; };
+		3A489A0423B6487600FC0703 /* OneFacilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A489A0323B6487600FC0703 /* OneFacilityInfoVC.swift */; };
+		3A57E89B23B4F0DD0082597D /* ARView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E89A23B4F0DD0082597D /* ARView.xib */; };
+		3A57E89E23B50D570082597D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E89D23B50D570082597D /* TableViewCell.swift */; };
+		3AE96EC823B10ADD006B115D /* ShopListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE96EC723B10ADD006B115D /* ShopListVC.swift */; };
+		3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE96EC923B1114B006B115D /* ShopListTVCell.swift */; };
 		3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */; };
 		3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */; };
 		3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */; };
+		3AECB8CD23AF8D25002F605B /* ShopfilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CC23AF8D25002F605B /* ShopfilterVC.swift */; };
 		EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */; };
 		EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02023A7D1570026EBAB /* StoreInformationViewController.swift */; };
 		EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */; };
@@ -125,10 +133,17 @@
 		3A0B8C85239E63F7003BBEDC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3A0B8C87239E647B003BBEDC /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
 		3A0B8C8F23A32520003BBEDC /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		3A0B8C9D23AD3712003BBEDC /* ShopfilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfilterVC.swift; sourceTree = "<group>"; };
+		3A4899FF23B638C600FC0703 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
+		3A489A0123B639A700FC0703 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		3A489A0323B6487600FC0703 /* OneFacilityInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFacilityInfoVC.swift; sourceTree = "<group>"; };
+		3A57E89A23B4F0DD0082597D /* ARView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARView.xib; sourceTree = "<group>"; };
+		3A57E89D23B50D570082597D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3AE96EC723B10ADD006B115D /* ShopListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListVC.swift; sourceTree = "<group>"; };
+		3AE96EC923B1114B006B115D /* ShopListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTVCell.swift; sourceTree = "<group>"; };
 		3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = facilityInfoVC.swift; path = Viewable/VC/AR/facilityInfoVC.swift; sourceTree = SOURCE_ROOT; };
 		3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailVC.swift; sourceTree = "<group>"; };
 		3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailCVCell.swift; sourceTree = "<group>"; };
+		3AECB8CC23AF8D25002F605B /* ShopfilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfilterVC.swift; sourceTree = "<group>"; };
 		54862A051D9BEBE508E5CAD3 /* Pods-Viewable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.release.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.release.xcconfig"; sourceTree = "<group>"; };
 		94F433FFD41A0CF548BAB9C1 /* Pods_Viewable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viewable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F596771FBD98D095074BB1 /* Pods-Viewable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.debug.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +297,7 @@
 			children = (
 				3A0B8C26239E5197003BBEDC /* Main.storyboard */,
 				3A0B8C8F23A32520003BBEDC /* Map.storyboard */,
+				3A57E89A23B4F0DD0082597D /* ARView.xib */,
 				3A0B8C2B239E5198003BBEDC /* LaunchScreen.storyboard */,
 				EEB32E4E23A92398001988D7 /* UIStoreCell.xib */,
 			);
@@ -310,13 +326,15 @@
 		3A0B8C9123A3434B003BBEDC /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				3A57E89C23B50BC90082597D /* ShopDetail */,
 				3A0B8C24239E5197003BBEDC /* ViewController.swift */,
 				3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */,
 				3A0B8C22239E5197003BBEDC /* Scene.swift */,
-				3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */,
-				3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */,
+				3A489A0323B6487600FC0703 /* OneFacilityInfoVC.swift */,
+				3AE96EC723B10ADD006B115D /* ShopListVC.swift */,
+				3AE96EC923B1114B006B115D /* ShopListTVCell.swift */,
 				3A0B8C20239E5197003BBEDC /* Scene.sks */,
-				3A0B8C9D23AD3712003BBEDC /* ShopfilterVC.swift */,
+				3AECB8CC23AF8D25002F605B /* ShopfilterVC.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -326,6 +344,18 @@
 			children = (
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		3A57E89C23B50BC90082597D /* ShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */,
+				3A57E89D23B50D570082597D /* TableViewCell.swift */,
+				3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */,
+				3A4899FF23B638C600FC0703 /* DynamicHeightCollectionView.swift */,
+				3A489A0123B639A700FC0703 /* CollectionViewFlowLayout.swift */,
+			);
+			path = ShopDetail;
 			sourceTree = "<group>";
 		};
 		3ACEB31623AF55A30025F649 /* Recovered References */ = {
@@ -466,6 +496,7 @@
 				3A0B8C73239E6337003BBEDC /* noimage.png in Resources */,
 				3A0B8C2D239E5198003BBEDC /* LaunchScreen.storyboard in Resources */,
 				3A0B8C6E239E6337003BBEDC /* info_box_tail.png in Resources */,
+				3A57E89B23B4F0DD0082597D /* ARView.xib in Resources */,
 				3A0B8C70239E6337003BBEDC /* map_present_direction.png in Resources */,
 				3A0B8C2A239E5198003BBEDC /* Assets.xcassets in Resources */,
 				3A0B8C28239E5197003BBEDC /* Main.storyboard in Resources */,
@@ -530,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A489A0023B638C600FC0703 /* DynamicHeightCollectionView.swift in Sources */,
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
 				EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
@@ -538,17 +570,23 @@
 				EE870F1923A6373D00A11EB3 /* SearchViewController.swift in Sources */,
 				EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */,
 				EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */,
+				3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */,
+				3A57E89E23B50D570082597D /* TableViewCell.swift in Sources */,
 				EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */,
 				EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */,
 				3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */,
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
 				EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */,
+				3A489A0423B6487600FC0703 /* OneFacilityInfoVC.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
 				3A0B8C1F239E5197003BBEDC /* AppDelegate.swift in Sources */,
 				EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */,
 				EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */,
+				3AECB8CD23AF8D25002F605B /* ShopfilterVC.swift in Sources */,
+				3AE96EC823B10ADD006B115D /* ShopListVC.swift in Sources */,
 				EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */,
 				3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */,
+				3A489A0223B639A700FC0703 /* CollectionViewFlowLayout.swift in Sources */,
 				EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
