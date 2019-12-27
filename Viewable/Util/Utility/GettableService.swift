@@ -27,7 +27,10 @@ extension GettableService {
     
     
     func get(_ URL: String, completion : @escaping (Result<NetworkData>)->Void){
-        Alamofire.request(url: URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseData {(res) in
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseJSON { response in
+            print(response)
+        }
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseData {(res) in
             switch res.result {
             case .success :
                 
@@ -35,16 +38,15 @@ extension GettableService {
         
                     let decoder = JSONDecoder()
                 
-                    
                     //do try catch 아예 컴플리션 쪽에서 처리가능
                     // 통신 성공 자체를 .success 로 본다면.
                     do {
                         let data = try decoder.decode(NetworkData.self, from: value)
-                        
                             completion(.success(data))
 
-                    }catch{
-                        
+                    }catch (let error){
+                        print(error.localizedDescription)
+                        print(error)
                         completion(.error("에러"))
                     }
                 }

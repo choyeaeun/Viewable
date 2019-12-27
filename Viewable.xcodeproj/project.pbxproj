@@ -80,6 +80,13 @@
 		80F8620623B673D6002BE417 /* ReportVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8620523B673D6002BE417 /* ReportVO.swift */; };
 		80F8620A23B679F9002BE417 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8620923B679F9002BE417 /* MyPageViewController.swift */; };
 		80F8620C23B67A5D002BE417 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F8620B23B67A5D002BE417 /* MyPage.storyboard */; };
+		80F8620E23B68396002BE417 /* UIReportHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8620D23B68396002BE417 /* UIReportHistoryCell.swift */; };
+		80F8621023B68A54002BE417 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8620F23B68A54002BE417 /* MyPageService.swift */; };
+		80F8621223B68A81002BE417 /* MyPageVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8621123B68A81002BE417 /* MyPageVO.swift */; };
+		80F8621423B6993F002BE417 /* UIViewImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8621323B6993F002BE417 /* UIViewImageExtension.swift */; };
+		80F8621623B69D53002BE417 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8621523B69D53002BE417 /* SearchService.swift */; };
+		80F8621823B69D73002BE417 /* SearchVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8621723B69D73002BE417 /* SearchVO.swift */; };
+		80F8621A23B6A078002BE417 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8621923B6A078002BE417 /* SearchResultViewController.swift */; };
 		8D3BA8BEAB07BE1C14A75395 /* Pods_Viewable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028BBBEAA72A5B0ACAB07EDF /* Pods_Viewable.framework */; };
 		EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */; };
 		EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */; };
@@ -185,6 +192,13 @@
 		80F8620523B673D6002BE417 /* ReportVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVO.swift; sourceTree = "<group>"; };
 		80F8620923B679F9002BE417 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		80F8620B23B67A5D002BE417 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		80F8620D23B68396002BE417 /* UIReportHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIReportHistoryCell.swift; sourceTree = "<group>"; };
+		80F8620F23B68A54002BE417 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
+		80F8621123B68A81002BE417 /* MyPageVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVO.swift; sourceTree = "<group>"; };
+		80F8621323B6993F002BE417 /* UIViewImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewImageExtension.swift; sourceTree = "<group>"; };
+		80F8621523B69D53002BE417 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		80F8621723B69D73002BE417 /* SearchVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVO.swift; sourceTree = "<group>"; };
+		80F8621923B6A078002BE417 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultViewController.swift; path = Viewable/Util/UI/SearchResultViewController.swift; sourceTree = SOURCE_ROOT; };
 		8351D89D27204A60FCACE70B /* Pods-Viewable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.release.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.release.xcconfig"; sourceTree = "<group>"; };
 		EE0AC77823B3AA68003BE41B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EE0AC77A23B3AB54003BE41B /* Facilitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facilitie.swift; sourceTree = "<group>"; };
@@ -419,6 +433,8 @@
 			children = (
 				3A6E26F923B66D58005ED418 /* ARService.swift */,
 				80F8620323B672D7002BE417 /* ReportService.swift */,
+				80F8620F23B68A54002BE417 /* MyPageService.swift */,
+				80F8621523B69D53002BE417 /* SearchService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -453,6 +469,8 @@
 				EE0AC77A23B3AB54003BE41B /* Facilitie.swift */,
 				3A6E26F623B66CF0005ED418 /* ArVO.swift */,
 				80F8620523B673D6002BE417 /* ReportVO.swift */,
+				80F8621123B68A81002BE417 /* MyPageVO.swift */,
+				80F8621723B69D73002BE417 /* SearchVO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -476,6 +494,7 @@
 				EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */,
 				EE546DBE23B3A5F900E85574 /* UIToggleButton.swift */,
 				8024427B23B637DC004CE0E2 /* UIReportTextView.swift */,
+				80F8620D23B68396002BE417 /* UIReportHistoryCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -484,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				EE546DB823B3962600E85574 /* SearchViewController.swift */,
+				80F8621923B6A078002BE417 /* SearchResultViewController.swift */,
 				EE546DB923B3962600E85574 /* StoreInformationViewController.swift */,
 			);
 			path = Map;
@@ -498,6 +518,7 @@
 				EE870F1423A614B100A11EB3 /* FloatExtension.swift */,
 				EEB32E5223A92D77001988D7 /* MTMapViewExtension.swift */,
 				8024427D23B65BEF004CE0E2 /* UIViewControllerExtension.swift */,
+				80F8621323B6993F002BE417 /* UIViewImageExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -654,6 +675,7 @@
 				80F8620023B672BA002BE417 /* GettableService.swift in Sources */,
 				3A6E26E523B6598D005ED418 /* ReportViewController.swift in Sources */,
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
+				80F8621623B69D53002BE417 /* SearchService.swift in Sources */,
 				3A6E26F123B66783005ED418 /* enums.swift in Sources */,
 				3A6E26FA23B66D58005ED418 /* ARService.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
@@ -662,10 +684,12 @@
 				EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */,
 				80F8620A23B679F9002BE417 /* MyPageViewController.swift in Sources */,
 				80F861FE23B672B5002BE417 /* PostableService.swift in Sources */,
+				80F8621A23B6A078002BE417 /* SearchResultViewController.swift in Sources */,
 				3A6E26F723B66CF0005ED418 /* ArVO.swift in Sources */,
 				3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */,
 				3A57E89E23B50D570082597D /* TableViewCell.swift in Sources */,
 				EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */,
+				80F8621023B68A54002BE417 /* MyPageService.swift in Sources */,
 				80F8620423B672D7002BE417 /* ReportService.swift in Sources */,
 				EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */,
 				3A6E26E623B659C1005ED418 /* UIReportTextView.swift in Sources */,
@@ -674,10 +698,13 @@
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
 				EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */,
 				80F8620223B672BF002BE417 /* APIService.swift in Sources */,
+				80F8621823B69D73002BE417 /* SearchVO.swift in Sources */,
 				3A6E26EC23B660A5005ED418 /* LoginVC.swift in Sources */,
+				80F8621223B68A81002BE417 /* MyPageVO.swift in Sources */,
 				3A489A0423B6487600FC0703 /* OneFacilityInfoVC.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
 				3A6E26EF23B66767005ED418 /* HttpResponseCode.swift in Sources */,
+				80F8621423B6993F002BE417 /* UIViewImageExtension.swift in Sources */,
 				3A0B8C1F239E5197003BBEDC /* AppDelegate.swift in Sources */,
 				EE546DBB23B3962600E85574 /* SearchViewController.swift in Sources */,
 				8024427E23B65BEF004CE0E2 /* UIViewControllerExtension.swift in Sources */,
@@ -694,6 +721,7 @@
 				EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */,
 				EE546DBD23B3962600E85574 /* UISearchResultCell.swift in Sources */,
 				EE546DBC23B3962600E85574 /* StoreInformationViewController.swift in Sources */,
+				80F8620E23B68396002BE417 /* UIReportHistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

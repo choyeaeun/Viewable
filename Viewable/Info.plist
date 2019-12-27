@@ -2,24 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <!-- 공통 -->
-        <string>kakao619d05edb746ee255c7c1dbea251329f</string>
-
-        <!-- 간편로그인 -->
-        <string>kakaokompassauth</string>
-        <string>storykompassauth</string>
-
-        <!-- 카카오톡링크 -->
-        <string>kakaolink</string>
-        <string>kakaotalk-5.9.7</string>
-
-        <!-- 카카오스토리링크 -->
-        <string>storylink</string>
-    </array>
-    <key>KAKAO_APP_KEY</key>
-    <string>619d05edb746ee255c7c1dbea251329f</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -49,20 +36,29 @@
 	<string>1</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>619d05edb746ee255c7c1dbea251329f</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakao619d05edb746ee255c7c1dbea251329f</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-5.9.7</string>
+		<string>storylink</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>신고 이미지를 찍기 위해 카메라에 접근합니다.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>신고 이미지를 업로드하기 위해 카메라에 접근합니다.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>항상 위치정보를 이용합니다</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>사용중에만 위치정보를 이용합니다</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>신고 이미지를 업로드하기 위해 카메라에 접근합니다.</string>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>MyPage</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Report</string>
+	<string>Map</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

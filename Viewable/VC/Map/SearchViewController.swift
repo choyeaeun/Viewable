@@ -15,6 +15,11 @@ class SearchViewController: UIViewController {
     @IBOutlet var filterButton: UIToggleButton!
     @IBOutlet var optionButtons: [UIToggleButton]!
     @IBOutlet var optionBGView: UIView!
+    @IBOutlet var searchBar: UISearchBar!
+    
+    var category: Int = -1
+    var searchText: String = ""
+    var facilties: [Int] = []
     
     // MARK:- Method
     @IBAction func didClickedAllOption(_ sender: Any) {
@@ -54,9 +59,37 @@ class SearchViewController: UIViewController {
         optionBGView.isHidden = false
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchBar.delegate = self
+        touchToHideKeyboard()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SearchResultViewController {
+            let tags = optionButtons.filter { button -> Bool in
+                return button.isOn
+            }.map { button -> Int in
+                return button.tag
+            }
+            print(tags)
+            vc.facilties = tags
+            vc.searchText = searchBar.text ?? ""
+            vc.category = category
+        }
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text, !text.isEmpty {
+            performSegue(withIdentifier: "toSearchResult", sender: nil)
+        }
     }
 }
 
@@ -72,5 +105,10 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         cell.iconImageView.image = Constants.categories[indexPath.item].image
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        category = indexPath.item
+        performSegue(withIdentifier: "toSearchResult", sender: nil)
     }
 }
