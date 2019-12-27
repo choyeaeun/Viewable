@@ -56,6 +56,15 @@
 		3A489A0423B6487600FC0703 /* OneFacilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A489A0323B6487600FC0703 /* OneFacilityInfoVC.swift */; };
 		3A57E89B23B4F0DD0082597D /* ARView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E89A23B4F0DD0082597D /* ARView.xib */; };
 		3A57E89E23B50D570082597D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E89D23B50D570082597D /* TableViewCell.swift */; };
+		3A6E26E823B65C88005ED418 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26E723B65C88005ED418 /* APIService.swift */; };
+		3A6E26EA23B65E52005ED418 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6E26E923B65E52005ED418 /* KakaoOpenSDK.framework */; };
+		3A6E26EC23B660A5005ED418 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26EB23B660A5005ED418 /* LoginVC.swift */; };
+		3A6E26EF23B66767005ED418 /* HttpResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26EE23B66767005ED418 /* HttpResponseCode.swift */; };
+		3A6E26F123B66783005ED418 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F023B66783005ED418 /* enums.swift */; };
+		3A6E26F323B6683A005ED418 /* GettableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F223B6683A005ED418 /* GettableService.swift */; };
+		3A6E26F523B6685C005ED418 /* PostableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F423B6685C005ED418 /* PostableService.swift */; };
+		3A6E26F723B66CF0005ED418 /* ArVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F623B66CF0005ED418 /* ArVO.swift */; };
+		3A6E26FA23B66D58005ED418 /* ARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F923B66D58005ED418 /* ARService.swift */; };
 		3AE96EC823B10ADD006B115D /* ShopListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE96EC723B10ADD006B115D /* ShopListVC.swift */; };
 		3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE96EC923B1114B006B115D /* ShopListTVCell.swift */; };
 		3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */; };
@@ -138,6 +147,15 @@
 		3A489A0323B6487600FC0703 /* OneFacilityInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFacilityInfoVC.swift; sourceTree = "<group>"; };
 		3A57E89A23B4F0DD0082597D /* ARView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARView.xib; sourceTree = "<group>"; };
 		3A57E89D23B50D570082597D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3A6E26E723B65C88005ED418 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3A6E26E923B65E52005ED418 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		3A6E26EB23B660A5005ED418 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3A6E26EE23B66767005ED418 /* HttpResponseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseCode.swift; sourceTree = "<group>"; };
+		3A6E26F023B66783005ED418 /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		3A6E26F223B6683A005ED418 /* GettableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettableService.swift; sourceTree = "<group>"; };
+		3A6E26F423B6685C005ED418 /* PostableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostableService.swift; sourceTree = "<group>"; };
+		3A6E26F623B66CF0005ED418 /* ArVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArVO.swift; sourceTree = "<group>"; };
+		3A6E26F923B66D58005ED418 /* ARService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARService.swift; sourceTree = "<group>"; };
 		3AE96EC723B10ADD006B115D /* ShopListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListVC.swift; sourceTree = "<group>"; };
 		3AE96EC923B1114B006B115D /* ShopListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTVCell.swift; sourceTree = "<group>"; };
 		3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = facilityInfoVC.swift; path = Viewable/VC/AR/facilityInfoVC.swift; sourceTree = SOURCE_ROOT; };
@@ -175,6 +193,7 @@
 				3A0B8C84239E63EC003BBEDC /* libxml2.tbd in Frameworks */,
 				3A0B8C77239E6337003BBEDC /* DaumMap.framework in Frameworks */,
 				3A0B8C7C239E63BB003BBEDC /* SystemConfiguration.framework in Frameworks */,
+				3A6E26EA23B65E52005ED418 /* KakaoOpenSDK.framework in Frameworks */,
 				3A0B8C7A239E63B1003BBEDC /* OpenGLES.framework in Frameworks */,
 				07BF3654D775AC4E82E5131C /* Pods_Viewable.framework in Frameworks */,
 			);
@@ -209,6 +228,7 @@
 				3A0B8C88239E7561003BBEDC /* Storyboard */,
 				3A0B8C8A239E7578003BBEDC /* VC */,
 				3A0B8C8B239E75BB003BBEDC /* Util */,
+				3A6E26F823B66D3C005ED418 /* Service */,
 				EE0DA02223A7D1B50026EBAB /* Model */,
 				3A0B8C87239E647B003BBEDC /* Bridging_Header.h */,
 				3A0B8C1E239E5197003BBEDC /* AppDelegate.swift */,
@@ -280,6 +300,7 @@
 		3A0B8C78239E63B1003BBEDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A6E26E923B65E52005ED418 /* KakaoOpenSDK.framework */,
 				3A0B8C85239E63F7003BBEDC /* libsqlite3.tbd */,
 				3A0B8C83239E63E6003BBEDC /* libxml2.tbd */,
 				3A0B8C81239E63D7003BBEDC /* libc++.tbd */,
@@ -309,6 +330,7 @@
 			children = (
 				3A0B8C9223A34351003BBEDC /* Map */,
 				3A0B8C9123A3434B003BBEDC /* AR */,
+				3A6E26EB23B660A5005ED418 /* LoginVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -319,6 +341,7 @@
 				EE0DA02523A7D2D00026EBAB /* Constants */,
 				EE0F04F223A601C10055369C /* UI */,
 				EE870F1323A614B100A11EB3 /* Utility */,
+				3A6E26ED23B6674E005ED418 /* Singleton */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -358,6 +381,23 @@
 			path = ShopDetail;
 			sourceTree = "<group>";
 		};
+		3A6E26ED23B6674E005ED418 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E26EE23B66767005ED418 /* HttpResponseCode.swift */,
+				3A6E26F023B66783005ED418 /* enums.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		3A6E26F823B66D3C005ED418 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E26F923B66D58005ED418 /* ARService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		3ACEB31623AF55A30025F649 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */,
+				3A6E26F623B66CF0005ED418 /* ArVO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +452,9 @@
 			children = (
 				EE870F1423A614B100A11EB3 /* FloatExtension.swift */,
 				EEB32E5223A92D77001988D7 /* MTMapViewExtension.swift */,
+				3A6E26E723B65C88005ED418 /* APIService.swift */,
+				3A6E26F223B6683A005ED418 /* GettableService.swift */,
+				3A6E26F423B6685C005ED418 /* PostableService.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -563,12 +607,17 @@
 			files = (
 				3A489A0023B638C600FC0703 /* DynamicHeightCollectionView.swift in Sources */,
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
+				3A6E26F123B66783005ED418 /* enums.swift in Sources */,
+				3A6E26F523B6685C005ED418 /* PostableService.swift in Sources */,
 				EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */,
+				3A6E26FA23B66D58005ED418 /* ARService.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
 				EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */,
 				3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */,
 				EE870F1923A6373D00A11EB3 /* SearchViewController.swift in Sources */,
 				EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */,
+				3A6E26F323B6683A005ED418 /* GettableService.swift in Sources */,
+				3A6E26F723B66CF0005ED418 /* ArVO.swift in Sources */,
 				EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */,
 				3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */,
 				3A57E89E23B50D570082597D /* TableViewCell.swift in Sources */,
@@ -577,12 +626,15 @@
 				3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */,
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
 				EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */,
+				3A6E26EC23B660A5005ED418 /* LoginVC.swift in Sources */,
 				3A489A0423B6487600FC0703 /* OneFacilityInfoVC.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
+				3A6E26EF23B66767005ED418 /* HttpResponseCode.swift in Sources */,
 				3A0B8C1F239E5197003BBEDC /* AppDelegate.swift in Sources */,
 				EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */,
 				EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */,
 				3AECB8CD23AF8D25002F605B /* ShopfilterVC.swift in Sources */,
+				3A6E26E823B65C88005ED418 /* APIService.swift in Sources */,
 				3AE96EC823B10ADD006B115D /* ShopListVC.swift in Sources */,
 				EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */,
 				3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */,
@@ -738,11 +790,31 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Viewable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ARCL\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"SceneKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"ARKit\"",
+					"-force_load",
+					"$(SRCROOT)/KakaoOpenSDK.framework/KakaoOpenSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeaeun.Viewable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -763,11 +835,31 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Viewable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ARCL\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"SceneKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"ARKit\"",
+					"-force_load",
+					"$(SRCROOT)/KakaoOpenSDK.framework/KakaoOpenSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeaeun.Viewable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
