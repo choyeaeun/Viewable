@@ -1,5 +1,5 @@
 //
-//  ARService.swift
+//  FilterService.swift
 //  Viewable
 //
 //  Created by 조예은 on 2019/12/28.
@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct ARService: GettableService {
-    typealias NetworkData = ARVO
-    static let shareInstance = ARService()
+struct FilterService: GettableService {
+    typealias NetworkData = FilterVO
+    static let shareInstance = FilterService()
     
-    func arInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
+    func filterBoardInit(url : String, params: [String : Any], completion : @escaping (NetworkResult<Any>) -> Void){
         
         get(url) { (result) in
             switch result {

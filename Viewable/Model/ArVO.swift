@@ -17,7 +17,7 @@ struct ARVO: Codable {
 }
 
 // MARK: - Data
-struct ARData: Codable {
+struct ARData: Codable, Equatable {
     let buildingIdx: Int
     let name, address: String
     let latitude, longitude, distance: Double
