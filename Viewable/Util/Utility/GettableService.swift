@@ -26,8 +26,8 @@ extension GettableService {
     
     
     
-    func get(_ URL:String, completion : @escaping (Result<NetworkData>)->Void){
-        Alamofire.request(URL).responseData {(res) in
+    func get(_ URL: String, completion : @escaping (Result<NetworkData>)->Void){
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseData {(res) in
             switch res.result {
             case .success :
                 

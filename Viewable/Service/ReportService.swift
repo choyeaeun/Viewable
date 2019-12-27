@@ -1,40 +1,35 @@
 //
-//  ARService.swift
+//  ReportService.swift
 //  Viewable
 //
-//  Created by 조예은 on 2019/12/28.
+//  Created by deokwon on 28/12/2019.
 //  Copyright © 2019 Yeaeun. All rights reserved.
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
-struct ARService: GettableService {
-    typealias NetworkData = ARVO
-    static let shareInstance = ARService()
+struct ReportService: PostableService {
+    typealias NetworkData = ReportVO
+    static let shareInstance = ReportService()
     
-    func arInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
-        
-        get(url) { (result) in
+    func sendReport(url : String, title: String, contents: String) {
+        post(url, params: ["title": title, "contents": contents]) { (result) in
             switch result {
             case .success(let networkResult):
-                
                 switch networkResult.message {
                 case "success" :
-                    completion(.networkSuccess(networkResult))
+                    break
                 case "Internal Server Error!" :
-                    completion(.serverErr)
+                    break
                 default :
                     break
                 }
                 break
             case .error(let errMsg) :
-                
                 print(errMsg)
                 break
             case .failure(_) :
-                completion(.networkFail)
+                break
             }
         }
     }

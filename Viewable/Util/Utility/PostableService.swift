@@ -29,7 +29,7 @@ extension PostableService {
     
     func post(_ URL:String, params : [String : Any], completion : @escaping (Result<NetworkData>)->Void){
         
-        Alamofire.request(URL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseData(){
+        Alamofire.request(URL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseData(){
             res in
             
             switch res.result {
@@ -61,7 +61,7 @@ extension PostableService {
     
     func delete(_ URL:String, params : [String : Any], completion : @escaping (Result<NetworkData>)->Void){
         
-        Alamofire.request(URL, method: .delete, parameters: params, encoding: JSONEncoding.default, headers: nil).responseData(){
+        Alamofire.request(URL, method: .delete, parameters: params, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseData(){
             res in
             switch res.result {
             case .success:

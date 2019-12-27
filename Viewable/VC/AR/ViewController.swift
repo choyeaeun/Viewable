@@ -208,7 +208,7 @@ extension ViewController: CLLocationManagerDelegate{
         let longitude: Double = Double(location.coordinate.longitude)
         let altitude: Double = Double(location.altitude)
         
-        arBoardInit(url: url("/building"), lat: 37.544401, long: 126.952659)
+        arBoardInit(url: "/building", lat: 37.544401, long: 126.952659)
         ViewPin(latitude: latitude, longitude: longitude, altitude: altitude)
         print(latitude, longitude, altitude)
     }
