@@ -19,6 +19,11 @@ class ViewController: UIViewController{
     var sceneLocationView = SceneLocationView()
     let pinImg = UIView()
     
+    var building: [ARData] = []
+    var buildingBackup: [ARData] = []
+    var buildingIdx: Int = 0
+    let curTime = Date().timeIntervalSince1970
+    
     @IBOutlet var buildingInfoView: UIView!
     
     @IBOutlet var buildingName: UILabel!
@@ -55,22 +60,19 @@ class ViewController: UIViewController{
     
     
     func arBoardInit(url : String, lat : Double, long: Double){
-        let params : [String : Any] = [
-            "latitude" : lat,
-            "longitude" : long
-        ]
-        ARService.shareInstance.arInit(url: url, completion: { [weak self] (result) in
+        ARService.shareInstance.arInit(url: "\(APIService.BaseURL)/building?time=\(String(describing: curTime))&latitude=\(lat)&longitude=\(long)", completion: { [weak self] (result) in
             guard let `self` = self else { return }
             
             switch result {
-                
-            case .networkSuccess(let PostionData):
-               
-                print(PostionData)
-                break
-                
-            case .networkFail : break
+            case .networkSuccess(let ardata):
+                if let vo = ardata as? ARVO {
+                    self.building = vo.data
+                }
+//                let nearBuilding = self.building[0]
+//                self.buildingName.text = String(nearBuilding.name)
+            case .networkFail :
 //                self.simpleAlert(title: "network", message: "check")
+                break
             default :
                 break
             }
@@ -100,6 +102,10 @@ class ViewController: UIViewController{
         annotationNode.annotationNode.name = "megabox"
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
     }
+    
+    func removePin(){
+        sceneLocationView.removeAllNodes()
+    }
 // MARK: - 버튼 액션
     // 보유시설 기능 설명 뷰로 넘어가는 액션
     @IBAction func infromationAction(_ sender: UIButton) {
@@ -109,12 +115,16 @@ class ViewController: UIViewController{
         self.present(infoVC, animated: true)
         
     }
+    
+    //매장 리스트로 넘어가기
     @IBAction func goShopList(_ sender: UIButton) {
         
         guard let listVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopListVC") as? ShopListVC else { return }
+        
         self.navigationController?.pushViewController(listVC, animated: true)
     }
     
+    //편의 시설 개별 설명뷰로 넘어가기
     @IBAction func exAccess(_ sender: UIButton) {
         let idx:Int = sender.tag
         guard let explainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "OneFacilityInfoVC") as? OneFacilityInfoVC else { return }
@@ -165,35 +175,7 @@ class ViewController: UIViewController{
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //
         sceneLocationView.frame = view.bounds
-    }
-}
-
-// MARK: - ARSKViewDelegate
-extension ViewController: ARSKViewDelegate{
-    
-    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKLabelNode(text: "👾")
-        labelNode.horizontalAlignmentMode = .center
-        labelNode.verticalAlignmentMode = .center
-        return labelNode;
-    }
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
     }
 }
 
@@ -207,9 +189,15 @@ extension ViewController: CLLocationManagerDelegate{
         let latitude: Double = Double(location.coordinate.latitude)
         let longitude: Double = Double(location.coordinate.longitude)
         let altitude: Double = Double(location.altitude)
-        
-        arBoardInit(url: "/building", lat: 37.544401, long: 126.952659)
-        ViewPin(latitude: latitude, longitude: longitude, altitude: altitude)
-        print(latitude, longitude, altitude)
+//        arBoardInit(url: "\(APIService.BaseURL)/building", lat: latitude, long: longitude)
+        arBoardInit(url: "\(APIService.BaseURL)/building", lat: 37.544401, long: 126.952659)
+        if self.buildingBackup != self.building {
+            self.removePin()
+            for i in 0...building.count-1{
+                self.ViewPin(latitude: self.building[i].latitude, longitude: self.building[i].longitude, altitude: altitude)
+                print("\nnew Piiiiiiin!!!!!!!\n")
+            }
+            self.buildingBackup = self.building
+        }
     }
 }
