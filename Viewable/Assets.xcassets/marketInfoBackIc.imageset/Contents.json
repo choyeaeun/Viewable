@@ -1,14 +1,14 @@
 {
   "images" : [
     {
+      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "marketInfoBackIc.png",
-      "scale" : "1x"
+      "filename" : "marketInfoBackIc.png"
     },
     {
+      "idiom" : "universal",
       "filename" : "marketInfoBackIc@2x.png",
-      "scale" : "2x",
-      "idiom" : "universal"
+      "scale" : "2x"
     },
     {
       "scale" : "3x",
