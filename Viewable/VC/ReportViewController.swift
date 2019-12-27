@@ -45,6 +45,7 @@ class ReportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerController.delegate = self
+        touchToHideKeyboard()
     }
 }
 

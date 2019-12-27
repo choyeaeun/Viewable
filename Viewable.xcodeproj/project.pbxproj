@@ -76,6 +76,7 @@
 		3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */; };
 		3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */; };
 		3AECB8CD23AF8D25002F605B /* ShopfilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CC23AF8D25002F605B /* ShopfilterVC.swift */; };
+		8024427E23B65BEF004CE0E2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024427D23B65BEF004CE0E2 /* UIViewControllerExtension.swift */; };
 		EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */; };
 		EE0DA02423A7D1C60026EBAB /* StoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02323A7D1C60026EBAB /* StoreInformation.swift */; };
 		EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA02623A7D2E30026EBAB /* Constants.swift */; };
@@ -173,6 +174,7 @@
 		8024427723B61F0C004CE0E2 /* Report.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
 		8024427923B61F5E004CE0E2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		8024427B23B637DC004CE0E2 /* UIReportTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIReportTextView.swift; sourceTree = "<group>"; };
+		8024427D23B65BEF004CE0E2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		B1ABFBF1B79F9CD6562CA9BE /* Pods-Viewable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.debug.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.debug.xcconfig"; sourceTree = "<group>"; };
 		EE0AC77823B3AA68003BE41B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EE0AC77A23B3AB54003BE41B /* Facilitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facilitie.swift; sourceTree = "<group>"; };
@@ -474,9 +476,7 @@
 			children = (
 				EE870F1423A614B100A11EB3 /* FloatExtension.swift */,
 				EEB32E5223A92D77001988D7 /* MTMapViewExtension.swift */,
-				3A6E26E723B65C88005ED418 /* APIService.swift */,
-				3A6E26F223B6683A005ED418 /* GettableService.swift */,
-				3A6E26F423B6685C005ED418 /* PostableService.swift */,
+				8024427D23B65BEF004CE0E2 /* UIViewControllerExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -657,6 +657,7 @@
 				3A6E26EF23B66767005ED418 /* HttpResponseCode.swift in Sources */,
 				3A0B8C1F239E5197003BBEDC /* AppDelegate.swift in Sources */,
 				EE546DBB23B3962600E85574 /* SearchViewController.swift in Sources */,
+				8024427E23B65BEF004CE0E2 /* UIViewControllerExtension.swift in Sources */,
 				EE870F0F23A610FC00A11EB3 /* UIRadiusButton.swift in Sources */,
 				EE870F1723A6262800A11EB3 /* UICategoryViewCell.swift in Sources */,
 				3AECB8CD23AF8D25002F605B /* ShopfilterVC.swift in Sources */,
