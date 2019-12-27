@@ -54,6 +54,9 @@
 		3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */; };
 		3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */; };
 		3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */; };
+		8024427823B61F0C004CE0E2 /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8024427723B61F0C004CE0E2 /* Report.storyboard */; };
+		8024427A23B61F5E004CE0E2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024427923B61F5E004CE0E2 /* ReportViewController.swift */; };
+		8024427C23B637DC004CE0E2 /* UIReportTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024427B23B637DC004CE0E2 /* UIReportTextView.swift */; };
 		EE0AC77923B3AA68003BE41B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AC77823B3AA68003BE41B /* Category.swift */; };
 		EE0AC77B23B3AB54003BE41B /* Facilitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AC77A23B3AB54003BE41B /* Facilitie.swift */; };
 		EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */; };
@@ -133,6 +136,9 @@
 		3AECB8C823AF63FB002F605B /* ShopDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailVC.swift; sourceTree = "<group>"; };
 		3AECB8CA23AF68D3002F605B /* ShopDetailCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailCVCell.swift; sourceTree = "<group>"; };
 		54862A051D9BEBE508E5CAD3 /* Pods-Viewable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.release.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.release.xcconfig"; sourceTree = "<group>"; };
+		8024427723B61F0C004CE0E2 /* Report.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
+		8024427923B61F5E004CE0E2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		8024427B23B637DC004CE0E2 /* UIReportTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIReportTextView.swift; sourceTree = "<group>"; };
 		94F433FFD41A0CF548BAB9C1 /* Pods_Viewable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viewable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F596771FBD98D095074BB1 /* Pods-Viewable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viewable.debug.xcconfig"; path = "Target Support Files/Pods-Viewable/Pods-Viewable.debug.xcconfig"; sourceTree = "<group>"; };
 		EE0AC77823B3AA68003BE41B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -292,6 +298,7 @@
 				3A0B8C8F23A32520003BBEDC /* Map.storyboard */,
 				3A0B8C2B239E5198003BBEDC /* LaunchScreen.storyboard */,
 				EEB32E4E23A92398001988D7 /* UIStoreCell.xib */,
+				8024427723B61F0C004CE0E2 /* Report.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 			children = (
 				EE546DB723B3962600E85574 /* Map */,
 				3A0B8C9123A3434B003BBEDC /* AR */,
+				8024427923B61F5E004CE0E2 /* ReportViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				EE0DA01E23A7D1370026EBAB /* UIStoreCell.swift */,
 				EE0DA02823A7D4DA0026EBAB /* UIRadiusView.swift */,
 				EE546DBE23B3A5F900E85574 /* UIToggleButton.swift */,
+				8024427B23B637DC004CE0E2 /* UIReportTextView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				3A0B8C64239E6337003BBEDC /* copyright.png in Resources */,
 				3A0B8C72239E6337003BBEDC /* map_present.png in Resources */,
 				3A0B8C9023A32520003BBEDC /* Map.storyboard in Resources */,
+				8024427823B61F0C004CE0E2 /* Report.storyboard in Resources */,
 				3A0B8C6A239E6337003BBEDC /* map_pin_red.png in Resources */,
 				3A0B8C76239E6337003BBEDC /* map_pin_shadow.png in Resources */,
 				3A0B8C5F239E6337003BBEDC /* map_pinup.png in Resources */,
@@ -544,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
+				8024427C23B637DC004CE0E2 /* UIReportTextView.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
 				EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */,
 				3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */,
@@ -551,6 +562,7 @@
 				EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */,
 				EEB32E5323A92D77001988D7 /* MTMapViewExtension.swift in Sources */,
 				3AECB8C923AF63FB002F605B /* ShopDetailVC.swift in Sources */,
+				8024427A23B61F5E004CE0E2 /* ReportViewController.swift in Sources */,
 				EE0DA02923A7D4DA0026EBAB /* UIRadiusView.swift in Sources */,
 				EEBD742C23A7E275001C76FE /* SearchResultViewController.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
