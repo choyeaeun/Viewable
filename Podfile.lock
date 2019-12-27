@@ -9,7 +9,7 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - ARCL
     - SwiftyJSON
@@ -19,6 +19,6 @@ SPEC CHECKSUMS:
   ARCL: db48b6927d6f3f49f29568295ed91c94ab8d4aab
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 53ffb2414fe573f0e4ffc62b63ce84ebcc28e554
+PODFILE CHECKSUM: 5169dce7181d29217720894d6c48c0b434099ffd
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5
