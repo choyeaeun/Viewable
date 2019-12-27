@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct ReportVO: Codable {
+    let success: Bool
+    let status: Int
+    let message: String
+}

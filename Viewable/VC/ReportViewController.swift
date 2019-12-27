@@ -36,6 +36,10 @@ class ReportViewController: UIViewController {
 
     @IBAction func didClickedRealSubmit(_ sender: Any) {
         confrimView.isHidden = true
+        if let title = titleTextField.text, let content = contentTextView.text {
+            ReportService.shareInstance.sendReport(url: "\(APIService.BaseURL)/building/1/report", title: title, contents: content)
+            dismiss(animated: true, completion: nil)
+        }
     }
 
     @IBAction func didClickedNoSubmit(_ sender: Any) {

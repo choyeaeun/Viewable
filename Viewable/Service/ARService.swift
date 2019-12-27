@@ -37,6 +37,5 @@ struct ARService: GettableService {
                 completion(.networkFail)
             }
         }
-        
     }
 }
