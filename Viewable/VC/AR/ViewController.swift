@@ -23,23 +23,25 @@ class ViewController: UIViewController{
     
     @IBOutlet var buildingName: UILabel!
     @IBOutlet var buildingAddress: UILabel!
-    @IBOutlet var facDoorIMG: UIRadiusImageView!
-    @IBOutlet var facDoorLB: UILabel!
-    @IBOutlet var facElevatorIMG: UIRadiusImageView!
-    @IBOutlet var facElevatorLB: UILabel!
-    @IBOutlet var facToiletIMG: UIRadiusImageView!
-    @IBOutlet var facToiletLB: UILabel!
-    @IBOutlet var facParkingIMG: UIRadiusImageView!
-    @IBOutlet var facParkingLB: UILabel!
+    //index 값 받아서 isSelected 바꿔주기
+    @IBOutlet var facilityList: [UIButton]!
+    @IBOutlet var yeoungIMG: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        buildingInfoView.layer.zPosition = 10
         sceneLocationView.run()
-        view.addSubview(sceneLocationView)
+        view.insertSubview(sceneLocationView, at: 0)
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationItem.backBarButtonItem?.title = ""
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         print("\ntap!!!!!!")
@@ -50,6 +52,7 @@ class ViewController: UIViewController{
 //        buildingInfoView.
         // Your action
     }
+    
     // 특정 위치에 pin 꽂기
     func ViewPin(latitude:Double, longitude:Double, altitude:Double){
         
@@ -71,7 +74,7 @@ class ViewController: UIViewController{
         annotationNode.annotationNode.name = "megabox"
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
     }
-    
+// MARK: - 버튼 액션
     // 보유시설 기능 설명 뷰로 넘어가는 액션
     @IBAction func infromationAction(_ sender: UIButton) {
         guard let infoVC = self.storyboard?.instantiateViewController(identifier: "facilityInfoVC") as? facilityInfoVC
@@ -80,7 +83,21 @@ class ViewController: UIViewController{
         self.present(infoVC, animated: true)
         
     }
+    @IBAction func goShopList(_ sender: UIButton) {
+        
+        guard let listVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopListVC") as? ShopListVC else { return }
+        self.navigationController?.pushViewController(listVC, animated: true)
+    }
     
+    @IBAction func exAccess(_ sender: UIButton) {
+        var idx:Int = sender.tag
+        guard let explainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "OneFacilityInfoVC") as? OneFacilityInfoVC else { return }
+        explainVC.modalPresentationStyle = .overCurrentContext
+        explainVC.index = idx
+        self.present(explainVC, animated: true)
+    }
+    
+    // MARK: - 위치기반 서비스 관련
     override func viewDidAppear(_ animated: Bool) {
         // 위치 기반 서비스가 활성화 되어 있으면
         if CLLocationManager.locationServicesEnabled(){
@@ -115,6 +132,9 @@ class ViewController: UIViewController{
         super.viewWillDisappear(animated)
         
         self.locManager.stopUpdatingLocation()
+        
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLayoutSubviews() {
