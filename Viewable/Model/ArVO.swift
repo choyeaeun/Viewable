@@ -13,11 +13,11 @@ struct ARVO: Codable {
     let success: Bool
     let status: Int
     let message: String
-    let data: [Data]
+    let data: [ARData]
 }
 
 // MARK: - Data
-struct Data: Codable {
+struct ARData: Codable {
     let buildingIdx: Int
     let name, address: String
     let latitude, longitude, distance: Double

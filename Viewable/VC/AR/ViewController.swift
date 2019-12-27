@@ -53,6 +53,32 @@ class ViewController: UIViewController{
         // Your action
     }
     
+    
+    func arBoardInit(url : String, lat : Double, long: Double){
+        let params : [String : Any] = [
+            "latitude" : lat,
+            "longitude" : long
+        ]
+        ARService.shareInstance.arInit(url: url, completion: { [weak self] (result) in
+            guard let `self` = self else { return }
+            
+            switch result {
+                
+            case .networkSuccess(let PostionData):
+               
+                print(PostionData)
+                break
+                
+            case .networkFail : break
+//                self.simpleAlert(title: "network", message: "check")
+            default :
+                break
+            }
+            
+        })
+    }
+    
+    
     // 특정 위치에 pin 꽂기
     func ViewPin(latitude:Double, longitude:Double, altitude:Double){
         
@@ -90,7 +116,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func exAccess(_ sender: UIButton) {
-        var idx:Int = sender.tag
+        let idx:Int = sender.tag
         guard let explainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "OneFacilityInfoVC") as? OneFacilityInfoVC else { return }
         explainVC.modalPresentationStyle = .overCurrentContext
         explainVC.index = idx
@@ -182,6 +208,7 @@ extension ViewController: CLLocationManagerDelegate{
         let longitude: Double = Double(location.coordinate.longitude)
         let altitude: Double = Double(location.altitude)
         
+        arBoardInit(url: url("/building"), lat: 37.544401, long: 126.952659)
         ViewPin(latitude: latitude, longitude: longitude, altitude: altitude)
         print(latitude, longitude, altitude)
     }

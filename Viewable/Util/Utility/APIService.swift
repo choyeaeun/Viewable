@@ -15,5 +15,4 @@ struct APIService {
     
     /* 유저(User) */
     static let LoginURL = BaseURL + "/user" // 로그인
-    static let SignupURL = BaseURL + "/signup" // 회원가입
 }

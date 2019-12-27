@@ -70,6 +70,7 @@
 		3A6E26F523B6685C005ED418 /* PostableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F423B6685C005ED418 /* PostableService.swift */; };
 		3A6E26F723B66CF0005ED418 /* ArVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F623B66CF0005ED418 /* ArVO.swift */; };
 		3A6E26FA23B66D58005ED418 /* ARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E26F923B66D58005ED418 /* ARService.swift */; };
+		3ACA999423B67AA3007DBC14 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA999323B67AA3007DBC14 /* APIConstants.swift */; };
 		3AE96EC823B10ADD006B115D /* ShopListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE96EC723B10ADD006B115D /* ShopListVC.swift */; };
 		3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE96EC923B1114B006B115D /* ShopListTVCell.swift */; };
 		3AECB8C723AF5BE6002F605B /* facilityInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */; };
@@ -163,6 +164,7 @@
 		3A6E26F423B6685C005ED418 /* PostableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostableService.swift; sourceTree = "<group>"; };
 		3A6E26F623B66CF0005ED418 /* ArVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArVO.swift; sourceTree = "<group>"; };
 		3A6E26F923B66D58005ED418 /* ARService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARService.swift; sourceTree = "<group>"; };
+		3ACA999323B67AA3007DBC14 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		3AE96EC723B10ADD006B115D /* ShopListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListVC.swift; sourceTree = "<group>"; };
 		3AE96EC923B1114B006B115D /* ShopListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTVCell.swift; sourceTree = "<group>"; };
 		3AECB8C623AF5BE6002F605B /* facilityInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = facilityInfoVC.swift; path = Viewable/VC/AR/facilityInfoVC.swift; sourceTree = SOURCE_ROOT; };
@@ -475,6 +477,7 @@
 				EE870F1423A614B100A11EB3 /* FloatExtension.swift */,
 				EEB32E5223A92D77001988D7 /* MTMapViewExtension.swift */,
 				3A6E26E723B65C88005ED418 /* APIService.swift */,
+				3ACA999323B67AA3007DBC14 /* APIConstants.swift */,
 				3A6E26F223B6683A005ED418 /* GettableService.swift */,
 				3A6E26F423B6685C005ED418 /* PostableService.swift */,
 			);
@@ -633,7 +636,6 @@
 				3A0B8C25239E5197003BBEDC /* ViewController.swift in Sources */,
 				3A6E26F123B66783005ED418 /* enums.swift in Sources */,
 				3A6E26F523B6685C005ED418 /* PostableService.swift in Sources */,
-				EE0DA02123A7D1570026EBAB /* StoreInformationViewController.swift in Sources */,
 				3A6E26FA23B66D58005ED418 /* ARService.swift in Sources */,
 				3A0B8C23239E5197003BBEDC /* Scene.swift in Sources */,
 				EE0DA01F23A7D1370026EBAB /* UIStoreCell.swift in Sources */,
@@ -641,7 +643,6 @@
 				EE870F1523A614B100A11EB3 /* FloatExtension.swift in Sources */,
 				3A6E26F323B6683A005ED418 /* GettableService.swift in Sources */,
 				3A6E26F723B66CF0005ED418 /* ArVO.swift in Sources */,
-				EE546DB423AF4DF500E85574 /* UISearchResultCell.swift in Sources */,
 				3AE96ECA23B1114B006B115D /* ShopListTVCell.swift in Sources */,
 				3A57E89E23B50D570082597D /* TableViewCell.swift in Sources */,
 				EE0F04F423A601D50055369C /* UIRadiusImageView.swift in Sources */,
@@ -666,6 +667,7 @@
 				EE546DBF23B3A5F900E85574 /* UIToggleButton.swift in Sources */,
 				3A6E26E223B65926005ED418 /* Facilitie.swift in Sources */,
 				3AECB8CB23AF68D3002F605B /* ShopDetailCVCell.swift in Sources */,
+				3ACA999423B67AA3007DBC14 /* APIConstants.swift in Sources */,
 				3A489A0223B639A700FC0703 /* CollectionViewFlowLayout.swift in Sources */,
 				EE0DA02723A7D2E30026EBAB /* Constants.swift in Sources */,
 				EE546DBD23B3962600E85574 /* UISearchResultCell.swift in Sources */,
