@@ -11,7 +11,7 @@ struct BuildingService: GettableService {
     typealias NetworkData = BuildInfo
     static let shareInstance = BuildingService()
     
-    func buildingBoardInit(url : String, params: [String : Any], completion : @escaping (NetworkResult<Any>) -> Void){
+    func buildingBoardInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
         
         get(url) { (result) in
             switch result {
