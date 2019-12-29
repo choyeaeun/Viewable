@@ -7,6 +7,7 @@ target 'Viewable' do
   pod 'ARCL'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 5.0'
   # Pods for Viewable
 
 end
