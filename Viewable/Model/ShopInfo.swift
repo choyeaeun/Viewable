@@ -13,20 +13,16 @@ struct ShopInfoVO: Codable {
     let success: Bool
     let status: Int
     let message: String
-    let data: DataStore
+    let data: Detail
 }
 
 // MARK: - DataClass
-struct DataStore: Codable {
-    let storeList: [StoreList]
-}
-
-// MARK: - StoreList
-struct StoreList: Codable {
-    let storeIdx: Int
+struct Detail: Codable {
+    let buildingIdx, storeIdx: Int
     let name: String
     let img: String
-    let phone, address, operating: String
-    let buildingIdx, categoryIdx, storeFacilityIdx: Int
-    let facility: [Int]
+    let phone, address, operating, category: String
+    let categoryIdx: Int
+    let latitude, longitude: Double
+    let facilities: [Int]
 }

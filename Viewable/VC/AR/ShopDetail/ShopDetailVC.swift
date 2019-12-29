@@ -12,7 +12,17 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
 
     @IBOutlet var smallMapView: UIView!
     var mapView: MTMapView?
+    var selectedStore:Int!
+    var shopData: Detail!
     
+    @IBOutlet var shopImg: UIImageView!
+    @IBOutlet var shopName: UILabel!
+    @IBOutlet var shopCategory: UILabel!
+    @IBOutlet var shopState: UILabel!
+    @IBOutlet var shopAddress: UILabel!
+    @IBOutlet var shopAddress2: UILabel!
+    @IBOutlet var shopTime: UILabel!
+    @IBOutlet var shopNumber: UILabel!
     @IBOutlet var tableview: UITableView!
     var arr :[UIImage] = [#imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc")]
     
@@ -25,6 +35,7 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
             mapView.baseMapType = .standard
             smallMapView.addSubview(mapView)
         }
+        ShopBoardInit()
         
     }
     @IBAction func back(_ sender: UIButton) {
@@ -46,6 +57,46 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
             else { return }
         
         self.present(infoVC, animated: true)
+    }
+    
+    func ShopBoardInit(){
+        guard let storeidx = selectedStore else {return}
+        ShopService.shareInstance.shopBoardInit(url: "\(APIService.BaseURL)/store/\(storeidx)", completion: { [weak self] (result) in
+                    guard let `self` = self else { return }
+                    
+                    switch result {
+                    case .networkSuccess(let data):
+                        if let vo = data as? ShopInfoVO {
+                            self.shopData = vo.data
+                            self.tableview.reloadData()
+                        }
+                        if let url = URL(string: self.gsno(self.shopData.img)){
+                            self.shopImg.kf.setImage(with: url)
+                        }
+                        self.shopName.text = self.shopData.name
+                        self.shopCategory.text = self.shopData.category
+                        self.shopAddress.text = self.shopData.address
+                        self.shopAddress2.text = self.shopData.address
+                        self.shopTime.text = self.shopData.operating
+                        self.shopNumber.text = self.shopData.phone
+                        
+                    case .networkFail :
+        //                self.simpleAlert(title: "network", message: "check")
+                        break
+                    default :
+                        break
+                    }
+                    
+                })
+    }
+    func gsno(_ value : String?) -> String{
+        return value ?? ""
+    }
+    @IBAction func goReport(_ sender: UIButton) {
+        guard let reportVC = UIStoryboard(name: "Report", bundle: nil).instantiateViewController(identifier: "ReportViewController") as? ReportViewController else { return }
+        reportVC.selectedBuilding = self.shopData.buildingIdx
+        print(self.shopData.buildingIdx)
+        self.present(reportVC, animated: true)
     }
 }
 
