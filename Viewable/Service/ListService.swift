@@ -1,17 +1,20 @@
 //
-//  BuildingService.swift
+//  ListService.swift
 //  Viewable
 //
-//  Created by 조예은 on 2019/12/28.
+//  Created by 조예은 on 2019/12/29.
 //  Copyright © 2019 Yeaeun. All rights reserved.
 //
 
 import Foundation
-struct BuildingService: GettableService {
-    typealias NetworkData = BuildInfo
-    static let shareInstance = BuildingService()
+import Alamofire
+import SwiftyJSON
+
+struct ListService: GettableService {
+    typealias NetworkData = ListVO
+    static let shareInstance = ListService()
     
-    func buildingBoardInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
+    func ListServiceInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
         
         get(url) { (result) in
             switch result {

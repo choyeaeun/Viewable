@@ -9,6 +9,15 @@
 import UIKit
 
 class ShopListTVCell: UITableViewCell {
+    @IBOutlet var name: UILabel!
+    @IBOutlet var time: UILabel!
+    @IBOutlet var number: UILabel!
+    @IBOutlet var facil1: UIImageView!
+    @IBOutlet var facil2: UIImageView!
+    @IBOutlet var facil3: UIImageView!
+    @IBOutlet var facil4: UIImageView!
+    @IBOutlet var facil5: UIImageView!
+    @IBOutlet var storeImg: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

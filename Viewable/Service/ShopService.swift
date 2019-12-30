@@ -11,7 +11,7 @@ struct ShopService: GettableService {
     typealias NetworkData = ShopInfoVO
     static let shareInstance = ShopService()
     
-    func shopBoardInit(url : String, params: [String : Any], completion : @escaping (NetworkResult<Any>) -> Void){
+    func shopBoardInit(url : String, completion : @escaping (NetworkResult<Any>) -> Void){
         
         get(url) { (result) in
             switch result {

@@ -16,6 +16,7 @@ class ReportViewController: UIViewController {
     @IBOutlet var contentImageView: UIImageView!
     @IBOutlet var contentTextView: UIReportTextView!
     @IBOutlet var confrimView: UIView!
+    var selectedBuilding: Int?
     
     private let pickerController: UIImagePickerController = {
         let result = UIImagePickerController()
@@ -29,15 +30,19 @@ class ReportViewController: UIViewController {
     @IBAction func didClickedContentImage(_ sender: Any) {
         present(pickerController, animated: true, completion: nil)
     }
-
+    @IBAction func didClickedDismiss(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func didClickedSubmit(_ sender: Any) {
         confrimView.isHidden = false
     }
 
     @IBAction func didClickedRealSubmit(_ sender: Any) {
         confrimView.isHidden = true
+        guard let buildingIdx = selectedBuilding else { return }
         if let title = titleTextField.text, let content = contentTextView.text {
-            ReportService.shareInstance.sendReport(url: "\(APIService.BaseURL)/building/1/report", title: title, contents: content)
+            ReportService.shareInstance.sendReport(url: "\(APIService.BaseURL)/building/\(buildingIdx)/report", title: title, contents: content)
             dismiss(animated: true, completion: nil)
         }
     }

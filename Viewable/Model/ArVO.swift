@@ -21,4 +21,6 @@ struct ARData: Codable, Equatable {
     let buildingIdx: Int
     let name, address: String
     let latitude, longitude, distance: Double
+    let facility: [Int]
+    let light: Int
 }
