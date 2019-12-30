@@ -51,8 +51,8 @@ class ShopListVC: UIViewController, SendDataDelegate {
     }
     
     func sendData(facility: String, category: String) {
-        filterFac = facility
-        filterCat = category
+        self.filterFac = facility
+        self.filterCat = category
         filterBoardInit(facility: filterFac, category: filterCat)
     }
     

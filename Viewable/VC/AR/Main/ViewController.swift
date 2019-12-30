@@ -26,6 +26,7 @@ class ViewController: UIViewController{
     
     var buildingFac: [Facil] = []
     var facilityArr: [Bool] = [false, false, false, false]
+    var facilityArrar: [Bool] = [false, false, false, false]
     
     @IBOutlet var buildingInfoView: UIView!
     
@@ -41,7 +42,8 @@ class ViewController: UIViewController{
         
 //        buildingInfoView.layer.zPosition = 10
         sceneLocationView.run()
-        view.insertSubview(sceneLocationView, at: 0)
+        view.insertSubview(sceneLocationView, at: 1)
+//        view.addSubview(sceneLocationView)
         //터치 후 view 올라오게 한 뒤 위치 변경
         buildingBoardInit(idx: 4)
     }
@@ -51,18 +53,8 @@ class ViewController: UIViewController{
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-        print("\ntap!!!!!!")
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-        UIView.animate(withDuration: 1) {
-            self.buildingInfoView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-        }
-        // Your action
-    }
     
-    
-    func arBoardInit(url : String, lat : Double, long: Double){
+    func arBoardInit(url : String, lat : String, long: String){
         ARService.shareInstance.arInit(url: "\(APIService.BaseURL)/building?time=\(String(describing: curTime))&latitude=\(lat)&longitude=\(long)", completion: { [weak self] (result) in
             guard let `self` = self else { return }
             
@@ -71,17 +63,19 @@ class ViewController: UIViewController{
                 if let vo = ardata as? ARVO {
                     self.building = vo.data
                 }
-                self.buildingName.text = self.building[1].name
-                self.buildingAddress.text = self.building[1].address
-                switch self.building[1].light{
-                case 3:
-                    self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionGreatIc")
-                case 2:
-                    self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionSosoIc")
-                case 1:
-                    self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionBadIc")
-                default:
-                    self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionBadIc")
+                if (self.building.count > 1) {
+                    self.buildingName.text = self.building[1].name
+                    self.buildingAddress.text = self.building[1].address
+                    switch self.building[1].light{
+                    case 3:
+                        self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionGreatIc")
+                    case 2:
+                        self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionSosoIc")
+                    case 1:
+                        self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionBadIc")
+                    default:
+                        self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionBadIc")
+                    }
                 }
             case .networkFail :
 //                self.simpleAlert(title: "network", message: "check")
@@ -103,7 +97,6 @@ class ViewController: UIViewController{
                                 for i in 0...self.buildingFac.count-1{
                                     self.facilityArr[self.buildingFac[i].facilityIdx-1] = true
                                 }
-                                print(self.facilityArr)
                                 for i in 0...self.facilityList.count-1{
                                     self.facilityList[i].isSelected = self.facilityArr[i]
                                 }
@@ -117,36 +110,54 @@ class ViewController: UIViewController{
                         
                     })
         }
+
+    @objc func someAction(_ sender:UITapGestureRecognizer){
+       print("AR Action!!")
+    }
     
     // 특정 위치에 pin 꽂기
-    func ViewPin(latitude:Double, longitude:Double, altitude:Double){
+    func ViewPin(latitude:String, longitude:String, altitude:Double, buildingArr: Int){
         
-        var location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), altitude: altitude)
-//        let view = ARView(frame: self.view.frame)
-//        self.view.addSubview(view)
-//        
-//        var annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, view: view)
+        let location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!), altitude: altitude)
+        
+        let xibName = "ARView"
+        guard let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? ARView
+        else {
+            return
+        }
+//        if building[buildingArr].facility.count <= 0{
+//            for i in 0...3{
+//                view.facility[i].isSelected = false
+//            }
+//        }else{
+//            for i in 0...building[buildingArr].facility.count-1{
+////                        facilityArrar[building[buildingArr].facility[i]] = true
+//                        print(building[buildingArr].facility[i])
+//                    }
+//                    for i in 0...view.facility.count-1{
+//                        view.facility[i].isSelected = self.facilityArrar[i]
+//                    }
+//        }
+        
+        view.name.text = self.building[buildingArr].name
+        print(self.building[buildingArr].facility)
+        switch building[buildingArr].light {
+        case 3:
+            view.light.image = #imageLiteral(resourceName: "conditionGreatIc")
+        case 2:
+            view.light.image = #imageLiteral(resourceName: "conditionSosoIc")
+        case 1:
+            view.light.image = #imageLiteral(resourceName: "conditionBadIc")
+        default:
+            view.light.image = #imageLiteral(resourceName: "bigConditionBadIc")
+        }
+        let annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, view: view)
 //        annotationNode.annotationNode.name = "what is"
-//        sceneLocationView.addLocationNodeForCurrentPosition(locationNode: annotationNode)
-//        var location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.498875, longitude: 127.027598), altitude: altitude+10)
-//
-//        let image:UIImage = UIImage(named: "group5Copy")!
-//        let imageView = UIImageView(image: image)
-//        self.pinImg.addSubview(imageView)
-//
-//
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-//        pinImg.isUserInteractionEnabled = true
-//        pinImg.addGestureRecognizer(tapGestureRecognizer)
-//
-//        var annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, image: image)
-//        annotationNode.annotationNode.name = "fastfive"
-//        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
-//
-//        location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.500362, longitude: 127.027006), altitude: altitude+10)
-//        annotationNode = LocationAnnotationNode(location: location, image: image)
-//        annotationNode.annotationNode.name = "megabox"
-//        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        sceneLocationView.addLocationNodeForCurrentPosition(locationNode: annotationNode)
+        print("new pin!!!")
+
+        let gesture = UITapGestureRecognizer(target: self, action: Selector(("someAction:")))
+        self.view.addGestureRecognizer(gesture)
     }
     
     func removePin(){
@@ -241,13 +252,24 @@ extension ViewController: CLLocationManagerDelegate{
         let latitude: Double = Double(location.coordinate.latitude)
         let longitude: Double = Double(location.coordinate.longitude)
         let altitude: Double = Double(location.altitude)
-//        arBoardInit(url: "\(APIService.BaseURL)/building", lat: latitude, long: longitude)
-        arBoardInit(url: "\(APIService.BaseURL)/building", lat: 37.544401, long: 126.952659)
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.roundingMode = .floor         // 형식을 버림으로 지정
+        numberFormatter.minimumSignificantDigits = 6  // 자르길 원하는 자릿수
+        numberFormatter.maximumSignificantDigits = 8
+        guard let newlatitude = numberFormatter.string(from: NSNumber(value: latitude)),
+            let newlongitude = numberFormatter.string(from: NSNumber(value: longitude))
+        else {
+            return
+        }
+        
+        arBoardInit(url: "\(APIService.BaseURL)/building", lat: newlatitude, long: newlongitude)
+//        arBoardInit(url: "\(APIService.BaseURL)/building", lat: "37.544401", long: "126.952659")
+        print(newlatitude, newlongitude)
         if self.buildingBackup != self.building {
             self.removePin()
             for i in 0...building.count-1{
-                self.ViewPin(latitude: self.building[i].latitude, longitude: self.building[i].longitude, altitude: altitude)
-                print("\nnew Piiiiiiin!!!!!!!\n")
+                self.ViewPin(latitude: self.building[i].latitude.description, longitude: self.building[i].longitude.description, altitude: altitude, buildingArr: i)
             }
             self.buildingBackup = self.building
         }

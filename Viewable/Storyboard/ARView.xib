@@ -13,67 +13,85 @@
             <rect key="frame" x="0.0" y="0.0" width="203" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeArBigInfoIc" translatesAutoresizingMaskIntoConstraints="NO" id="ugU-Ka-XFr">
-                    <rect key="frame" x="0.0" y="24" width="203" height="126"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeArBigInfoIc" translatesAutoresizingMaskIntoConstraints="NO" id="ugU-Ka-XFr">
+                    <rect key="frame" x="0.0" y="24" width="203" height="127"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="민영빌딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlb-fn-EqO">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="민영빌딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlb-fn-EqO">
                     <rect key="frame" x="13" y="35" width="59" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="편의시설" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-qP-JRy">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="편의시설" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-qP-JRy">
                     <rect key="frame" x="13" y="62" width="39" height="14"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                     <color key="textColor" red="0.41568627450000001" green="0.46666666670000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRT-0S-6LM">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRT-0S-6LM">
                     <rect key="frame" x="13" y="81" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="facilitySmallBlAccessRoadIc"/>
+                    <state key="normal" image="facilitySmallGrAccessRoadIc"/>
                     <state key="selected" image="facilitySmallGrAccessRoadIc"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34o-mu-Qwx">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34o-mu-Qwx">
                     <rect key="frame" x="59" y="81" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="facilitySmallBlLiftIc"/>
-                    <state key="selected" image="facilitySmallGrLiftIc"/>
+                    <state key="normal" image="facilitySmallGrLiftIc"/>
+                    <state key="selected" image="facilitySmallBlLiftIc"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLd-y6-3mC">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLd-y6-3mC">
                     <rect key="frame" x="105" y="81" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="facilitySmallBlBathroomIc"/>
+                    <state key="normal" image="facilitySmallGrBathroomIc"/>
                     <state key="selected" image="facilitySmallBlBathroomIc"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afL-9E-426">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afL-9E-426">
                     <rect key="frame" x="151" y="81" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="facilitySmallBlParkingIc"/>
-                    <state key="selected" image="facilitySmallGrParkingIc"/>
+                    <state key="normal" image="facilitySmallGrParkingIc"/>
+                    <state key="selected" image="facilitySmallBlParkingIc"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwE-MR-osn">
-                    <rect key="frame" x="151" y="1" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="conditionBadIc"/>
-                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conditionBadIc" translatesAutoresizingMaskIntoConstraints="NO" id="Nha-5W-v4l">
+                    <rect key="frame" x="151" y="-1" width="42" height="42"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YRT-0S-6LM" firstAttribute="leading" secondItem="cTh-qP-JRy" secondAttribute="leading" id="1cb-hx-oNX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="ugU-Ka-XFr" secondAttribute="top" constant="20" id="3rN-LH-Pjd"/>
+                <constraint firstItem="ugU-Ka-XFr" firstAttribute="leading" secondItem="tlb-fn-EqO" secondAttribute="trailing" constant="-72" id="D3d-I4-QOM"/>
+                <constraint firstItem="Nha-5W-v4l" firstAttribute="leading" secondItem="ugU-Ka-XFr" secondAttribute="trailing" constant="-52" id="MAn-Tr-n09"/>
+                <constraint firstItem="ugU-Ka-XFr" firstAttribute="top" secondItem="tlb-fn-EqO" secondAttribute="bottom" constant="-32" id="QB8-bu-HHV"/>
+                <constraint firstItem="ugU-Ka-XFr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RHf-ki-3xQ"/>
+                <constraint firstItem="cTh-qP-JRy" firstAttribute="leading" secondItem="tlb-fn-EqO" secondAttribute="leading" id="SwO-sg-Lyq"/>
+                <constraint firstItem="lLd-y6-3mC" firstAttribute="leading" secondItem="34o-mu-Qwx" secondAttribute="trailing" constant="6" id="bFf-zL-2u3"/>
+                <constraint firstItem="34o-mu-Qwx" firstAttribute="top" secondItem="YRT-0S-6LM" secondAttribute="top" id="bJG-sn-Y3G"/>
+                <constraint firstItem="YRT-0S-6LM" firstAttribute="top" secondItem="cTh-qP-JRy" secondAttribute="bottom" constant="5" id="kns-EP-brh"/>
+                <constraint firstItem="ugU-Ka-XFr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="203:150" id="lTo-Q2-6gI"/>
+                <constraint firstItem="ugU-Ka-XFr" firstAttribute="top" secondItem="Nha-5W-v4l" secondAttribute="bottom" constant="-17" id="m2S-nF-ogM"/>
+                <constraint firstItem="afL-9E-426" firstAttribute="top" secondItem="lLd-y6-3mC" secondAttribute="top" id="n2Y-tl-t0r"/>
+                <constraint firstItem="YRT-0S-6LM" firstAttribute="width" secondItem="cTh-qP-JRy" secondAttribute="height" multiplier="20:7" id="tHt-tl-bss"/>
+                <constraint firstItem="cTh-qP-JRy" firstAttribute="top" secondItem="tlb-fn-EqO" secondAttribute="bottom" constant="6" id="urH-2S-yvI"/>
+                <constraint firstItem="lLd-y6-3mC" firstAttribute="top" secondItem="34o-mu-Qwx" secondAttribute="top" id="vf2-Q0-3Qx"/>
+                <constraint firstItem="afL-9E-426" firstAttribute="leading" secondItem="lLd-y6-3mC" secondAttribute="trailing" constant="6" id="wO0-x7-hbe"/>
+                <constraint firstItem="34o-mu-Qwx" firstAttribute="leading" secondItem="YRT-0S-6LM" secondAttribute="trailing" constant="6" id="xdv-li-lYu"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="light" destination="Nha-5W-v4l" id="OsK-Ks-zgQ"/>
+                <outlet property="name" destination="tlb-fn-EqO" id="JCP-Ue-KVb"/>
+                <outletCollection property="facility" destination="YRT-0S-6LM" collectionClass="NSMutableArray" id="aij-py-Arf"/>
+                <outletCollection property="facility" destination="34o-mu-Qwx" collectionClass="NSMutableArray" id="iHo-1U-MD2"/>
+                <outletCollection property="facility" destination="lLd-y6-3mC" collectionClass="NSMutableArray" id="joX-P1-bi7"/>
+                <outletCollection property="facility" destination="afL-9E-426" collectionClass="NSMutableArray" id="5XT-uy-G2i"/>
+            </connections>
             <point key="canvasLocation" x="136.95652173913044" y="114.84375"/>
         </view>
     </objects>
     <resources>
         <image name="conditionBadIc" width="42" height="42"/>
-        <image name="facilitySmallBlAccessRoadIc" width="40" height="40"/>
         <image name="facilitySmallBlBathroomIc" width="40" height="40"/>
         <image name="facilitySmallBlLiftIc" width="40" height="40"/>
         <image name="facilitySmallBlParkingIc" width="40" height="40"/>
         <image name="facilitySmallGrAccessRoadIc" width="40" height="40"/>
+        <image name="facilitySmallGrBathroomIc" width="40" height="40"/>
         <image name="facilitySmallGrLiftIc" width="40" height="40"/>
         <image name="facilitySmallGrParkingIc" width="40" height="40"/>
         <image name="homeArBigInfoIc" width="202" height="127"/>
