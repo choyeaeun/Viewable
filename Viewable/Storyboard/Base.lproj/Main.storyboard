@@ -102,7 +102,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="매장 한 눈에 보기">
+                                                <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -124,10 +124,17 @@
                                                     <action selector="goReport:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UPX-YH-hVC"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매장 한 눈에 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic4-o7-jZb">
+                                                <rect key="frame" x="101.5" y="250.5" width="115" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="DqM-CJ-GYV" firstAttribute="top" secondItem="qPC-Hp-bXV" secondAttribute="top" constant="21" id="0jP-iX-aQr"/>
+                                            <constraint firstItem="ic4-o7-jZb" firstAttribute="centerX" secondItem="UVD-JH-GPB" secondAttribute="centerX" id="1GL-zj-Yes"/>
                                             <constraint firstItem="2DJ-77-5lv" firstAttribute="leading" secondItem="9AK-2b-1UW" secondAttribute="trailing" constant="8" id="3ED-qY-eJl"/>
                                             <constraint firstItem="Qld-Sv-AdO" firstAttribute="height" secondItem="2DJ-77-5lv" secondAttribute="height" id="46L-nn-LXX"/>
                                             <constraint firstItem="p6O-5v-iSg" firstAttribute="leading" secondItem="DqM-CJ-GYV" secondAttribute="leading" id="4BH-56-UFu"/>
@@ -149,6 +156,7 @@
                                             <constraint firstItem="p6O-5v-iSg" firstAttribute="top" secondItem="DqM-CJ-GYV" secondAttribute="bottom" id="TV9-7X-syG"/>
                                             <constraint firstItem="Qld-Sv-AdO" firstAttribute="centerY" secondItem="2DJ-77-5lv" secondAttribute="centerY" id="UMS-G6-Vo4"/>
                                             <constraint firstItem="fnx-2a-rxN" firstAttribute="top" secondItem="p6O-5v-iSg" secondAttribute="bottom" constant="13" id="YNw-GQ-pKl"/>
+                                            <constraint firstItem="ic4-o7-jZb" firstAttribute="centerY" secondItem="UVD-JH-GPB" secondAttribute="centerY" id="eMI-Hi-xSo"/>
                                             <constraint firstItem="2DJ-77-5lv" firstAttribute="width" secondItem="9AK-2b-1UW" secondAttribute="width" id="fgz-E3-2MR"/>
                                             <constraint firstAttribute="height" constant="293" id="ge4-E4-MyC"/>
                                             <constraint firstItem="DqM-CJ-GYV" firstAttribute="leading" secondItem="qPC-Hp-bXV" secondAttribute="leading" constant="20" id="ghC-kQ-ybg"/>
