@@ -35,7 +35,6 @@
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-pi-wBd" userLabel="Facility1 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                         <rect key="frame" x="20" y="156.5" width="36" height="36"/>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Y7C-pi-wBd" secondAttribute="height" multiplier="1:1" id="F5l-hN-3VK"/>
                             <constraint firstAttribute="width" constant="36" id="IyE-QY-Xmu"/>
@@ -48,7 +47,6 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sou-Vk-QYa" userLabel="Facility2 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                         <rect key="frame" x="66" y="156.5" width="36" height="36"/>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="sou-Vk-QYa" secondAttribute="height" multiplier="1:1" id="3Z6-8w-nKP"/>
                             <constraint firstAttribute="width" constant="36" id="gic-bk-niP"/>
@@ -61,7 +59,6 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-b8-04u" userLabel="Facility3 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                         <rect key="frame" x="112" y="156.5" width="36" height="36"/>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="B6K-Jb-v7M"/>
                             <constraint firstAttribute="width" secondItem="jmm-b8-04u" secondAttribute="height" multiplier="1:1" id="id9-EN-k6h"/>
@@ -74,7 +71,6 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-B3-Emk" userLabel="Facility4 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                         <rect key="frame" x="158" y="156.5" width="36" height="36"/>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="XOj-B3-Emk" secondAttribute="height" multiplier="1:1" id="HDN-Z6-lgc"/>
                             <constraint firstAttribute="width" constant="36" id="heT-UA-uIc"/>
@@ -85,13 +81,24 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-Px-Oc5" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-Px-Oc5" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                         <rect key="frame" x="309" y="23" width="85" height="85"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="85" id="JIx-M5-C5t"/>
                             <constraint firstAttribute="width" secondItem="qEx-Px-Oc5" secondAttribute="height" multiplier="1:1" id="nEh-LX-0tQ"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listStoreCafeIc" translatesAutoresizingMaskIntoConstraints="NO" id="dnj-OQ-ljb">
                         <rect key="frame" x="20" y="15" width="50" height="32"/>
@@ -117,7 +124,6 @@
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-F8-9ip" userLabel="Facility5 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                         <rect key="frame" x="204" y="156.5" width="36" height="36"/>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="sUB-F8-9ip" secondAttribute="height" multiplier="1:1" id="0W1-nn-kMP"/>
                             <constraint firstAttribute="width" constant="36" id="o9d-9B-bm5"/>
@@ -162,13 +168,16 @@
                     <constraint firstAttribute="trailing" secondItem="qEx-Px-Oc5" secondAttribute="trailing" constant="20" id="qdn-h9-dC4"/>
                     <constraint firstItem="jmm-b8-04u" firstAttribute="leading" secondItem="sou-Vk-QYa" secondAttribute="trailing" constant="10" id="tpn-9A-yw9"/>
                     <constraint firstItem="CzY-Ny-QkT" firstAttribute="top" secondItem="WXi-OC-KY5" secondAttribute="bottom" constant="5" id="uDh-yl-UJW"/>
+                    <constraint firstItem="qEx-Px-Oc5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pq1-9G-NPi" secondAttribute="trailing" constant="16" id="ykM-VF-u6b"/>
                     <constraint firstItem="fFl-51-XJl" firstAttribute="leading" secondItem="dnj-OQ-ljb" secondAttribute="leading" id="zKy-JT-eoa"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="categoryImageView" destination="dnj-OQ-ljb" id="ozo-a2-FAH"/>
                 <outlet property="storeAddressLabel" destination="pq1-9G-NPi" id="jgp-26-nnE"/>
                 <outlet property="storeNameLabel" destination="fFl-51-XJl" id="FBk-SN-BHD"/>
                 <outlet property="storePhoneLabel" destination="RoN-xa-tkf" id="1In-DL-nAS"/>
+                <outlet property="storeTimeLabel" destination="af1-Vj-XlW" id="xAt-Ql-I7K"/>
                 <outlet property="thumbnailImageView" destination="qEx-Px-Oc5" id="WjQ-D7-FkO"/>
                 <outletCollection property="facilitiesImageView" destination="Y7C-pi-wBd" collectionClass="NSMutableArray" id="Jjt-Ly-bsf"/>
                 <outletCollection property="facilitiesImageView" destination="sou-Vk-QYa" collectionClass="NSMutableArray" id="dbZ-Kb-jxB"/>

@@ -12,12 +12,17 @@ struct SearchCategoryVO: Codable {
     let success: Bool
     let status: Int
     let message: String
-    let data: [StoreData]
+    let data: StoreListData
+}
+
+struct StoreListData: Codable {
+    let storeList: [StoreData]
 }
 
 struct StoreData: Codable {
     let address: String
     let buildingIdx: Int
+    let buildingName: String
     let categoryIdx: Int
     let img: String
     let name: String

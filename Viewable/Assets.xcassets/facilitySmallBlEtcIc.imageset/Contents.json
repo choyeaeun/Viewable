@@ -7,13 +7,13 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "facilitySmallBlEtcIc@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "facilitySmallBlEtcIc@2x.png"
     },
     {
       "scale" : "3x",
-      "filename" : "facilitySmallBlEtcIc@3x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "facilitySmallBlEtcIc@3x.png"
     }
   ],
   "info" : {

@@ -97,7 +97,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Constants.categories.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as? UICategoryViewCell
         else {
@@ -106,8 +106,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.iconImageView.image = Constants.categories[indexPath.item].image
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("cate: \(category)")
         category = indexPath.item
         performSegue(withIdentifier: "toSearchResult", sender: nil)
     }

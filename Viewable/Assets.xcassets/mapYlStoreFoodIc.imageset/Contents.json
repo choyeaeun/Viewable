@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "mapYlStoreFoodIc.png",
       "scale" : "1x",
+      "filename" : "mapYlStoreFoodIc.png",
       "idiom" : "universal"
     },
     {
+      "scale" : "2x",
       "filename" : "mapYlStoreFoodIc@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
+      "idiom" : "universal"
     },
     {
       "filename" : "mapYlStoreFoodIc@3x.png",

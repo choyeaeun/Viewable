@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "idiom" : "universal",
+      "scale" : "1x",
       "filename" : "mapBlStoreMartIc.png"
     },
     {
-      "filename" : "mapBlStoreMartIc@2x.png",
       "scale" : "2x",
+      "filename" : "mapBlStoreMartIc@2x.png",
       "idiom" : "universal"
     },
     {
       "filename" : "mapBlStoreMartIc@3x.png",
-      "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

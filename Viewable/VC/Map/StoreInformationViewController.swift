@@ -13,11 +13,12 @@ class StoreInformationViewController: UIViewController {
     
     // MARk:- Property
     @IBOutlet var tableView: UITableView!
+    var stores: [StoreData] = []
     
-    let data = [
-        StoreInformation(name: "스타벅스 공덕오거리점", address: "서울특별시 마포구 백범로 108-112", phone: "02-702-4199", facilities: [1, 2, 3], category: 0, thumbnail: "")
-    ]
-    
+    @IBAction func didClickedMap(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+
     // MARK:- Method
     override func viewDidLoad() {
         print("view did load")
@@ -49,7 +50,7 @@ class StoreInformationViewController: UIViewController {
 
 extension StoreInformationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return stores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +58,7 @@ extension StoreInformationViewController: UITableViewDelegate, UITableViewDataSo
         else {
             return UITableViewCell()
         }
-        cell.data = data[indexPath.item]
+        cell.data = stores[indexPath.item]
         return cell
     }
     
