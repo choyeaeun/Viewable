@@ -16,17 +16,18 @@ struct Constants {
         Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlParkingIc"), name: "장애인 주차구역", info: "장애인전용주차구역 위치(층수표기) 및 유도안내표지판 설치해야합니다.\n장애인전용주차구역 내 감시카메라(CCTV) 설치해야합니다."),
         Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlRemoveHightIc"), name: "주,출입구 높이차이 제거", info: "주출입구는 높이차이(단차) 없이 설치해야합니다.\n(다만, 단차이로 인한 경사로 설치시 기울기 1/18이하로 설치)"),
         Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlInfoServiceIc"), name: "안내 서비스", info: "음성안내 및 호출버튼이 설치된 촉지도식(반구형) 안내판이 설치되어야합니다\n* 호출시 보조안내서비스 제공\n청각장애인 이용 가능한 문자안내표지판이 설치되어야합니다.\n비상(화재) 대비용 시각경보기가 설치되어야합니다.\n주요 실명 점자표지판 출입문 옆 측면에 부착되어야합니다."),
-        Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlAccessRoadIc"), name: "휠체어 충전", info: "전동휠체어 급속충전기(공기주입 일체형)가 설치되어 있어야합니다."),
+        Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlChargerIc"), name: "휠체어 충전", info: "전동휠체어 급속충전기(공기주입 일체형)가 설치되어 있어야합니다."),
         Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlEntranceIc"), name: "출입구", info: "주출입문은 자동문으로 설치되어야 합니다.\n(다만, 자동문이 아닐 경우 비상통화장치 설치)"),
+        Facilitie(icon: #imageLiteral(resourceName: "facilitySmallBlFirstFloorIc"), name: "1층", info: "1층에 위치하여 접근성이 편리합니다."),
     ]
     
     static let categories = [
-        Category(image: #imageLiteral(resourceName: "searchStoreFoodBt"), name: "음식점"),
-        Category(image: #imageLiteral(resourceName: "searchStorePostofficeBt"), name: "우체국"),
-        Category(image: #imageLiteral(resourceName: "searchStoreConveniencestoreBt"), name: "편의점"),
-        Category(image: #imageLiteral(resourceName: "searchStoreCafeBt"), name: "카페"),
-        Category(image: #imageLiteral(resourceName: "searchStoreMartBt"), name: "마트"),
-        Category(image: #imageLiteral(resourceName: "searchStoreBankBt"), name: "은행"),
-        Category(image: #imageLiteral(resourceName: "searchStorePharmacyBt"), name: "약국"),
+        Category(image: #imageLiteral(resourceName: "searchStoreFoodBt"), name: "음식점", iconName: "Food"),
+        Category(image: #imageLiteral(resourceName: "searchStorePostofficeBt"), name: "우체국", iconName: "Postoffice"),
+        Category(image: #imageLiteral(resourceName: "searchStoreConveniencestoreBt"), name: "편의점", iconName: "Conveniencestore"),
+        Category(image: #imageLiteral(resourceName: "searchStoreCafeBt"), name: "카페", iconName: "Cafe"),
+        Category(image: #imageLiteral(resourceName: "searchStoreMartBt"), name: "마트", iconName: "Mart"),
+        Category(image: #imageLiteral(resourceName: "searchStoreBankBt"), name: "은행", iconName: "Bank"),
+        Category(image: #imageLiteral(resourceName: "searchStorePharmacyBt"), name: "약국", iconName: "Pharmacy"),
     ]
 }
