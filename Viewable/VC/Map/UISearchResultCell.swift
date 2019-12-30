@@ -18,6 +18,7 @@ class UISearchResultCell: UICollectionViewCell {
     @IBOutlet var operationLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var imageView: UIRadiusImageView!
+    @IBOutlet var facilityImageViews: [UIImageView]!
     
     var data: StoreData? {
         didSet {
@@ -28,6 +29,19 @@ class UISearchResultCell: UICollectionViewCell {
                 phoneLabel.text = safeData.phone
                 if let url = URL(string: safeData.img) {
                     imageView.downloadImage(from: url)
+                }
+                facilityImageViews.forEach { imageView in
+                    imageView.image = nil
+                }
+
+                for (index, value) in safeData.facility.enumerated() {
+                    if index >= 4 {
+                        break
+                    }
+                    facilityImageViews[index].image = Constants.facilities[value - 1].icon
+                }
+                if safeData.facility.count > 4 {
+                    facilityImageViews[facilityImageViews.count - 1].image = #imageLiteral(resourceName: "facilitySmallBlEtcIc")
                 }
             }
         }

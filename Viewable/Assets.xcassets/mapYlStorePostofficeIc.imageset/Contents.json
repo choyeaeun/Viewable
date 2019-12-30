@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "idiom" : "universal",
+      "scale" : "1x",
       "filename" : "mapYlStorePostofficeIc.png"
     },
     {
-      "filename" : "mapYlStorePostofficeIc@2x.png",
       "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "mapYlStorePostofficeIc@2x.png"
     },
     {
       "filename" : "mapYlStorePostofficeIc@3x.png",

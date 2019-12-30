@@ -86,6 +86,7 @@
 		3AECB8CD23AF8D25002F605B /* ShopfilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB8CC23AF8D25002F605B /* ShopfilterVC.swift */; };
 		7877AACDA53165C0D14D72DD /* Pods_Viewable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C79D8BE18E21F17023A3A /* Pods_Viewable.framework */; };
 		8024427E23B65BEF004CE0E2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024427D23B65BEF004CE0E2 /* UIViewControllerExtension.swift */; };
+		803B342023BA3BFE004C7B9D /* RecommandDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B341F23BA3BFE004C7B9D /* RecommandDetailViewController.swift */; };
 		80F861FE23B672B5002BE417 /* PostableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F861FD23B672B5002BE417 /* PostableService.swift */; };
 		80F8620023B672BA002BE417 /* GettableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F861FF23B672BA002BE417 /* GettableService.swift */; };
 		80F8620223B672BF002BE417 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8620123B672BF002BE417 /* APIService.swift */; };
@@ -210,6 +211,7 @@
 		8024427923B61F5E004CE0E2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		8024427B23B637DC004CE0E2 /* UIReportTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIReportTextView.swift; sourceTree = "<group>"; };
 		8024427D23B65BEF004CE0E2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		803B341F23BA3BFE004C7B9D /* RecommandDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandDetailViewController.swift; sourceTree = "<group>"; };
 		80F861FD23B672B5002BE417 /* PostableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostableService.swift; sourceTree = "<group>"; };
 		80F861FF23B672BA002BE417 /* GettableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettableService.swift; sourceTree = "<group>"; };
 		80F8620123B672BF002BE417 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				EE546DB823B3962600E85574 /* SearchViewController.swift */,
 				80F8621923B6A078002BE417 /* SearchResultViewController.swift */,
 				EE546DB923B3962600E85574 /* StoreInformationViewController.swift */,
+				803B341F23BA3BFE004C7B9D /* RecommandDetailViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				EE546DBD23B3962600E85574 /* UISearchResultCell.swift in Sources */,
 				3A8CD18F23B69F42007BC30D /* FilterVO.swift in Sources */,
 				EE546DBC23B3962600E85574 /* StoreInformationViewController.swift in Sources */,
+				803B342023BA3BFE004C7B9D /* RecommandDetailViewController.swift in Sources */,
 				80F8620E23B68396002BE417 /* UIReportHistoryCell.swift in Sources */,
 				3A8CD1C823B8D8FA007BC30D /* ListService.swift in Sources */,
 			);

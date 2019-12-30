@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "mapYlStoreCafeIc.png",
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "mapYlStoreCafeIc.png"
     },
     {
       "scale" : "2x",
@@ -11,9 +11,9 @@
       "idiom" : "universal"
     },
     {
+      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "mapYlStoreCafeIc@3x.png",
-      "scale" : "3x"
+      "filename" : "mapYlStoreCafeIc@3x.png"
     }
   ],
   "info" : {
