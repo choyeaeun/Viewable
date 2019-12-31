@@ -12,12 +12,34 @@ class ShopListTVCell: UITableViewCell {
     @IBOutlet var name: UILabel!
     @IBOutlet var time: UILabel!
     @IBOutlet var number: UILabel!
-    @IBOutlet var facil1: UIImageView!
-    @IBOutlet var facil2: UIImageView!
-    @IBOutlet var facil3: UIImageView!
-    @IBOutlet var facil4: UIImageView!
-    @IBOutlet var facil5: UIImageView!
     @IBOutlet var storeImg: UIImageView!
+    @IBOutlet var facilitiesImageView: [UIImageView]!
+    
+    var data: StoreLine? {
+        didSet {
+            if let safeData = data {
+                name.text = safeData.name
+                time.text = safeData.operating
+                number.text = safeData.phone
+                if let url = URL(string: safeData.img) {
+                    storeImg.downloadImage(from: url)
+                }
+                
+                facilitiesImageView.forEach { imageView in
+                    imageView.image = nil
+                }
+                for (index, value) in safeData.facility.enumerated() {
+                    if index >= 4 {
+                        break
+                    }
+                    facilitiesImageView[index].image = Constants.facilities[value - 1].icon
+                }
+                if safeData.facility.count > 4 {
+                    facilitiesImageView[facilitiesImageView.count - 1].image = #imageLiteral(resourceName: "facilitySmallBlEtcIc")
+                }
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

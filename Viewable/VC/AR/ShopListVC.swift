@@ -111,14 +111,15 @@ extension ShopListVC: UITableViewDelegate, UITableViewDataSource{
         else {
             return UITableViewCell()
         }
-        cell.name.text = self.list[indexPath.row].name
-        cell.time.text = self.list[indexPath.row].operating
-        cell.number.text = self.list[indexPath.row].phone
+//        cell.name.text = self.list[indexPath.row].name
+//        cell.time.text = self.list[indexPath.row].operating
+//        cell.number.text = self.list[indexPath.row].phone
 //        cell.facil
 //        cell.category.image =
-        if let url = URL(string: gsno(self.list[indexPath.row].img)){
-            cell.storeImg.kf.setImage(with: url)
-        }
+//        if let url = URL(string: gsno(self.list[indexPath.row].img)){
+//            cell.storeImg.kf.setImage(with: url)
+//        }
+        cell.data = list[indexPath.item]
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
