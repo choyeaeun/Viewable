@@ -38,6 +38,7 @@ class ShopfilterVC: UIViewController {
             }
         }
     }
+    
     @IBAction func adjustFilter(_ sender: UIButton) {
         if let facilityBtns = facility {
             for i in 0...facilityBtns.count-1{

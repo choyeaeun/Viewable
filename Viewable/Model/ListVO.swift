@@ -21,7 +21,9 @@ struct StoreLine: Codable {
     let storeIdx: Int
     let name: String
     let img: String
-    let phone, address, operating, category: String
+    let phone: String
+    let address: String
+    let operating: String
     let categoryIdx: Int
     let facility: [Int]
 }
