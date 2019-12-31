@@ -17,6 +17,7 @@ class ReportViewController: UIViewController {
     @IBOutlet var contentTextView: UIReportTextView!
     @IBOutlet var confrimView: UIView!
     var selectedBuilding: Int?
+    var selectedBuildingName: String = ""
     
     private let pickerController: UIImagePickerController = {
         let result = UIImagePickerController()
@@ -55,6 +56,11 @@ class ReportViewController: UIViewController {
         super.viewDidLoad()
         pickerController.delegate = self
         touchToHideKeyboard()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationLabel.text = selectedBuildingName
     }
 }
 
