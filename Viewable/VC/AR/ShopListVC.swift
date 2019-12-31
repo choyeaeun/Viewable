@@ -31,7 +31,8 @@ class ShopListVC: UIViewController, SendDataDelegate {
     @IBAction func openFilter(_ sender: UIButton) {
         guard let filterVC = self.storyboard?.instantiateViewController(identifier: "ShopfilterVC") as? ShopfilterVC
             else { return }
-
+        
+        filterVC.delegate = self
         self.present(filterVC, animated: true)
     }
     
@@ -53,7 +54,7 @@ class ShopListVC: UIViewController, SendDataDelegate {
     func sendData(facility: String, category: String) {
         self.filterFac = facility
         self.filterCat = category
-        filterBoardInit(facility: filterFac, category: filterCat)
+        filterBoardInit(facility: filterCat, category: filterFac)
     }
     
     func listBoardInit(){
@@ -81,9 +82,8 @@ class ShopListVC: UIViewController, SendDataDelegate {
                         
                         switch result {
                         case .networkSuccess(let data):
-                            if let vo = data as? FilterVO {
-                                self.filterList = [vo.data]
-                                //
+                            if let vo = data as? ListVO {
+                                self.list = vo.data
                                 self.tableview.reloadData()
                             }
                         case .networkFail :
