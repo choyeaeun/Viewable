@@ -140,13 +140,6 @@
                                                                 <constraint firstAttribute="height" constant="40" id="TLu-LF-MHM"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="790-rZ-9dL" userLabel="facility5">
-                                                            <rect key="frame" x="210" y="189" width="40" height="40"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="790-rZ-9dL" secondAttribute="height" multiplier="1:1" id="Cz6-Yu-Bsc"/>
-                                                                <constraint firstAttribute="height" constant="40" id="ufp-Ea-YQ5"/>
-                                                            </constraints>
-                                                        </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5g1-B9-qvI" userLabel="facility4">
                                                             <rect key="frame" x="160" y="189" width="40" height="40"/>
                                                             <constraints>
@@ -154,6 +147,17 @@
                                                                 <constraint firstAttribute="width" secondItem="5g1-B9-qvI" secondAttribute="height" multiplier="1:1" id="n1e-O5-gic"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSr-a1-UbK">
+                                                            <rect key="frame" x="254" y="185" width="48" height="48"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="48" id="Kdb-bi-RmP"/>
+                                                                <constraint firstAttribute="width" constant="48" id="mEb-Si-6ro"/>
+                                                            </constraints>
+                                                            <state key="normal" image="mapPathfindingBt"/>
+                                                            <connections>
+                                                                <action selector="didClickedPathFind:" destination="aKk-mF-SzO" eventType="touchUpInside" id="DFK-Xp-byS"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -177,12 +181,13 @@
                                                         <constraint firstItem="FGb-7R-Cyp" firstAttribute="top" secondItem="9oR-k2-XUi" secondAttribute="bottom" constant="6" id="fW0-O1-MJK"/>
                                                         <constraint firstItem="90N-jT-y7w" firstAttribute="leading" secondItem="FGb-7R-Cyp" secondAttribute="trailing" constant="6" id="gNX-QK-bHE"/>
                                                         <constraint firstItem="fPW-Ok-CnK" firstAttribute="centerY" secondItem="631-5w-cyq" secondAttribute="centerY" id="hgQ-ff-1IP"/>
-                                                        <constraint firstItem="790-rZ-9dL" firstAttribute="centerY" secondItem="5g1-B9-qvI" secondAttribute="centerY" id="iCz-qh-kfg"/>
                                                         <constraint firstAttribute="trailing" secondItem="Gew-rJ-zck" secondAttribute="trailing" constant="10" id="j4c-vE-o7k"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zSr-a1-UbK" secondAttribute="bottom" priority="250" constant="13" id="lxx-Fe-TbM"/>
+                                                        <constraint firstItem="zSr-a1-UbK" firstAttribute="centerY" secondItem="5g1-B9-qvI" secondAttribute="centerY" id="mP7-HM-AMV"/>
                                                         <constraint firstItem="juA-xW-Vf6" firstAttribute="top" secondItem="FGb-7R-Cyp" secondAttribute="bottom" constant="6" id="sHG-hv-1gv"/>
                                                         <constraint firstItem="vRB-S2-R30" firstAttribute="leading" secondItem="juA-xW-Vf6" secondAttribute="trailing" constant="6" id="tnN-Ng-rWM"/>
                                                         <constraint firstItem="bWI-lF-1Jy" firstAttribute="centerY" secondItem="9oR-k2-XUi" secondAttribute="centerY" id="vzf-uz-hmq"/>
-                                                        <constraint firstItem="790-rZ-9dL" firstAttribute="leading" secondItem="5g1-B9-qvI" secondAttribute="trailing" constant="10" id="whG-oq-dps"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zSr-a1-UbK" secondAttribute="trailing" constant="28" id="wHo-sv-UlR"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,7 +202,6 @@
                                                     <outletCollection property="facilityImageViews" destination="631-5w-cyq" collectionClass="NSMutableArray" id="tyF-yk-JdX"/>
                                                     <outletCollection property="facilityImageViews" destination="fPW-Ok-CnK" collectionClass="NSMutableArray" id="hEB-M0-dOA"/>
                                                     <outletCollection property="facilityImageViews" destination="5g1-B9-qvI" collectionClass="NSMutableArray" id="sff-Gx-GHr"/>
-                                                    <outletCollection property="facilityImageViews" destination="790-rZ-9dL" collectionClass="NSMutableArray" id="3so-sK-6Hk"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -1019,6 +1023,7 @@
         <image name="mapFilterConditionGreatBt" width="49" height="49"/>
         <image name="mapFilterConditionSosoBt" width="50" height="49"/>
         <image name="mapFindPlaceBt" width="49" height="49"/>
+        <image name="mapPathfindingBt" width="58" height="57"/>
         <image name="marketListCallIc" width="20" height="21"/>
         <image name="marketListLocationIc" width="20" height="20"/>
         <image name="marketListTimeIc" width="20" height="21"/>
