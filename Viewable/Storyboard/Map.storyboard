@@ -498,7 +498,7 @@
                                                             <constraint firstAttribute="width" secondItem="YLk-5t-zG1" secondAttribute="height" multiplier="184:221" id="Po2-N8-eDo"/>
                                                             <constraint firstAttribute="height" constant="221" id="x6i-BV-fSC"/>
                                                         </constraints>
-                                                        <state key="normal" image="group17"/>
+                                                        <state key="normal" image="searchTravelMuseumCard"/>
                                                         <connections>
                                                             <segue destination="tN4-ac-j45" kind="showDetail" id="kTb-gi-riB"/>
                                                         </connections>
@@ -509,7 +509,7 @@
                                                             <constraint firstAttribute="width" secondItem="XA3-vv-lta" secondAttribute="height" multiplier="184:221" id="UqO-or-VZy"/>
                                                             <constraint firstAttribute="width" constant="184" id="abW-LA-7PL"/>
                                                         </constraints>
-                                                        <state key="normal" image="group17"/>
+                                                        <state key="normal" image="searchTravelWarCard"/>
                                                         <connections>
                                                             <segue destination="tN4-ac-j45" kind="showDetail" id="BHZ-GF-eZF"/>
                                                         </connections>
@@ -1042,6 +1042,8 @@
         <image name="searchGrFilterIc" width="24" height="24"/>
         <image name="searchSecondIc" width="21" height="21"/>
         <image name="searchThirdIc" width="21" height="21"/>
+        <image name="searchTravelMuseumCard" width="275" height="322"/>
+        <image name="searchTravelWarCard" width="275" height="322"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BHZ-GF-eZF"/>

@@ -35,7 +35,7 @@
 			<string>com.yeaeun.Viewable</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>kakaoMaplink</string>
+				<string>kakaomap</string>
 			</array>
 		</dict>
 	</array>
@@ -51,7 +51,7 @@
 		<string>kakaolink</string>
 		<string>kakaotalk-5.9.7</string>
 		<string>storylink</string>
-        <string>kakaoMaplink</string>
+		<string>kakaomap</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
