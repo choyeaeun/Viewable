@@ -48,8 +48,9 @@ class UISearchResultCell: UICollectionViewCell {
     }
     
     @IBAction func didClickedPathFind(_ sender: Any) {
-        let urlString = "kakaomap://search?q=\(data!.name)&p=\(data!.latitude),\(data!.longitude)"
-        if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+        
+//        , UIApplication.shared.canOpenURL(url)
+        if let urlString = "kakaomap://search?q=\(data!.name)&p=\(data!.latitude),\(data!.longitude)".addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: urlString) { 
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
             // app store 이동 openURLToAppStore(urlPath: name)
