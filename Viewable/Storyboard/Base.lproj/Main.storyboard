@@ -64,6 +64,9 @@
                                                 <state key="normal" image="facilityBigGrAccessRoadIc"/>
                                                 <state key="disabled" image="facilityBigGrAccessRoadIc"/>
                                                 <state key="selected" image="facilityBigBlAccessRoadIc"/>
+                                                <connections>
+                                                    <action selector="exAccess:" destination="BV1-FR-VrT" eventType="touchUpInside" id="xOL-bq-Vhf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="444-Q7-mSf">
                                                 <rect key="frame" x="83" y="84" width="30" height="30"/>
@@ -71,6 +74,9 @@
                                                     <constraint firstAttribute="width" secondItem="444-Q7-mSf" secondAttribute="height" multiplier="1:1" id="OOC-E1-VZM"/>
                                                 </constraints>
                                                 <state key="normal" image="facilityInformationBt"/>
+                                                <connections>
+                                                    <action selector="infromationAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="y4D-YC-mSm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DJ-77-5lv">
                                                 <rect key="frame" x="111" y="121" width="73" height="104"/>
@@ -80,18 +86,27 @@
                                                 <state key="normal" image="facilityBigGrLiftIc"/>
                                                 <state key="disabled" image="facilityBigGrLiftIc"/>
                                                 <state key="selected" image="facilityBigBlLiftIc"/>
+                                                <connections>
+                                                    <action selector="exAccess:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SFQ-lJ-AIu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-Sv-AdO">
                                                 <rect key="frame" x="192" y="121" width="73" height="104"/>
                                                 <state key="normal" image="facilityBigGrBathroomIc"/>
                                                 <state key="disabled" image="facilityBigGrBathroomIc"/>
                                                 <state key="selected" image="facilityBigBlBathroomIc"/>
+                                                <connections>
+                                                    <action selector="exAccess:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SIN-y2-mHd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-R2-mQg">
                                                 <rect key="frame" x="273" y="121" width="73" height="104"/>
                                                 <state key="normal" image="facilityBigGrParkingIc"/>
                                                 <state key="disabled" image="facilityBigGrParkingIc"/>
                                                 <state key="selected" image="facilityBigBlParkingIc"/>
+                                                <connections>
+                                                    <action selector="exAccess:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yjJ-eI-pIC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVD-JH-GPB" customClass="UIRadiusButton" customModule="Viewable" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="237" width="278" height="48"/>
@@ -176,6 +191,72 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="On6-mM-zM5"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-Kt-4QJ">
+                                <rect key="frame" x="0.0" y="30" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbs-EZ-bFI" customClass="UIRadiusButton" customModule="Viewable" customModuleProvider="target">
+                                        <rect key="frame" x="315" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="homeSearchIc"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goSearch:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yZb-As-rVB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9kr-kE-hJk" customClass="UIRadiusButton" customModule="Viewable" customModuleProvider="target">
+                                        <rect key="frame" x="96" y="0.0" width="183" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="마포대로" image="homeRocationIc">
+                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-VH-3gl" customClass="UIRadiusButton" customModule="Viewable" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="homeProfileIc"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goMypage:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fyY-6x-gX6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마포대로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twc-EI-5L5">
+                                        <rect key="frame" x="164" y="9" width="63" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeRocationIc" translatesAutoresizingMaskIntoConstraints="NO" id="djE-3b-IMn">
+                                        <rect key="frame" x="145" y="9" width="16" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeSearchIc" translatesAutoresizingMaskIntoConstraints="NO" id="c2v-Po-Loc">
+                                        <rect key="frame" x="326" y="9" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeProfileIc" translatesAutoresizingMaskIntoConstraints="NO" id="1hK-te-uYy">
+                                        <rect key="frame" x="30" y="10" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -191,7 +272,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="buildingAddress" destination="p6O-5v-iSg" id="KaV-xd-5ry"/>
-                        <outlet property="buildingInfoView" destination="qPC-Hp-bXV" id="0HZ-pl-ekg"/>
+                        <outlet property="buildingInfoView" destination="8Ta-CL-lmO" id="t54-2T-hdj"/>
                         <outlet property="buildingName" destination="DqM-CJ-GYV" id="jlu-E1-13F"/>
                         <outlet property="yeoungIMG" destination="BOV-vv-p57" id="qW6-In-kJX"/>
                         <outletCollection property="facilityList" destination="9AK-2b-1UW" collectionClass="NSMutableArray" id="h2g-78-Bwm"/>
@@ -202,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="131"/>
+            <point key="canvasLocation" x="1028" y="130.88455772113943"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MmB-HD-A3x">
@@ -828,7 +909,7 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketListLocationIc" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-Ew-v2u">
                                                                 <rect key="frame" x="20" y="209" width="20" height="20"/>
                                                             </imageView>
-                                                            <button opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-0Q-OFE">
+                                                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-0Q-OFE">
                                                                 <rect key="frame" x="307" y="239" width="48" height="48"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="48" id="v2Z-VO-0eZ"/>
@@ -1213,7 +1294,7 @@
                                         <color key="textColor" red="0.3803921569" green="0.42745098040000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-oY-uqa" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facilityAccessRoadImage1" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-oY-uqa" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                                         <rect key="frame" x="15" y="198" width="95" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1239,11 +1320,11 @@
 -접근로와 차도의 경계는 완전 분리하여 설치되어야 합니다.
 -대지 경계면에서 주출입구까지 점자 유도블록이
 설치되어야 합니다.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ME-dc-vav" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facilityAccessRoadImage2" translatesAutoresizingMaskIntoConstraints="NO" id="5ME-dc-vav" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                                         <rect key="frame" x="125" y="198" width="95" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1253,7 +1334,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-yN-BvF" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facilityAccessRoadImage3" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-yN-BvF" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
                                         <rect key="frame" x="235" y="198" width="95" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1289,6 +1370,9 @@
     </scenes>
     <resources>
         <image name="bigConditionBadIc" width="52" height="69"/>
+        <image name="facilityAccessRoadImage1" width="95" height="95"/>
+        <image name="facilityAccessRoadImage2" width="95" height="95"/>
+        <image name="facilityAccessRoadImage3" width="95" height="95"/>
         <image name="facilityBigBlAccessRoadIc" width="73" height="104"/>
         <image name="facilityBigBlBathroomIc" width="73" height="104"/>
         <image name="facilityBigBlChargerIc" width="73" height="104"/>

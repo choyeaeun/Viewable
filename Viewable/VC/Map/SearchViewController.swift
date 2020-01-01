@@ -22,6 +22,10 @@ class SearchViewController: UIViewController {
     var facilties: [Int] = []
     
     // MARK:- Method
+
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func didClickedAllOption(_ sender: Any) {
         let optionState = !optionButtons[0].isOn
         optionButtons.forEach { button in

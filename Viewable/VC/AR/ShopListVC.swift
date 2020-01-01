@@ -17,7 +17,7 @@ class ShopListVC: UIViewController, SendDataDelegate {
     var filterCat: String = "0,1,2,3,4,5,6"
     var list:[StoreLine] = []
     var filterList:[FilterStore] = []
-    var buildingId:Int = 1
+    var buildingId:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
