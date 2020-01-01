@@ -11,7 +11,7 @@ import UIKit
 class ShopDetailVC: UIViewController, MTMapViewDelegate {
 
     @IBOutlet var smallMapView: UIView!
-    var mapView: MTMapView?
+    var daumMapView: MTMapView?
     var selectedStore:Int!
     var shopData: Detail!
     
@@ -23,24 +23,58 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
     @IBOutlet var shopAddress2: UILabel!
     @IBOutlet var shopTime: UILabel!
     @IBOutlet var shopNumber: UILabel!
-    @IBOutlet var tableview: UITableView!
-    var arr :[UIImage] = [#imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc")]
+    @IBOutlet var facilityImageView: [UIImageView]!
+    @IBOutlet var Line2StackView: UIStackView!
+
+    var facilityImages: [UIImage] = [#imageLiteral(resourceName: "facilityBigBlAccessRoadIc"), #imageLiteral(resourceName: "facilityBigBlLiftIc"), #imageLiteral(resourceName: "facilityBigBlBathroomIc"), #imageLiteral(resourceName: "facilityBigBlParkingIc"), #imageLiteral(resourceName: "facilityBigBlRemoveHightIc"), #imageLiteral(resourceName: "facilityBigBlInfoServiceIc"), #imageLiteral(resourceName: "facilityBigBlChargerIc"), #imageLiteral(resourceName: "facilityBigBlEntranceIc"), #imageLiteral(resourceName: "facilityBigBlFirstFloorIc")]
+    
+    func setFacilityImageView() {
+        let isSingleLine = shopData.facilities.count < 5
+        Line2StackView.isHidden = isSingleLine
+
+        for (index, value) in shopData.facilities.enumerated() {
+            facilityImageView[index].image = facilityImages[value]
+        }
+    }
+    
+    func initMap() {
+        if (!MTMapView.isMapTilePersistentCacheEnabled()) {
+            MTMapView.setMapTilePersistentCacheEnabled(true)
+        }
+
+        daumMapView = MTMapView.create(delegate: self, bound: smallMapView.bounds)
+        if let mapView = daumMapView {
+            smallMapView.addSubview(mapView)
+        }
+    }
+    
+    func pinOnMapView() {
+        guard let mapView = daumMapView
+        else {
+            return
+        }
+
+        let marker = MTMapPOIItem()
+        let geoCoord = MTMapPointGeo(latitude: shopData.latitude, longitude: shopData.longitude)
+        marker.mapPoint = MTMapPoint(geoCoord: geoCoord)
+        marker.markerType = .bluePin
+        marker.showAnimationType = .springFromGround
+        marker.draggable = false
+        mapView.addPOIItems([marker])
+        mapView.fitAreaToShowAllPOIItems()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mapView = MTMapView(frame: smallMapView.bounds)
-        if let mapView = mapView{
-            mapView.delegate = self
-            mapView.baseMapType = .standard
-            smallMapView.addSubview(mapView)
-        }
+        initMap()
         ShopBoardInit()
-        
     }
+
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationItem.backBarButtonItem?.title = ""
@@ -68,7 +102,8 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
                     case .networkSuccess(let data):
                         if let vo = data as? ShopInfoVO {
                             self.shopData = vo.data
-                            self.tableview.reloadData()
+                            self.setFacilityImageView()
+                            self.pinOnMapView()
                         }
                         if let url = URL(string: self.gsno(self.shopData.img)){
                             self.shopImg.kf.setImage(with: url)
@@ -95,19 +130,7 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
     @IBAction func goReport(_ sender: UIButton) {
         guard let reportVC = UIStoryboard(name: "Report", bundle: nil).instantiateViewController(identifier: "ReportViewController") as? ReportViewController else { return }
         reportVC.selectedBuilding = self.shopData.buildingIdx
-        print(self.shopData.buildingIdx)
+        reportVC.selectedBuildingName = shopData.name
         self.present(reportVC, animated: true)
-    }
-}
-
-extension ShopDetailVC: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        cell.configure(with: self.arr )
-        return cell
     }
 }

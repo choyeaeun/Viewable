@@ -31,7 +31,8 @@ class ShopListVC: UIViewController, SendDataDelegate {
     @IBAction func openFilter(_ sender: UIButton) {
         guard let filterVC = self.storyboard?.instantiateViewController(identifier: "ShopfilterVC") as? ShopfilterVC
             else { return }
-
+        
+        filterVC.delegate = self
         self.present(filterVC, animated: true)
     }
     
@@ -53,7 +54,7 @@ class ShopListVC: UIViewController, SendDataDelegate {
     func sendData(facility: String, category: String) {
         self.filterFac = facility
         self.filterCat = category
-        filterBoardInit(facility: filterFac, category: filterCat)
+        filterBoardInit(facility: filterCat, category: filterFac)
     }
     
     func listBoardInit(){
@@ -81,9 +82,8 @@ class ShopListVC: UIViewController, SendDataDelegate {
                         
                         switch result {
                         case .networkSuccess(let data):
-                            if let vo = data as? FilterVO {
-                                self.filterList = [vo.data]
-                                //
+                            if let vo = data as? ListVO {
+                                self.list = vo.data
                                 self.tableview.reloadData()
                             }
                         case .networkFail :
@@ -111,14 +111,15 @@ extension ShopListVC: UITableViewDelegate, UITableViewDataSource{
         else {
             return UITableViewCell()
         }
-        cell.name.text = self.list[indexPath.row].name
-        cell.time.text = self.list[indexPath.row].operating
-        cell.number.text = self.list[indexPath.row].phone
+//        cell.name.text = self.list[indexPath.row].name
+//        cell.time.text = self.list[indexPath.row].operating
+//        cell.number.text = self.list[indexPath.row].phone
 //        cell.facil
 //        cell.category.image =
-        if let url = URL(string: gsno(self.list[indexPath.row].img)){
-            cell.storeImg.kf.setImage(with: url)
-        }
+//        if let url = URL(string: gsno(self.list[indexPath.row].img)){
+//            cell.storeImg.kf.setImage(with: url)
+//        }
+        cell.data = list[indexPath.item]
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
