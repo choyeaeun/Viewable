@@ -47,16 +47,17 @@ class SearchResultViewController: UIViewController {
             return
         }
         mapView.removeAllPOIItems()
-
+        
         var markers: [MTMapPOIItem] = []
         currentStores.forEach { data in
+            let cate = category == -1 ? data.categoryIdx - 1 : category
             let marker = MTMapPOIItem()
             marker.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: data.latitude, longitude: data.longitude))
             marker.showAnimationType = .springFromGround
             marker.markerType = .customImage
             marker.markerSelectedType = .customImage
-            marker.customImageName = Constants.categories[category].smallMarkers[data.light - 1]
-            marker.customSelectedImageName = Constants.categories[category].largeMarkers[data.light - 1]
+            marker.customImageName = Constants.categories[cate].smallMarkers[data.light - 1]
+            marker.customSelectedImageName = Constants.categories[cate].largeMarkers[data.light - 1]
             marker.customImageAnchorPointOffset = MTMapImageOffset(offsetX: 45, offsetY: 10)
             markers.append(marker)
         }
