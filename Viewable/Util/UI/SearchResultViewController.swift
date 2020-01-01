@@ -180,5 +180,10 @@ extension SearchResultViewController: UICollectionViewDelegate, UICollectionView
         let data = currentStores[indexPath.item]
         let point = MTMapPoint(geoCoord: MTMapPointGeo(latitude: data.latitude, longitude: data.longitude))
         mapView.setMapCenter(point, animated: true)
+        
+        guard let DetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopDetailVC") as? ShopDetailVC else { return }
+                DetailVC.selectedStore = currentStores[indexPath.item].storeIdx
+        //        DetailVC.selectedStore = list[indexPath.row].storeIdx
+                self.navigationController?.pushViewController(DetailVC, animated: true)
     }
 }

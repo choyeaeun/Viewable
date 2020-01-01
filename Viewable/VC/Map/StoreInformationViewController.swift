@@ -62,6 +62,12 @@ extension StoreInformationViewController: UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let DetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopDetailVC") as? ShopDetailVC else { return }
+        DetailVC.selectedStore = stores[indexPath.item].storeIdx
+                self.navigationController?.pushViewController(DetailVC, animated: true)
+    }
+    
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return data.count
 //    }
