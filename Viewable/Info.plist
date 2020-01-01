@@ -21,9 +21,21 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>kakao619d05edb746ee255c7c1dbea251329f</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.yeaeun.Viewable</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakaoMaplink</string>
 			</array>
 		</dict>
 	</array>
@@ -39,6 +51,7 @@
 		<string>kakaolink</string>
 		<string>kakaotalk-5.9.7</string>
 		<string>storylink</string>
+        <string>kakaoMaplink</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

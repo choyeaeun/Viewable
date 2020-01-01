@@ -35,18 +35,26 @@ class UISearchResultCell: UICollectionViewCell {
                 }
 
                 for (index, value) in safeData.facility.enumerated() {
-                    if index >= 4 {
+                    if index >= 3 {
                         break
                     }
                     facilityImageViews[index].image = Constants.facilities[value - 1].icon
                 }
-                if safeData.facility.count > 4 {
+                if safeData.facility.count > 3 {
                     facilityImageViews[facilityImageViews.count - 1].image = #imageLiteral(resourceName: "facilitySmallBlEtcIc")
                 }
             }
         }
     }
     
+    @IBAction func didClickedPathFind(_ sender: Any) {
+        let urlString = "kakaomap://search?q=\(data!.name)&p=\(data!.latitude),\(data!.longitude)"
+        if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            // app store 이동 openURLToAppStore(urlPath: name)
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
