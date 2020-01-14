@@ -30,6 +30,7 @@ class ViewController: UIViewController{
     var facilityArr: [Bool] = [false, false, false, false]
     var facilityArrar: [Bool] = [false, false, false, false]
     var sendBuildingID: Int = 0
+    var sendBuildingName: String = ""
     
     @IBOutlet var buildingInfoView: UIView!
     
@@ -84,7 +85,7 @@ class ViewController: UIViewController{
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
-        self.ViewPin(latitude: "37.544401", longitude: "126.952659", altitude: 42, buildingArr: 0)
+//        self.ViewPin(latitude: "37.544401", longitude: "126.952659", altitude: 42, buildingArr: 0)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -115,6 +116,7 @@ class ViewController: UIViewController{
             
         })
     }
+    
     func buildingBoardInit(idx: Int){
             BuildingService.shareInstance.buildingBoardInit(url: "\(APIService.BaseURL)/building/\(idx)" ,completion: { [weak self] (result) in
                         guard let `self` = self else { return }
@@ -122,35 +124,16 @@ class ViewController: UIViewController{
                         switch result {
                         case .networkSuccess(let data):
                             if let vo = data as? BuildInfo {
-                                guard let buildingFac: Facil = vo.data else { return }
+                                let buildingFac : Facil = vo.data
+                                //편의시설 색 초기화
+                                var facilityBackup: [Bool] = [false, false, false, false]
                                 //편의시설 색 칠하기
-                                for i in 0...self.facilityList.count-1 { self.facilityList[i].isSelected = false }
-                                var i : Int = buildingFac.facility.count
-                                if buildingFac.buildingIdx == 1{
-                                    self.facilityList[0].isSelected = true
-                                    self.facilityList[1].isSelected = true
-                                    self.facilityList[2].isSelected = true
-                                    self.facilityList[3].isSelected = true
-                                }else if buildingFac.buildingIdx == 5{
-                                    self.facilityList[0].isSelected = true
-                                    self.facilityList[1].isSelected = false
-                                    self.facilityList[2].isSelected = false
-                                    self.facilityList[3].isSelected = true
-                                }else{
-                                    self.facilityList[0].isSelected = false
-                                    self.facilityList[1].isSelected = true
-                                    self.facilityList[2].isSelected = true
-                                    self.facilityList[3].isSelected = false
-                                    
+                                for i in 1...buildingFac.facility.count{
+                                    facilityBackup[buildingFac.facility[i-1]-1] = true
                                 }
-//                                if i > 0 {
-//                                    while(true){
-//                                        self.facilityList[buildingFac.facility[i-1]].isSelected = true
-//                                        i -= 1
-//                                        if i <= 0 { break }
-//                                    }
-//
-//                                }
+                                for i in 0...3{
+                                    self.facilityList[i].isSelected = facilityBackup[i]
+                                }
                                 self.buildingName.text = buildingFac.name
                                 self.buildingAddress.text = buildingFac.address
                                 switch buildingFac.light{
@@ -164,6 +147,7 @@ class ViewController: UIViewController{
                                     self.yeoungIMG.image = #imageLiteral(resourceName: "bigConditionBadIc")
                                 }
                                 self.sendBuildingID = buildingFac.buildingIdx
+                                self.sendBuildingName = buildingFac.name
                                 self.buildingInfoView.setNeedsDisplay()
                             }
                         case .networkFail :
@@ -216,84 +200,39 @@ class ViewController: UIViewController{
     // 특정 위치에 pin 꽂기
     func ViewPin(latitude:String, longitude:String, altitude:Double, buildingArr: Int){
         
-//        let location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!), altitude: altitude)
-//
-//        guard let view = Bundle.main.loadNibNamed("ARView", owner: self, options: nil)?.first as? ARView else { return }
-//        let oneBuilding: ARData = building[buildingArr]
-//        for i in 0...view.facility.count-1 { view.facility[i].isSelected = false }
-//        var i : Int = oneBuilding.facility.count
-////        if i > 0 {
-////            while(true){
-////                view.facility[oneBuilding.facility[i-1]].isSelected = true
-////                i -= 1
-////                if i <= 0 { break }
-////            }
-////        }
-//        //아님 buildingBoard 데이터 가져와서 빌딩 인덱스로 판별해줘도 될듯
-//        guard var buildingText = view.name.text else {return}
-//        buildingText = self.building[buildingArr].name
-////        view.name.text = self.building[buildingArr].name
-//        print(buildingText)
-//        print(self.building[buildingArr].facility)
-//        switch building[buildingArr].light {
-//        case 3:
-//            view.light.image = #imageLiteral(resourceName: "conditionGreatIc")
-//        case 2:
-//            view.light.image = #imageLiteral(resourceName: "conditionSosoIc")
-//        case 1:
-//            view.light.image = #imageLiteral(resourceName: "conditionBadIc")
-//        default:
-//            view.light.image = #imageLiteral(resourceName: "bigConditionBadIc")
-//        }
-        let location1:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.544401, longitude: 126.952659), altitude: altitude)
-        
-        guard let view1 = Bundle.main.loadNibNamed("ARView2", owner: self, options: nil)?.first as? UIImageView else { return }
-        view1.image = #imageLiteral(resourceName: "arJeilbuilding")
-        
-        let annotationNode1: LocationAnnotationNode = LocationAnnotationNode(location: location1, view: view1)
-        annotationNode1.tag = "1"
-//        view1.name.text = "제일빌딩"
-//        view1.facility[0].isSelected = true
-//        view1.facility[1].isSelected = true
-//        view1.facility[2].isSelected = true
-//        view1.facility[3].isSelected = true
-//        view1.light.image = #imageLiteral(resourceName: "conditionGreatIc")
-//        sceneLocationView.addLocationNodeForCurrentPosition(locationNode: annotationNode)
-//        annotationNode1.tag = "\(building[buildingArr].buildingIdx)"
-        
-        guard let view2 = Bundle.main.loadNibNamed("ARView2", owner: self, options: nil)?.first as? UIImageView else { return }
-        view2.image = #imageLiteral(resourceName: "arRenaissancetower")
-        
-        let location2:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.543875, longitude: 126.952732), altitude: altitude)
-        let annotationNode2:LocationAnnotationNode = LocationAnnotationNode(location: location2, view: view2)
-        annotationNode2.tag = "5"
-//        view2.name.text = "한국사회복지회관 르네상스타워"
-//        view2.facility[0].isSelected = true
-//        view2.facility[1].isSelected = false
-//        view2.facility[2].isSelected = false
-//        view2.facility[3].isSelected = true
-//        view2.light.image = #imageLiteral(resourceName: "conditionSosoIc")
-//        sceneLocationView.addLocationNodeForCurrentPosition(locationNode: <#T##LocationNode#>)
-        
-        guard let view3 = Bundle.main.loadNibNamed("ARView2", owner: self, options: nil)?.first as? UIImageView else { return }
-        view3.image = #imageLiteral(resourceName: "arGongdukbuilding")
-        
-        let location3:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.545524, longitude: 126.95166), altitude: altitude)
-        let annotationNode3:LocationAnnotationNode = LocationAnnotationNode(location: location3, view: view3)
-        annotationNode3.tag = "4"
-//        view3.name.text = "공덕빌딩"
-//        view3.facility[0].isSelected = false
-//        view3.facility[1].isSelected = true
-//        view3.facility[2].isSelected = true
-//        view3.facility[3].isSelected = false
-//        view3.light.image = #imageLiteral(resourceName: "conditionSosoIc")
+        let location:CLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!), altitude: altitude)
 
+        guard let view = Bundle.main.loadNibNamed("ARView", owner: self, options: nil)?.first as? ARView else { return }
+        view.name.text = self.building[buildingArr].name
+        //편의시설 색 초기화
+        var facilityBackup: [Bool] = [false, false, false, false]
+        //편의시설 색 칠하기
+        for i in 1...self.building[buildingArr].facility.count{
+            let index = self.building[buildingArr].facility[i-1]
+            facilityBackup[index-1] = true
+        }
+        for i in 0...3{
+            view.facility[i].isSelected = false
+        }
+        for i in 0...3{
+            view.facility[i].isSelected = facilityBackup[i]
+        }
+        let lightInt : Int = self.building[buildingArr].light
+        switch lightInt {
+        case 3:
+            view.light.image = #imageLiteral(resourceName: "conditionGreatIc")
+        case 2:
+            view.light.image = #imageLiteral(resourceName: "conditionSosoIc")
+        case 1:
+            view.light.image = #imageLiteral(resourceName: "conditionBadIc")
+        default:
+            view.light.image = #imageLiteral(resourceName: "bigConditionBadIc")
+        }
+        let annotationNode: LocationAnnotationNode = LocationAnnotationNode(location: location, view: view)
+        annotationNode.tag = (String)(self.building[buildingArr].buildingIdx)
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
         
-//        sceneLocationView.addLocationNodesForCurrentPosition(locationNodes: [annotationNode1, annotationNode2, annotationNode3])
-        sceneLocationView.addLocationNodesWithConfirmedLocation(locationNodes: [annotationNode1, annotationNode2, annotationNode3])
-//        sceneLocationView.add
         print("new pin plz")
-//        print("new pin!!!",building[buildingArr].name)
     }
     
     func removePin(){
@@ -329,8 +268,8 @@ class ViewController: UIViewController{
     //신고하기 뷰로 넘어가기
     @IBAction func goReport(_ sender: UIButton) {
         guard let reportVC = UIStoryboard(name: "Report", bundle: nil).instantiateViewController(identifier: "ReportViewController") as? ReportViewController else { return }
-        
-        reportVC.selectedBuilding = self.building[1].buildingIdx
+        reportVC.selectedBuildingName = self.sendBuildingName
+        reportVC.selectedBuilding = self.sendBuildingID
         self.present(reportVC, animated: true)
     }
     //마이페이지 뷰로 넘어가기
@@ -363,6 +302,7 @@ extension ViewController: CLLocationManagerDelegate{
         let longitude: Double = Double(location.coordinate.longitude)
         let altitude: Double = Double(location.altitude)
         
+        // 위도 경도 값 문자열로 바꿔줌
         let numberFormatter = NumberFormatter()
         numberFormatter.roundingMode = .floor         // 형식을 버림으로 지정
         numberFormatter.minimumSignificantDigits = 6  // 자르길 원하는 자릿수
@@ -373,15 +313,19 @@ extension ViewController: CLLocationManagerDelegate{
             return
         }
         
+        //위치 서버에 보냄
         arBoardInit(url: "\(APIService.BaseURL)/building", lat: newlatitude, long: newlongitude)
 //        arBoardInit(url: "\(APIService.BaseURL)/building", lat: "37.544401", long: "126.952659")
-//        print(newlatitude, newlongitude, altitude)
-//        if self.buildingBackup != self.building {
-//            self.removePin()
-//            for i in 0...building.count - 1{
-//                self.ViewPin(latitude: self.building[i].latitude.description, longitude: self.building[i].longitude.description, altitude: altitude, buildingArr: i)
-//            }
-//            self.buildingBackup = self.building
-//        }
+        print(newlatitude, newlongitude, altitude)
+
+        // self.building 배열에 응답 빌딩 리스트 받고 백업 배열과 비교
+        if self.buildingBackup != self.building {
+            self.removePin()
+            print("new building list Backup!!!")
+            for i in 0...building.count - 1{
+                self.ViewPin(latitude: self.building[i].latitude.description, longitude: self.building[i].longitude.description, altitude: altitude, buildingArr: i)
+            }
+            self.buildingBackup = self.building
+        }
     }
 }

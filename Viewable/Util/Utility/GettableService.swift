@@ -25,10 +25,10 @@ extension GettableService {
     
     
     func get(_ URL: String, completion : @escaping (Result<NetworkData>)->Void){
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseJSON { json in
-            print(json)
-        }
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseData {(res) in
+//        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzc0NTYwMjMsImV4cCI6MTU3ODY2NTYyMywiaXNzIjoidmlld2FibGUifQ.XJJsjTLKh3O41BID52ynGTv9t3EOsbgzE6VXcPNQ7QM"]).responseJSON { json in
+//            print(json)
+//        }
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0LCJpYXQiOjE1Nzg3Mzg3MTIsImV4cCI6MTU3OTk0ODMxMiwiaXNzIjoidmlld2FibGUifQ.LUjVzlRccUi8WCK7tijtvrFg7W1DeYQmkpffbrj0WB4"]).responseData {(res) in
             switch res.result {
             case .success :
                 

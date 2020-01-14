@@ -482,34 +482,32 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="638" height="221"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-ys-bKY">
-                                                        <rect key="frame" x="20" y="0.0" width="184" height="221"/>
+                                                        <rect key="frame" x="20" y="0.0" width="200" height="221"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="fdC-ys-bKY" secondAttribute="height" multiplier="184:221" id="8Kh-Kt-Jzp"/>
-                                                            <constraint firstAttribute="width" constant="184" id="y4C-WQ-c0w"/>
+                                                            <constraint firstAttribute="width" secondItem="fdC-ys-bKY" secondAttribute="height" multiplier="200:221" id="AIh-So-VfE"/>
                                                         </constraints>
-                                                        <state key="normal" image="group17"/>
+                                                        <state key="normal" image="searchTravelWordlcupCard22"/>
                                                         <connections>
                                                             <segue destination="tN4-ac-j45" kind="showDetail" id="Efc-iX-AKW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-5t-zG1">
-                                                        <rect key="frame" x="224" y="0.0" width="184" height="221"/>
+                                                        <rect key="frame" x="240" y="0.0" width="200" height="221"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="YLk-5t-zG1" secondAttribute="height" multiplier="184:221" id="Po2-N8-eDo"/>
+                                                            <constraint firstAttribute="width" secondItem="YLk-5t-zG1" secondAttribute="height" multiplier="200:221" id="Po2-N8-eDo"/>
                                                             <constraint firstAttribute="height" constant="221" id="x6i-BV-fSC"/>
                                                         </constraints>
-                                                        <state key="normal" image="searchTravelMuseumCard"/>
+                                                        <state key="normal" image="searchTravelWarCard"/>
                                                         <connections>
                                                             <segue destination="tN4-ac-j45" kind="showDetail" id="kTb-gi-riB"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA3-vv-lta">
-                                                        <rect key="frame" x="428" y="0.0" width="184" height="221"/>
+                                                        <rect key="frame" x="460" y="0.0" width="200" height="221"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="XA3-vv-lta" secondAttribute="height" multiplier="184:221" id="UqO-or-VZy"/>
-                                                            <constraint firstAttribute="width" constant="184" id="abW-LA-7PL"/>
+                                                            <constraint firstAttribute="width" secondItem="XA3-vv-lta" secondAttribute="height" multiplier="200:221" id="UqO-or-VZy"/>
                                                         </constraints>
-                                                        <state key="normal" image="searchTravelWarCard"/>
+                                                        <state key="normal" image="searchTravelMuseumCard"/>
                                                         <connections>
                                                             <segue destination="tN4-ac-j45" kind="showDetail" id="BHZ-GF-eZF"/>
                                                         </connections>
@@ -881,7 +879,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-Oi-f96">
-                                                <rect key="frame" x="324" y="8" width="43" height="43"/>
+                                                <rect key="frame" x="281" y="8" width="86" height="86"/>
                                                 <state key="normal" image="contentCloseBt"/>
                                                 <connections>
                                                     <action selector="didClickedBackButton:" destination="tN4-ac-j45" eventType="touchUpInside" id="6F2-Di-6hN"/>
@@ -944,7 +942,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca0-B0-SK5">
-                                        <rect key="frame" x="289" y="6" width="76" height="42"/>
+                                        <rect key="frame" x="213" y="6" width="152" height="84"/>
                                         <state key="normal" image="nbMapBt">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -953,7 +951,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Yp-Tot">
-                                        <rect key="frame" x="10" y="10" width="35" height="36"/>
+                                        <rect key="frame" x="10" y="10" width="70" height="72"/>
                                         <state key="normal" image="nbBackBt"/>
                                         <connections>
                                             <action selector="didClickedBackButton:" destination="uag-vD-cSL" eventType="touchUpInside" id="P6H-RV-YcL"/>
@@ -1016,7 +1014,6 @@
     </scenes>
     <resources>
         <image name="contentCloseBt" width="43" height="43"/>
-        <image name="group17" width="275" height="322"/>
         <image name="mapBlFilterConditionAllBt" width="50" height="49"/>
         <image name="mapBlFilterConditionBadBt" width="49" height="49"/>
         <image name="mapBlFilterConditionGreatBt" width="49" height="49"/>
@@ -1042,8 +1039,9 @@
         <image name="searchGrFilterIc" width="24" height="24"/>
         <image name="searchSecondIc" width="21" height="21"/>
         <image name="searchThirdIc" width="21" height="21"/>
-        <image name="searchTravelMuseumCard" width="275" height="322"/>
-        <image name="searchTravelWarCard" width="275" height="322"/>
+        <image name="searchTravelMuseumCard" width="259" height="275"/>
+        <image name="searchTravelWarCard" width="259" height="275"/>
+        <image name="searchTravelWordlcupCard22" width="259" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BHZ-GF-eZF"/>

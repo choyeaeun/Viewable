@@ -26,7 +26,6 @@ struct MyPageService: GettableService {
                 }
                 break
             case .error(let errMsg) :
-                
                 print(errMsg)
                 break
             case .failure(_) :
