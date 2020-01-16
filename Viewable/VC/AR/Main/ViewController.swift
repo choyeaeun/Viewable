@@ -42,7 +42,7 @@ class ViewController: UIViewController{
     
     
     override func viewDidLoad() {
-//        sleep(2)
+        sleep(2)
         super.viewDidLoad()
         view.insertSubview(sceneLocationView, at: 1)
 //        buildingBoardInit(idx: 4)
