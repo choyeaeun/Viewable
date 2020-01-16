@@ -53,7 +53,7 @@ class ShopfilterVC: UIViewController {
         if let categoryBtns = category {
             for i in 0...categoryBtns.count-1{
                 if categoryBtns[i].isSelected == true{
-                    categoryArr.append(i)
+                    categoryArr.append(categoryBtns[i].tag)
                 }
             }
             if categoryArr == []{
