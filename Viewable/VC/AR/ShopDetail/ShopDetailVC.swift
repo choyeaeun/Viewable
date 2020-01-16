@@ -33,7 +33,7 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
         Line2StackView.isHidden = isSingleLine
 
         for (index, value) in shopData.facilities.enumerated() {
-            facilityImageView[index].image = facilityImages[value]
+            facilityImageView[index].image = facilityImages[value - 1]
         }
     }
     
