@@ -97,6 +97,12 @@ class SearchResultViewController: UIViewController {
         }
     }
     
+    deinit {
+        if (daumMapView != nil) {
+            daumMapView = nil
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let color = CGFloat(155 / 255)
@@ -118,9 +124,6 @@ class SearchResultViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-        if (daumMapView != nil) {
-            daumMapView = nil
-        }
     }
     
     @IBAction func didClickedBackButton(_ sender: Any) {
