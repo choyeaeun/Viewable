@@ -937,7 +937,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 526389PKKJ;
+				DEVELOPMENT_TEAM = C99ST777A5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -967,7 +967,7 @@
 					"-force_load",
 					"$(SRCROOT)/KakaoOpenSDK.framework/KakaoOpenSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yeaeun.Viewable1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeaeun.Viewable;
 				PRODUCT_NAME = wheelmap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Bridging_Header.h";
@@ -984,7 +984,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 526389PKKJ;
+				DEVELOPMENT_TEAM = C99ST777A5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -1014,7 +1014,7 @@
 					"-force_load",
 					"$(SRCROOT)/KakaoOpenSDK.framework/KakaoOpenSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yeaeun.Viewable1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeaeun.Viewable;
 				PRODUCT_NAME = wheelmap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Bridging_Header.h";

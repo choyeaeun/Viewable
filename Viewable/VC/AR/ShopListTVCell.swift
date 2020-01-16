@@ -14,6 +14,17 @@ class ShopListTVCell: UITableViewCell {
     @IBOutlet var number: UILabel!
     @IBOutlet var storeImg: UIImageView!
     @IBOutlet var facilitiesImageView: [UIImageView]!
+    @IBOutlet var categoryImageView: UIImageView!
+    
+    let category = [
+        #imageLiteral(resourceName: "listStoreFoodIc"),
+        #imageLiteral(resourceName: "listStorePostofficeIc"),
+        #imageLiteral(resourceName: "listStoreConveniencestoreIc"),
+        #imageLiteral(resourceName: "listStoreCafeIc"),
+        #imageLiteral(resourceName: "listStoreMartIc"),
+        #imageLiteral(resourceName: "listStoreBankIc"),
+        #imageLiteral(resourceName: "listStorePharmacyIc")
+    ]
     
     var data: StoreLine? {
         didSet {
@@ -21,6 +32,7 @@ class ShopListTVCell: UITableViewCell {
                 name.text = safeData.name
                 time.text = safeData.operating
                 number.text = safeData.phone
+                categoryImageView.image = category[safeData.categoryIdx - 1]
                 if let url = URL(string: safeData.img) {
                     storeImg.downloadImage(from: url)
                 }

@@ -106,7 +106,7 @@ class ViewController: UIViewController{
             case .networkSuccess(let ardata):
                 if let vo = ardata as? ARVO {
                     self.building = vo.data
-                    self.ViewPin(latitude: "37.499908", longitude: "127.043080", altitude: 42, buildingArr: 0)
+//                    self.ViewPin(latitude: "37.499908", longitude: "127.043080", altitude: 42, buildingArr: 0)
                 }
             case .networkFail :
 //                self.simpleAlert(title: "network", message: "check")
@@ -323,7 +323,7 @@ extension ViewController: CLLocationManagerDelegate{
         if self.buildingBackup != self.building {
             self.removePin()
             print("new building list Backup!!!")
-            for i in 0...building.count - 1{
+            for i in 0...building.count - 1 {
                 self.ViewPin(latitude: self.building[i].latitude.description, longitude: self.building[i].longitude.description, altitude: altitude, buildingArr: i)
             }
             self.buildingBackup = self.building

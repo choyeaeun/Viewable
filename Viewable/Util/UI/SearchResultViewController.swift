@@ -25,6 +25,8 @@ class SearchResultViewController: UIViewController {
     var searchText: String = ""
     var facilties: [Int] = []
     
+    var step: Int = 0
+    
     // MARK:- Method
     func initMap() {
         if (!MTMapView.isMapTilePersistentCacheEnabled()) {
@@ -136,7 +138,18 @@ class SearchResultViewController: UIViewController {
     
     @IBAction func setCurrentLocation(_ sender: Any) {
         if let mapView = daumMapView {
-            mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.onWithHeading
+            step = (step + 1) % 3
+            switch step {
+            case 0:
+                mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.onWithHeading
+            case 1:
+                mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.onWithoutHeading
+            case 2:
+                mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.off
+            default:
+                print("no item")
+            }
+            
         }
     }
 
