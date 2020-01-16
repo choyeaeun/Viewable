@@ -42,7 +42,7 @@ class ViewController: UIViewController{
     
     
     override func viewDidLoad() {
-        sleep(2)
+//        sleep(2)
         super.viewDidLoad()
         view.insertSubview(sceneLocationView, at: 1)
 //        buildingBoardInit(idx: 4)
@@ -106,6 +106,7 @@ class ViewController: UIViewController{
             case .networkSuccess(let ardata):
                 if let vo = ardata as? ARVO {
                     self.building = vo.data
+                    self.ViewPin(latitude: "37.499908", longitude: "127.043080", altitude: 42, buildingArr: 0)
                 }
             case .networkFail :
 //                self.simpleAlert(title: "network", message: "check")

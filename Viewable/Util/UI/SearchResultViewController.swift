@@ -134,6 +134,12 @@ class SearchResultViewController: UIViewController {
         performSegue(withIdentifier: "toStoreList", sender: nil)
     }
     
+    @IBAction func setCurrentLocation(_ sender: Any) {
+        if let mapView = daumMapView {
+            mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.onWithHeading
+        }
+    }
+
     @IBAction func didClickedFilterButton(_ sender: UIToggleButton) {
         filterButtons.forEach { button in
             button.isOn = button.tag == sender.tag
@@ -142,7 +148,6 @@ class SearchResultViewController: UIViewController {
             if sender.tag == 0 {
                 return true
             }
-            print(sender.tag == data.light)
             return sender.tag == data.light
         })
         pinOnMap()

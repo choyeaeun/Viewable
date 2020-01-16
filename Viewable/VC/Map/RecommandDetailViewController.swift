@@ -11,7 +11,6 @@ import Foundation
 class RecommandDetailViewController: UIViewController {
 
     @IBAction func didClickedBackButton(_ sender: UIButton) {
-        print("sibal")
         dismiss(animated: true, completion: nil)
     }
 }

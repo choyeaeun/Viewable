@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UIStoreCell" rowHeight="202" id="tUL-u4-MX5" customClass="UIStoreCell" customModule="Viewable" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UIStoreCell" rowHeight="202" id="tUL-u4-MX5" customClass="UIStoreCell" customModule="wheelmap" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUL-u4-MX5" id="5cB-gC-laK">
@@ -33,7 +33,7 @@
                         <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-pi-wBd" userLabel="Facility1 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-pi-wBd" userLabel="Facility1 ImageView" customClass="UIRadiusImageView" customModule="wheelmap" customModuleProvider="target">
                         <rect key="frame" x="20" y="156.5" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Y7C-pi-wBd" secondAttribute="height" multiplier="1:1" id="F5l-hN-3VK"/>
@@ -45,7 +45,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sou-Vk-QYa" userLabel="Facility2 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sou-Vk-QYa" userLabel="Facility2 ImageView" customClass="UIRadiusImageView" customModule="wheelmap" customModuleProvider="target">
                         <rect key="frame" x="66" y="156.5" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="sou-Vk-QYa" secondAttribute="height" multiplier="1:1" id="3Z6-8w-nKP"/>
@@ -57,7 +57,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-b8-04u" userLabel="Facility3 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-b8-04u" userLabel="Facility3 ImageView" customClass="UIRadiusImageView" customModule="wheelmap" customModuleProvider="target">
                         <rect key="frame" x="112" y="156.5" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="B6K-Jb-v7M"/>
@@ -69,7 +69,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-B3-Emk" userLabel="Facility4 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-B3-Emk" userLabel="Facility4 ImageView" customClass="UIRadiusImageView" customModule="wheelmap" customModuleProvider="target">
                         <rect key="frame" x="158" y="156.5" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="XOj-B3-Emk" secondAttribute="height" multiplier="1:1" id="HDN-Z6-lgc"/>
@@ -81,7 +81,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-Px-Oc5" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-Px-Oc5" customClass="UIRadiusImageView" customModule="wheelmap" customModuleProvider="target">
                         <rect key="frame" x="309" y="23" width="85" height="85"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,7 +101,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listStoreCafeIc" translatesAutoresizingMaskIntoConstraints="NO" id="dnj-OQ-ljb">
-                        <rect key="frame" x="20" y="15" width="50" height="32"/>
+                        <rect key="frame" x="15" y="15" width="50" height="32"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketListLocationIc" translatesAutoresizingMaskIntoConstraints="NO" id="3xM-xG-BQn">
                         <rect key="frame" x="20" y="72.5" width="20" height="20"/>
@@ -122,7 +122,7 @@
                         <rect key="frame" x="20" y="201" width="374" height="1"/>
                         <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-F8-9ip" userLabel="Facility5 ImageView" customClass="UIRadiusImageView" customModule="Viewable" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-F8-9ip" userLabel="Facility5 ImageView" customClass="UIRadiusImageView" customModule="wheelmap" customModuleProvider="target">
                         <rect key="frame" x="204" y="156.5" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="sUB-F8-9ip" secondAttribute="height" multiplier="1:1" id="0W1-nn-kMP"/>
@@ -156,12 +156,13 @@
                     <constraint firstItem="3xM-xG-BQn" firstAttribute="top" secondItem="fFl-51-XJl" secondAttribute="bottom" constant="4" id="aLH-sp-RNS"/>
                     <constraint firstItem="sUB-F8-9ip" firstAttribute="centerY" secondItem="XOj-B3-Emk" secondAttribute="centerY" id="aVj-s6-9fq"/>
                     <constraint firstItem="3xM-xG-BQn" firstAttribute="leading" secondItem="fFl-51-XJl" secondAttribute="leading" id="b6d-LE-FXm"/>
+                    <constraint firstItem="fFl-51-XJl" firstAttribute="leading" secondItem="5cB-gC-laK" secondAttribute="leading" constant="20" id="bOr-LO-E6B"/>
                     <constraint firstItem="pq1-9G-NPi" firstAttribute="centerY" secondItem="3xM-xG-BQn" secondAttribute="centerY" id="bbJ-uJ-BUG"/>
                     <constraint firstItem="WXi-OC-KY5" firstAttribute="top" secondItem="3xM-xG-BQn" secondAttribute="bottom" constant="3" id="c3e-1m-B0p"/>
                     <constraint firstItem="sou-Vk-QYa" firstAttribute="leading" secondItem="Y7C-pi-wBd" secondAttribute="trailing" constant="10" id="eWO-pW-hDc"/>
                     <constraint firstItem="sUB-F8-9ip" firstAttribute="leading" secondItem="XOj-B3-Emk" secondAttribute="trailing" constant="10" id="f13-gz-bIR"/>
                     <constraint firstItem="af1-Vj-XlW" firstAttribute="centerY" secondItem="WXi-OC-KY5" secondAttribute="centerY" id="fSP-wj-1Gu"/>
-                    <constraint firstItem="dnj-OQ-ljb" firstAttribute="leading" secondItem="5cB-gC-laK" secondAttribute="leading" constant="20" id="jA0-iN-sTp"/>
+                    <constraint firstItem="dnj-OQ-ljb" firstAttribute="leading" secondItem="5cB-gC-laK" secondAttribute="leading" constant="15" id="jA0-iN-sTp"/>
                     <constraint firstItem="WXi-OC-KY5" firstAttribute="leading" secondItem="3xM-xG-BQn" secondAttribute="leading" id="mLl-Wt-axv"/>
                     <constraint firstItem="sUB-F8-9ip" firstAttribute="leading" secondItem="XOj-B3-Emk" secondAttribute="trailing" constant="10" id="muh-av-DYK"/>
                     <constraint firstItem="dnj-OQ-ljb" firstAttribute="top" secondItem="5cB-gC-laK" secondAttribute="top" constant="15" id="pMN-rR-G1H"/>
@@ -169,7 +170,6 @@
                     <constraint firstItem="jmm-b8-04u" firstAttribute="leading" secondItem="sou-Vk-QYa" secondAttribute="trailing" constant="10" id="tpn-9A-yw9"/>
                     <constraint firstItem="CzY-Ny-QkT" firstAttribute="top" secondItem="WXi-OC-KY5" secondAttribute="bottom" constant="5" id="uDh-yl-UJW"/>
                     <constraint firstItem="qEx-Px-Oc5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pq1-9G-NPi" secondAttribute="trailing" constant="16" id="ykM-VF-u6b"/>
-                    <constraint firstItem="fFl-51-XJl" firstAttribute="leading" secondItem="dnj-OQ-ljb" secondAttribute="leading" id="zKy-JT-eoa"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

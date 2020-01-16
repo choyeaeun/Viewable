@@ -44,6 +44,8 @@ class ShopDetailVC: UIViewController, MTMapViewDelegate {
 
         daumMapView = MTMapView.create(delegate: self, bound: smallMapView.bounds)
         if let mapView = daumMapView {
+            mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingMode.off
+            mapView.isUserInteractionEnabled = false
             smallMapView.addSubview(mapView)
         }
     }
